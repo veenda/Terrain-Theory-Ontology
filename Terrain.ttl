@@ -183,7 +183,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BloodManifestation
 :BloodManifestation rdf:type owl:Class ;
-                    rdfs:subClassOf :Manifestation .
+                    rdfs:subClassOf :Manifestation ;
+                    rdfs:label "Blood Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BloodVessels
@@ -251,7 +252,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystemManifestation
 :CardiovascularSystemManifestation rdf:type owl:Class ;
-                                   rdfs:subClassOf :Manifestation .
+                                   rdfs:subClassOf :Manifestation ;
+                                   rdfs:label "Cardiovascular System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Catatonia
@@ -549,7 +551,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GastrointestinalSystemManifestation
 :GastrointestinalSystemManifestation rdf:type owl:Class ;
-                                     rdfs:subClassOf :Manifestation .
+                                     rdfs:subClassOf :Manifestation ;
+                                     rdfs:label "Gastrointestinal System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gliosarcoma
@@ -631,7 +634,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HormoneSystemManifestation
 :HormoneSystemManifestation rdf:type owl:Class ;
-                            rdfs:subClassOf :Manifestation .
+                            rdfs:subClassOf :Manifestation ;
+                            rdfs:label "Hormone System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HyperkineticSyndrome
@@ -669,7 +673,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystemManifestation
 :ImmuneSystemManifestation rdf:type owl:Class ;
-                           rdfs:subClassOf :Manifestation .
+                           rdfs:subClassOf :Manifestation ;
+                           rdfs:label "Immune System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Immunodeficiency
@@ -782,7 +787,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystemManifestation
 :LocomotorSystemManifestation rdf:type owl:Class ;
-                              rdfs:subClassOf :Manifestation .
+                              rdfs:subClassOf :Manifestation ;
+                              rdfs:label "Locomotor System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lungs
@@ -813,7 +819,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphSystemManifestation
 :LymphSystemManifestation rdf:type owl:Class ;
-                          rdfs:subClassOf :Manifestation .
+                          rdfs:subClassOf :Manifestation ;
+                          rdfs:label "Lymph System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphadenitis
@@ -949,7 +956,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MetabolismManifestation
 :MetabolismManifestation rdf:type owl:Class ;
-                         rdfs:subClassOf :Manifestation .
+                         rdfs:subClassOf :Manifestation ;
+                         rdfs:label "Metabolism Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Migraine
@@ -1006,7 +1014,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NervousSystemManifestation
 :NervousSystemManifestation rdf:type owl:Class ;
-                            rdfs:subClassOf :Manifestation .
+                            rdfs:subClassOf :Manifestation ;
+                            rdfs:label "Nervous System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nervousness
@@ -1124,7 +1133,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PsycheManifestation
 :PsycheManifestation rdf:type owl:Class ;
-                     rdfs:subClassOf :Manifestation .
+                     rdfs:subClassOf :Manifestation ;
+                     rdfs:label "Psyche Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Psychosis
@@ -1177,7 +1187,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratoryTractManifestation
 :RespiratoryTractManifestation rdf:type owl:Class ;
-                               rdfs:subClassOf :Manifestation .
+                               rdfs:subClassOf :Manifestation ;
+                               rdfs:label "Respiratory Tract Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Reticulocytosis
@@ -1224,7 +1235,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystemManifestation
 :SensorySystemManifestation rdf:type owl:Class ;
-                            rdfs:subClassOf :Manifestation .
+                            rdfs:subClassOf :Manifestation ;
+                            rdfs:label "Sensory System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Silicosis
@@ -1243,7 +1255,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SkinManifestation
 :SkinManifestation rdf:type owl:Class ;
-                   rdfs:subClassOf :Manifestation .
+                   rdfs:subClassOf :Manifestation ;
+                   rdfs:label "Skin Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SlowReaction
@@ -1437,7 +1450,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystemManifestation
 :UrogenitalSystemManifestation rdf:type owl:Class ;
-                               rdfs:subClassOf :Manifestation .
+                               rdfs:subClassOf :Manifestation ;
+                               rdfs:label "Urogenital System Manifestation"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WeakImmuneSystem
