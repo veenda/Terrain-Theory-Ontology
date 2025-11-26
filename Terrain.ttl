@@ -6,150 +6,405 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/> .
 
-<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11> rdf:type owl:Ontology .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> rdf:type owl:Ontology ;
+                                                                 owl:versionIRI <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#AppropriationCycle
-:AppropriationCycle rdf:type owl:Class ;
-                    rdfs:subClassOf :TimeCycle .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Acne
+:Acne rdf:type owl:Class ;
+      rdfs:subClassOf :SkinManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#AssimilationCycle
-:AssimilationCycle rdf:type owl:Class ;
-                   rdfs:subClassOf :TimeCycle .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Allergy
+:Allergy rdf:type owl:Class ;
+         rdfs:subClassOf :SkinManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#BodySystem
-:BodySystem rdf:type owl:Class .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alzheimer
+:Alzheimer rdf:type owl:Class ;
+           rdfs:subClassOf :NervousSystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#CellularPhase
-:CellularPhase rdf:type owl:Class ;
-               rdfs:subClassOf :TerrainStatus .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Amaurosis
+:Amaurosis rdf:type owl:Class ;
+           rdfs:subClassOf :SensorySystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#DietaryInput
-:DietaryInput rdf:type owl:Class .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Anosmia
+:Anosmia rdf:type owl:Class ;
+         rdfs:subClassOf :SensorySystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#ElectricFoods
-:ElectricFoods rdf:type owl:Class ;
-               rdfs:subClassOf :DietaryInput .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BloodManifestation
+:BloodManifestation rdf:type owl:Class ;
+                    rdfs:subClassOf :Manifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#EliminationChannel
-:EliminationChannel rdf:type owl:Class ;
-                    rdfs:subClassOf :BodySystem .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BronchialCarcinoma
+:BronchialCarcinoma rdf:type owl:Class ;
+                    rdfs:subClassOf :RespiratoryTractManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#EliminationCycle
-:EliminationCycle rdf:type owl:Class ;
-                  rdfs:subClassOf :TimeCycle .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bronchiectasia
+:Bronchiectasia rdf:type owl:Class ;
+                rdfs:subClassOf :RespiratoryTractManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#Ginjal
-:Ginjal rdf:type owl:Class ;
-        rdfs:subClassOf :EliminationChannel .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bronchitis
+:Bronchitis rdf:type owl:Class ;
+            rdfs:subClassOf :RespiratoryTractManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#HumoralPhase
-:HumoralPhase rdf:type owl:Class ;
-              rdfs:subClassOf :TerrainStatus .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystemManifestation
+:CardiovascularSystemManifestation rdf:type owl:Class ;
+                                   rdfs:subClassOf :Manifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#Kulit
-:Kulit rdf:type owl:Class ;
-       rdfs:subClassOf :EliminationChannel .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cerebrosclerosis
+:Cerebrosclerosis rdf:type owl:Class ;
+                  rdfs:subClassOf :NervousSystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#MucusFormingFoods
-:MucusFormingFoods rdf:type owl:Class ;
-                   rdfs:subClassOf :DietaryInput .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chalazion
+:Chalazion rdf:type owl:Class ;
+           rdfs:subClassOf :SensorySystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#MucuslessFoods
-:MucuslessFoods rdf:type owl:Class ;
-                rdfs:subClassOf :DietaryInput .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cholesteatoma
+:Cholesteatoma rdf:type owl:Class ;
+               rdfs:subClassOf :SensorySystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#ParuParu
-:ParuParu rdf:type owl:Class ;
-          rdfs:subClassOf :EliminationChannel .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chondroma
+:Chondroma rdf:type owl:Class ;
+           rdfs:subClassOf :LocomotorSystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#PusForming
-:PusForming rdf:type owl:Class ;
-            rdfs:subClassOf :MucusFormingFoods .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicBronchitis
+:ChronicBronchitis rdf:type owl:Class ;
+                   rdfs:subClassOf :RespiratoryTractManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#SeededFruit
-:SeededFruit rdf:type owl:Class ;
-             rdfs:subClassOf :ElectricFoods .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicRheumatoidArthritis
+:ChronicRheumatoidArthritis rdf:type owl:Class ;
+                            rdfs:subClassOf :LocomotorSystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#SistemLimfatik
-:SistemLimfatik rdf:type owl:Class ;
-                rdfs:subClassOf :EliminationChannel .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Conjunctivitis
+:Conjunctivitis rdf:type owl:Class ;
+                rdfs:subClassOf :SensorySystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#SlimeForming
-:SlimeForming rdf:type owl:Class ;
-              rdfs:subClassOf :MucusFormingFoods .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cough
+:Cough rdf:type owl:Class ;
+       rdfs:subClassOf :RespiratoryTractManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#SoftLeafyGreens
-:SoftLeafyGreens rdf:type owl:Class ;
-                 rdfs:subClassOf :ElectricFoods .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DifficultyConcentrating
+:DifficultyConcentrating rdf:type owl:Class ;
+                         rdfs:subClassOf :NervousSystemManifestation .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#Subject
-:Subject rdf:type owl:Class .
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Emphysema
+:Emphysema rdf:type owl:Class ;
+           rdfs:subClassOf :RespiratoryTractManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Epicondylitis
+:Epicondylitis rdf:type owl:Class ;
+               rdfs:subClassOf :LocomotorSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Exostosis
+:Exostosis rdf:type owl:Class ;
+           rdfs:subClassOf :LocomotorSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Expectoration
+:Expectoration rdf:type owl:Class ;
+               rdfs:subClassOf :RespiratoryTractManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GastrointestinalSystemManifestation
+:GastrointestinalSystemManifestation rdf:type owl:Class ;
+                                     rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gliosarcoma
+:Gliosarcoma rdf:type owl:Class ;
+             rdfs:subClassOf :NervousSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HormoneSystemManifestation
+:HormoneSystemManifestation rdf:type owl:Class ;
+                            rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystemManifestation
+:ImmuneSystemManifestation rdf:type owl:Class ;
+                           rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Iridocyclitis
+:Iridocyclitis rdf:type owl:Class ;
+               rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#JointPains
+:JointPains rdf:type owl:Class ;
+            rdfs:subClassOf :LocomotorSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystemManifestation
+:LocomotorSystemManifestation rdf:type owl:Class ;
+                              rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphSystemManifestation
+:LymphSystemManifestation rdf:type owl:Class ;
+                          rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MacularDegeneration
+:MacularDegeneration rdf:type owl:Class ;
+                     rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MalignantTumor
+:MalignantTumor rdf:type owl:Class ;
+                rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Manifestation
+:Manifestation rdf:type owl:Class .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Melanoma
+:Melanoma rdf:type owl:Class ;
+          rdfs:subClassOf :SkinManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Meningitis
+:Meningitis rdf:type owl:Class ;
+            rdfs:subClassOf :NervousSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MetabolismManifestation
+:MetabolismManifestation rdf:type owl:Class ;
+                         rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Migraine
+:Migraine rdf:type owl:Class ;
+          rdfs:subClassOf :NervousSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Naevi
+:Naevi rdf:type owl:Class ;
+       rdfs:subClassOf :SkinManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NervousSystemManifestation
+:NervousSystemManifestation rdf:type owl:Class ;
+                            rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OtitisMedia
+:OtitisMedia rdf:type owl:Class ;
+             rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Otorrhea
+:Otorrhea rdf:type owl:Class ;
+          rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PsycheManifestation
+:PsycheManifestation rdf:type owl:Class ;
+                     rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratoryTractManifestation
+:RespiratoryTractManifestation rdf:type owl:Class ;
+                               rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sarcoma
+:Sarcoma rdf:type owl:Class ;
+         rdfs:subClassOf :LocomotorSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Scleroderma
+:Scleroderma rdf:type owl:Class ;
+             rdfs:subClassOf :SkinManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystemManifestation
+:SensorySystemManifestation rdf:type owl:Class ;
+                            rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Silicosis
+:Silicosis rdf:type owl:Class ;
+           rdfs:subClassOf :RespiratoryTractManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SkinManifestation
+:SkinManifestation rdf:type owl:Class ;
+                   rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spondylosis
+:Spondylosis rdf:type owl:Class ;
+             rdfs:subClassOf :LocomotorSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sweating
+:Sweating rdf:type owl:Class ;
+          rdfs:subClassOf :SkinManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tears
+:Tears rdf:type owl:Class ;
+       rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tinnitus
+:Tinnitus rdf:type owl:Class ;
+          rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystemManifestation
+:UrogenitalSystemManifestation rdf:type owl:Class ;
+                               rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Smoker'sLung
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Smoker'sLung> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf :RespiratoryTractManifestation .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus
-:TerrainStatus rdf:type owl:Class .
+<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TimeCycle
-:TimeCycle rdf:type owl:Class .
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#UsusBesar
-:UsusBesar rdf:type owl:Class ;
-           rdfs:subClassOf :EliminationChannel .
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#1_ExcretionPhase
-<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#1_ExcretionPhase> rdf:type owl:Class ;
-                                                                                         rdfs:subClassOf :HumoralPhase .
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#BodySystem
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#BodySystem> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#2_InflammationPhase
-<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#2_InflammationPhase> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf :HumoralPhase .
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#3_DepositionPhase
-<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#3_DepositionPhase> rdf:type owl:Class ;
-                                                                                          rdfs:subClassOf :HumoralPhase .
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#4_ImpregnationPhase
-<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#4_ImpregnationPhase> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf :CellularPhase .
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#5_DegenerationPhase
-<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#5_DegenerationPhase> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf :CellularPhase .
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationChannel
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationChannel> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#BodySystem> .
 
 
-###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#6_NeoplasmPhase
-<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#6_NeoplasmPhase> rdf:type owl:Class ;
-                                                                                        rdfs:subClassOf :CellularPhase .
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucuslessFoods
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucuslessFoods> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#PusForming
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#PusForming> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#SeededFruit
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SeededFruit> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#SlimeForming
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SlimeForming> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#SoftLeafyGreens
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SoftLeafyGreens> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#Subject
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#Subject> rdf:type owl:Class .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> rdf:type owl:Class .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#1_ExcretionPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#1_ExcretionPhase> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#2_InflammationPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#2_InflammationPhase> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#3_DepositionPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#3_DepositionPhase> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#4_ImpregnationPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#4_ImpregnationPhase> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#5_DegenerationPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#5_DegenerationPhase> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#6_NeoplasmPhase
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#6_NeoplasmPhase> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
