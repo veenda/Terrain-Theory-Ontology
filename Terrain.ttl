@@ -61,6 +61,15 @@
                          ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alzheimer
+:Alzheimer rdf:type owl:Class ;
+           rdfs:subClassOf :NervousSystemManifestation ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTerrainPhase ;
+                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
+                           ] .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Amaurosis
 :Amaurosis rdf:type owl:Class ;
            rdfs:subClassOf :SensorySystemManifestation .
@@ -132,7 +141,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cerebrosclerosis
 :Cerebrosclerosis rdf:type owl:Class ;
-                  rdfs:subClassOf :NervousSystemManifestation .
+                  rdfs:subClassOf :NervousSystemManifestation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTerrainPhase ;
+                                    owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
+                                  ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chalazion
@@ -202,7 +215,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DifficultyConcentrating
 :DifficultyConcentrating rdf:type owl:Class ;
-                         rdfs:subClassOf :NervousSystemManifestation .
+                         rdfs:subClassOf :NervousSystemManifestation ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTerrainPhase ;
+                                           owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
+                                         ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ElectrolyteShift
@@ -277,7 +294,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gliosarcoma
 :Gliosarcoma rdf:type owl:Class ;
-             rdfs:subClassOf :NervousSystemManifestation .
+             rdfs:subClassOf :NervousSystemManifestation ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasTerrainPhase ;
+                               owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
+                             ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GlobusSensation
@@ -455,7 +476,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Meningitis
 :Meningitis rdf:type owl:Class ;
-            rdfs:subClassOf :NervousSystemManifestation .
+            rdfs:subClassOf :NervousSystemManifestation ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTerrainPhase ;
+                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
+                            ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MenopausalSymptoms
@@ -480,7 +505,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Migraine
 :Migraine rdf:type owl:Class ;
-          rdfs:subClassOf :NervousSystemManifestation .
+          rdfs:subClassOf :NervousSystemManifestation ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasTerrainPhase ;
+                            owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                          ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MyocardialInfarction
@@ -728,11 +757,6 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WeakReactions
 :WeakReactions rdf:type owl:Class ;
                rdfs:subClassOf :ImmuneSystemManifestation .
-
-
-###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alzheimer'sDisease
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alzheimer'sDisease> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf :NervousSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Smoker'sLung
