@@ -115,7 +115,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AnxietyNeurosis
 :AnxietyNeurosis rdf:type owl:Class ;
-                 rdfs:subClassOf :PsycheManifestation .
+                 rdfs:subClassOf :PsycheManifestation ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTerrainPhase ;
+                                   owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                                 ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AtrophicGastritis
@@ -193,7 +197,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Catatonia
 :Catatonia rdf:type owl:Class ;
-           rdfs:subClassOf :PsycheManifestation .
+           rdfs:subClassOf :PsycheManifestation ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTerrainPhase ;
+                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
+                           ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cerebrosclerosis
@@ -360,7 +368,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#EndogenousDepression
 :EndogenousDepression rdf:type owl:Class ;
-                      rdfs:subClassOf :PsycheManifestation .
+                      rdfs:subClassOf :PsycheManifestation ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTerrainPhase ;
+                                        owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                                      ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Endothelioma
@@ -419,7 +431,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FunctionalPsychologicalDistrubance
 :FunctionalPsychologicalDistrubance rdf:type owl:Class ;
-                                    rdfs:subClassOf :PsycheManifestation .
+                                    rdfs:subClassOf :PsycheManifestation ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasTerrainPhase ;
+                                                      owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
+                                                    ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gastritis
@@ -524,7 +540,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HyperkineticSyndrome
 :HyperkineticSyndrome rdf:type owl:Class ;
-                      rdfs:subClassOf :PsycheManifestation .
+                      rdfs:subClassOf :PsycheManifestation ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTerrainPhase ;
+                                        owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
+                                      ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HyperplasticGastritis
@@ -715,7 +735,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mania
 :Mania rdf:type owl:Class ;
-       rdfs:subClassOf :PsycheManifestation .
+       rdfs:subClassOf :PsycheManifestation ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTerrainPhase ;
+                         owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
+                       ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Manifestation
@@ -751,7 +775,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MentalDeficiency
 :MentalDeficiency rdf:type owl:Class ;
-                  rdfs:subClassOf :PsycheManifestation .
+                  rdfs:subClassOf :PsycheManifestation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTerrainPhase ;
+                                    owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
+                                  ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MetabolicSyndrome
@@ -811,17 +839,29 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nervousness
 :Nervousness rdf:type owl:Class ;
-             rdfs:subClassOf :PsycheManifestation .
+             rdfs:subClassOf :PsycheManifestation ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasTerrainPhase ;
+                               owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
+                             ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Neuroses
 :Neuroses rdf:type owl:Class ;
-          rdfs:subClassOf :PsycheManifestation .
+          rdfs:subClassOf :PsycheManifestation ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasTerrainPhase ;
+                            owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
+                          ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NeuroticDepression
 :NeuroticDepression rdf:type owl:Class ;
-                    rdfs:subClassOf :PsycheManifestation .
+                    rdfs:subClassOf :PsycheManifestation ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTerrainPhase ;
+                                      owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
+                                    ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NonHodgkinLymphoma
@@ -844,7 +884,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OrganicPsychosyndrome
 :OrganicPsychosyndrome rdf:type owl:Class ;
-                       rdfs:subClassOf :PsycheManifestation .
+                       rdfs:subClassOf :PsycheManifestation ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasTerrainPhase ;
+                                         owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                                       ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OtitisMedia
@@ -876,7 +920,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Phobias
 :Phobias rdf:type owl:Class ;
-         rdfs:subClassOf :PsycheManifestation .
+         rdfs:subClassOf :PsycheManifestation ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasTerrainPhase ;
+                           owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
+                         ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Polycythaemia
@@ -904,17 +952,29 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Psychosis
 :Psychosis rdf:type owl:Class ;
-           rdfs:subClassOf :PsycheManifestation .
+           rdfs:subClassOf :PsycheManifestation ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTerrainPhase ;
+                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                           ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PsychosomaticManifestation
 :PsychosomaticManifestation rdf:type owl:Class ;
-                            rdfs:subClassOf :PsycheManifestation .
+                            rdfs:subClassOf :PsycheManifestation ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasTerrainPhase ;
+                                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
+                                            ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ReactiveDepressiveSyndromes
 :ReactiveDepressiveSyndromes rdf:type owl:Class ;
-                             rdfs:subClassOf :PsycheManifestation .
+                             rdfs:subClassOf :PsycheManifestation ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTerrainPhase ;
+                                               owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
+                                             ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RenalAtrophy
@@ -951,7 +1011,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SchizophrenicDefectiveStates
 :SchizophrenicDefectiveStates rdf:type owl:Class ;
-                              rdfs:subClassOf :PsycheManifestation .
+                              rdfs:subClassOf :PsycheManifestation ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTerrainPhase ;
+                                                owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
+                                              ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Scleroderma
