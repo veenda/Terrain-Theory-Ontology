@@ -1,10 +1,6 @@
 # Terrain Theory Ontology
 Repositori yang dibuat untuk memenuhi mata kuliah Knowledge Base and Reasoning.
 
-### Member of this project group:
-- Emeralita Wistyaka Rani
-- Veenda Putri Divo
-
 # Tutorial Connect Protégé ke GitHub
 ## Tahap 1: Persiapan
 1. **Instal GitHub Desktop**: Unduh dan instal aplikasi [GitHub Desktop](https://github.com/apps/desktop). Login dengan akun GitHub Anda.
@@ -47,3 +43,9 @@ Karena file ontologi adalah file teks, jika Anda dan partner mengedit baris yang
 **Aturan Emas**:
 1. **Komunikasi**: Sebelum mulai kerja, bilang di grup chat: "*Saya lagi edit bagian Class Makanan ya.*" Partner sebaiknya mengerjakan bagian lain (misal: *Class Penyakit*).
 2. **Pull Dulu**: Sebelum buka Protégé, biasakan selalu klik *Pull* di GitHub Desktop untuk memastikan Anda mengedit di atas versi terbaru.
+
+# Authors
+- Emeralita Wistyaka Rani [emeralita@student.uns.ac.id](mailto:emeralita@student.uns.ac.id)
+- Veenda Putri Divo [veenda@student.uns.ac.id](mailto:veenda@student.uns.ac.id)
+
+Program Studi Sains Data, Fakultas Teknologi Informasi dan Sains Data, Universitas Sebelas Maret
