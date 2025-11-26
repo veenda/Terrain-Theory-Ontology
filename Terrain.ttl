@@ -13,9 +13,29 @@
 #    Classes
 #################################################################
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AIDS
+:AIDS rdf:type owl:Class ;
+      rdfs:subClassOf :ImmuneSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Acne
 :Acne rdf:type owl:Class ;
       rdfs:subClassOf :SkinManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AcuteInfection
+:AcuteInfection rdf:type owl:Class ;
+                rdfs:subClassOf :ImmuneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Adenoma
+:Adenoma rdf:type owl:Class ;
+         rdfs:subClassOf :HormoneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AggregationDisturbance
+:AggregationDisturbance rdf:type owl:Class ;
+                        rdfs:subClassOf :BloodManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Allergy
@@ -23,19 +43,39 @@
          rdfs:subClassOf :SkinManifestation .
 
 
-###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alzheimer
-:Alzheimer rdf:type owl:Class ;
-           rdfs:subClassOf :NervousSystemManifestation .
-
-
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Amaurosis
 :Amaurosis rdf:type owl:Class ;
            rdfs:subClassOf :SensorySystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Anemia
+:Anemia rdf:type owl:Class ;
+        rdfs:subClassOf :BloodManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Anosmia
 :Anosmia rdf:type owl:Class ;
          rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AnxietyNeurosis
+:AnxietyNeurosis rdf:type owl:Class ;
+                 rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AtrophicGastritis
+:AtrophicGastritis rdf:type owl:Class ;
+                   rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AutoimmuneDisease
+:AutoimmuneDisease rdf:type owl:Class ;
+                   rdfs:subClassOf :ImmuneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BladderStones
+:BladderStones rdf:type owl:Class ;
+               rdfs:subClassOf :UrogenitalSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BloodManifestation
@@ -58,9 +98,19 @@
             rdfs:subClassOf :RespiratoryTractManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cancer
+:Cancer rdf:type owl:Class ;
+        rdfs:subClassOf :UrogenitalSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystemManifestation
 :CardiovascularSystemManifestation rdf:type owl:Class ;
                                    rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Catatonia
+:Catatonia rdf:type owl:Class ;
+           rdfs:subClassOf :PsycheManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cerebrosclerosis
@@ -88,9 +138,29 @@
                    rdfs:subClassOf :RespiratoryTractManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicGastritis
+:ChronicGastritis rdf:type owl:Class ;
+                  rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicInfections
+:ChronicInfections rdf:type owl:Class ;
+                   rdfs:subClassOf :ImmuneSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicRheumatoidArthritis
 :ChronicRheumatoidArthritis rdf:type owl:Class ;
                             rdfs:subClassOf :LocomotorSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicUrinaryTractInfection
+:ChronicUrinaryTractInfection rdf:type owl:Class ;
+                              rdfs:subClassOf :UrogenitalSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ColonCancer
+:ColonCancer rdf:type owl:Class ;
+             rdfs:subClassOf :GastrointestinalSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Conjunctivitis
@@ -98,9 +168,19 @@
                 rdfs:subClassOf :SensorySystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CoronaryHeartDisease
+:CoronaryHeartDisease rdf:type owl:Class ;
+                      rdfs:subClassOf :CardiovascularSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cough
 :Cough rdf:type owl:Class ;
        rdfs:subClassOf :RespiratoryTractManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DiabetesMellitus
+:DiabetesMellitus rdf:type owl:Class ;
+                  rdfs:subClassOf :MetabolismManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DifficultyConcentrating
@@ -108,9 +188,29 @@
                          rdfs:subClassOf :NervousSystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ElectrolyteShift
+:ElectrolyteShift rdf:type owl:Class ;
+                  rdfs:subClassOf :MetabolismManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Emphysema
 :Emphysema rdf:type owl:Class ;
            rdfs:subClassOf :RespiratoryTractManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Endocarditis
+:Endocarditis rdf:type owl:Class ;
+              rdfs:subClassOf :CardiovascularSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#EndogenousDepression
+:EndogenousDepression rdf:type owl:Class ;
+                      rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Endothelioma
+:Endothelioma rdf:type owl:Class ;
+              rdfs:subClassOf :CardiovascularSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Epicondylitis
@@ -128,6 +228,31 @@
                rdfs:subClassOf :RespiratoryTractManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fibrosis
+:Fibrosis rdf:type owl:Class ;
+          rdfs:subClassOf :LymphSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FunctionalHeartComplaint
+:FunctionalHeartComplaint rdf:type owl:Class ;
+                          rdfs:subClassOf :CardiovascularSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FunctionalPsychologicalDistrubance
+:FunctionalPsychologicalDistrubance rdf:type owl:Class ;
+                                    rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gastritis
+:Gastritis rdf:type owl:Class ;
+           rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gastroenteritis
+:Gastroenteritis rdf:type owl:Class ;
+                 rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GastrointestinalSystemManifestation
 :GastrointestinalSystemManifestation rdf:type owl:Class ;
                                      rdfs:subClassOf :Manifestation .
@@ -138,14 +263,74 @@
              rdfs:subClassOf :NervousSystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GlobusSensation
+:GlobusSensation rdf:type owl:Class ;
+                 rdfs:subClassOf :HormoneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GlucoseIntolerance
+:GlucoseIntolerance rdf:type owl:Class ;
+                    rdfs:subClassOf :HormoneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Goitre
+:Goitre rdf:type owl:Class ;
+        rdfs:subClassOf :HormoneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gout
+:Gout rdf:type owl:Class ;
+      rdfs:subClassOf :MetabolismManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HeartFailure
+:HeartFailure rdf:type owl:Class ;
+              rdfs:subClassOf :CardiovascularSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Heartburn
+:Heartburn rdf:type owl:Class ;
+           rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HodgkinLymphoma
+:HodgkinLymphoma rdf:type owl:Class ;
+                 rdfs:subClassOf :LymphSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HormoneSystemManifestation
 :HormoneSystemManifestation rdf:type owl:Class ;
                             rdfs:subClassOf :Manifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HyperkineticSyndrome
+:HyperkineticSyndrome rdf:type owl:Class ;
+                      rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HyperplasticGastritis
+:HyperplasticGastritis rdf:type owl:Class ;
+                       rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Hyperthyroidism
+:Hyperthyroidism rdf:type owl:Class ;
+                 rdfs:subClassOf :HormoneSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystemManifestation
 :ImmuneSystemManifestation rdf:type owl:Class ;
                            rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Immunodeficiency
+:Immunodeficiency rdf:type owl:Class ;
+                  rdfs:subClassOf :ImmuneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#InsufficiencyOfTheLymphSystem
+:InsufficiencyOfTheLymphSystem rdf:type owl:Class ;
+                               rdfs:subClassOf :LymphSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Iridocyclitis
@@ -158,9 +343,39 @@
             rdfs:subClassOf :LocomotorSystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#KidneyStones
+:KidneyStones rdf:type owl:Class ;
+              rdfs:subClassOf :UrogenitalSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Leucocytosis
+:Leucocytosis rdf:type owl:Class ;
+              rdfs:subClassOf :BloodManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Leukemia
+:Leukemia rdf:type owl:Class ;
+          rdfs:subClassOf :BloodManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LipidMetabolismDisturbance
+:LipidMetabolismDisturbance rdf:type owl:Class ;
+                            rdfs:subClassOf :MetabolismManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LiverCirrhosis
+:LiverCirrhosis rdf:type owl:Class ;
+                rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystemManifestation
 :LocomotorSystemManifestation rdf:type owl:Class ;
                               rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymph-nodeSwelling
+:Lymph-nodeSwelling rdf:type owl:Class ;
+                    rdfs:subClassOf :LymphSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphSystemManifestation
@@ -168,14 +383,44 @@
                           rdfs:subClassOf :Manifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphadenitis
+:Lymphadenitis rdf:type owl:Class ;
+               rdfs:subClassOf :LymphSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphangitis
+:Lymphangitis rdf:type owl:Class ;
+              rdfs:subClassOf :LymphSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphedema
+:Lymphedema rdf:type owl:Class ;
+            rdfs:subClassOf :LymphSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphoma
+:Lymphoma rdf:type owl:Class ;
+          rdfs:subClassOf :LymphSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MacularDegeneration
 :MacularDegeneration rdf:type owl:Class ;
                      rdfs:subClassOf :SensorySystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Malabsorbtion
+:Malabsorbtion rdf:type owl:Class ;
+               rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MalignantTumor
 :MalignantTumor rdf:type owl:Class ;
                 rdfs:subClassOf :SensorySystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mania
+:Mania rdf:type owl:Class ;
+       rdfs:subClassOf :PsycheManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Manifestation
@@ -192,6 +437,21 @@
             rdfs:subClassOf :NervousSystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MenopausalSymptoms
+:MenopausalSymptoms rdf:type owl:Class ;
+                    rdfs:subClassOf :HormoneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MentalDeficiency
+:MentalDeficiency rdf:type owl:Class ;
+                  rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MetabolicSyndrome
+:MetabolicSyndrome rdf:type owl:Class ;
+                   rdfs:subClassOf :MetabolismManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MetabolismManifestation
 :MetabolismManifestation rdf:type owl:Class ;
                          rdfs:subClassOf :Manifestation .
@@ -200,6 +460,16 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Migraine
 :Migraine rdf:type owl:Class ;
           rdfs:subClassOf :NervousSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MyocardialInfarction
+:MyocardialInfarction rdf:type owl:Class ;
+                      rdfs:subClassOf :CardiovascularSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Myocarditis
+:Myocarditis rdf:type owl:Class ;
+             rdfs:subClassOf :CardiovascularSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Naevi
@@ -212,6 +482,36 @@
                             rdfs:subClassOf :Manifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nervousness
+:Nervousness rdf:type owl:Class ;
+             rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Neuroses
+:Neuroses rdf:type owl:Class ;
+          rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NeuroticDepression
+:NeuroticDepression rdf:type owl:Class ;
+                    rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NonHodgkinLymphoma
+:NonHodgkinLymphoma rdf:type owl:Class ;
+                    rdfs:subClassOf :LymphSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Obesity
+:Obesity rdf:type owl:Class ;
+         rdfs:subClassOf :MetabolismManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OrganicPsychosyndrome
+:OrganicPsychosyndrome rdf:type owl:Class ;
+                       rdfs:subClassOf :PsycheManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OtitisMedia
 :OtitisMedia rdf:type owl:Class ;
              rdfs:subClassOf :SensorySystemManifestation .
@@ -222,9 +522,49 @@
           rdfs:subClassOf :SensorySystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pericarditis
+:Pericarditis rdf:type owl:Class ;
+              rdfs:subClassOf :CardiovascularSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Phobias
+:Phobias rdf:type owl:Class ;
+         rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Polycythaemia
+:Polycythaemia rdf:type owl:Class ;
+               rdfs:subClassOf :BloodManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Polyuria
+:Polyuria rdf:type owl:Class ;
+          rdfs:subClassOf :UrogenitalSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PsycheManifestation
 :PsycheManifestation rdf:type owl:Class ;
                      rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Psychosis
+:Psychosis rdf:type owl:Class ;
+           rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PsychosomaticManifestation
+:PsychosomaticManifestation rdf:type owl:Class ;
+                            rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ReactiveDepressiveSyndromes
+:ReactiveDepressiveSyndromes rdf:type owl:Class ;
+                             rdfs:subClassOf :PsycheManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RenalAtrophy
+:RenalAtrophy rdf:type owl:Class ;
+              rdfs:subClassOf :UrogenitalSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratoryTractManifestation
@@ -232,9 +572,19 @@
                                rdfs:subClassOf :Manifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Reticulocytosis
+:Reticulocytosis rdf:type owl:Class ;
+                 rdfs:subClassOf :BloodManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sarcoma
 :Sarcoma rdf:type owl:Class ;
          rdfs:subClassOf :LocomotorSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SchizophrenicDefectiveStates
+:SchizophrenicDefectiveStates rdf:type owl:Class ;
+                              rdfs:subClassOf :PsycheManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Scleroderma
@@ -257,9 +607,34 @@
                    rdfs:subClassOf :Manifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SlowReaction
+:SlowReaction rdf:type owl:Class ;
+              rdfs:subClassOf :MetabolismManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SlowReactions
+:SlowReactions rdf:type owl:Class ;
+               rdfs:subClassOf :ImmuneSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spondylosis
 :Spondylosis rdf:type owl:Class ;
              rdfs:subClassOf :LocomotorSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#StomachCancer
+:StomachCancer rdf:type owl:Class ;
+               rdfs:subClassOf :GastrointestinalSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Suppuration
+:Suppuration rdf:type owl:Class ;
+             rdfs:subClassOf :BloodManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SusceptibilityToInfection
+:SusceptibilityToInfection rdf:type owl:Class ;
+                           rdfs:subClassOf :ImmuneSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sweating
@@ -272,14 +647,59 @@
        rdfs:subClassOf :SensorySystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Thrombocytopenia
+:Thrombocytopenia rdf:type owl:Class ;
+                  rdfs:subClassOf :BloodManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Thrombocytosis
+:Thrombocytosis rdf:type owl:Class ;
+                rdfs:subClassOf :BloodManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ThyroidCancer
+:ThyroidCancer rdf:type owl:Class ;
+               rdfs:subClassOf :HormoneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Thyroiditis
+:Thyroiditis rdf:type owl:Class ;
+             rdfs:subClassOf :HormoneSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tinnitus
 :Tinnitus rdf:type owl:Class ;
           rdfs:subClassOf :SensorySystemManifestation .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tonsillitis
+:Tonsillitis rdf:type owl:Class ;
+             rdfs:subClassOf :LymphSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrinalTractInfection
+:UrinalTractInfection rdf:type owl:Class ;
+                      rdfs:subClassOf :UrogenitalSystemManifestation .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystemManifestation
 :UrogenitalSystemManifestation rdf:type owl:Class ;
                                rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WeakImmuneSystem
+:WeakImmuneSystem rdf:type owl:Class ;
+                  rdfs:subClassOf :ImmuneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WeakReactions
+:WeakReactions rdf:type owl:Class ;
+               rdfs:subClassOf :ImmuneSystemManifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alzheimer'sDisease
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alzheimer'sDisease> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf :NervousSystemManifestation .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Smoker'sLung
