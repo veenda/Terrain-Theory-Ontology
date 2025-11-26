@@ -100,7 +100,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AtrophicGastritis
 :AtrophicGastritis rdf:type owl:Class ;
-                   rdfs:subClassOf :GastrointestinalSystemManifestation .
+                   rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTerrainPhase ;
+                                     owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
+                                   ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AutoimmuneDisease
@@ -207,7 +211,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicGastritis
 :ChronicGastritis rdf:type owl:Class ;
-                  rdfs:subClassOf :GastrointestinalSystemManifestation .
+                  rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTerrainPhase ;
+                                    owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                                  ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicInfections
@@ -231,7 +239,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ColonCancer
 :ColonCancer rdf:type owl:Class ;
-             rdfs:subClassOf :GastrointestinalSystemManifestation .
+             rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasTerrainPhase ;
+                               owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
+                             ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Conjunctivitis
@@ -360,12 +372,20 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gastritis
 :Gastritis rdf:type owl:Class ;
-           rdfs:subClassOf :GastrointestinalSystemManifestation .
+           rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTerrainPhase ;
+                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
+                           ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gastroenteritis
 :Gastroenteritis rdf:type owl:Class ;
-                 rdfs:subClassOf :GastrointestinalSystemManifestation .
+                 rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTerrainPhase ;
+                                   owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
+                                 ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GastrointestinalSystemManifestation
@@ -413,7 +433,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Heartburn
 :Heartburn rdf:type owl:Class ;
-           rdfs:subClassOf :GastrointestinalSystemManifestation .
+           rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTerrainPhase ;
+                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
+                           ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HodgkinLymphoma
@@ -433,7 +457,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HyperplasticGastritis
 :HyperplasticGastritis rdf:type owl:Class ;
-                       rdfs:subClassOf :GastrointestinalSystemManifestation .
+                       rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasTerrainPhase ;
+                                         owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
+                                       ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Hyperthyroidism
@@ -496,7 +524,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LiverCirrhosis
 :LiverCirrhosis rdf:type owl:Class ;
-                rdfs:subClassOf :GastrointestinalSystemManifestation .
+                rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTerrainPhase ;
+                                  owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
+                                ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystemManifestation
@@ -545,7 +577,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Malabsorbtion
 :Malabsorbtion rdf:type owl:Class ;
-               rdfs:subClassOf :GastrointestinalSystemManifestation .
+               rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTerrainPhase ;
+                                 owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                               ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MalignantTumor
@@ -824,7 +860,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#StomachCancer
 :StomachCancer rdf:type owl:Class ;
-               rdfs:subClassOf :GastrointestinalSystemManifestation .
+               rdfs:subClassOf :GastrointestinalSystemManifestation ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTerrainPhase ;
+                                 owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
+                               ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Suppuration
