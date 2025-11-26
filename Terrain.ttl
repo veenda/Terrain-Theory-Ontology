@@ -10,6 +10,14 @@
                                                                  owl:versionIRI <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -57,6 +65,11 @@
                            owl:onProperty :hasTerrainPhase ;
                            owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
                          ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AdrenalGland
+:AdrenalGland rdf:type owl:Class ;
+              rdfs:subClassOf :EndocrineSystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AggregationDisturbance
@@ -140,6 +153,11 @@
                                    ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bladder
+:Bladder rdf:type owl:Class ;
+         rdfs:subClassOf :UrogenitalSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BladderStones
 :BladderStones rdf:type owl:Class ;
                rdfs:subClassOf :UrogenitalSystemManifestation ,
@@ -149,9 +167,34 @@
                                ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Blood
+:Blood rdf:type owl:Class ;
+       rdfs:subClassOf :CardiovascularSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BloodManifestation
 :BloodManifestation rdf:type owl:Class ;
                     rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BloodVessels
+:BloodVessels rdf:type owl:Class ;
+              rdfs:subClassOf :CardiovascularSystem .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bones
+:Bones rdf:type owl:Class ;
+       rdfs:subClassOf :LocomotorSystem .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Brain
+:Brain rdf:type owl:Class ;
+       rdfs:subClassOf :NervousSystem .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bronchi
+:Bronchi rdf:type owl:Class ;
+         rdfs:subClassOf :RespiratorySystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BronchialCarcinoma
@@ -188,6 +231,11 @@
                           owl:onProperty :hasTerrainPhase ;
                           owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
                         ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystem
+:CardiovascularSystem rdf:type owl:Class ;
+                      rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystemManifestation
@@ -285,6 +333,11 @@
                                               ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Colon
+:Colon rdf:type owl:Class ;
+       rdfs:subClassOf :DigestiveSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ColonCancer
 :ColonCancer rdf:type owl:Class ;
              rdfs:subClassOf :GastrointestinalSystemManifestation ,
@@ -339,6 +392,16 @@
                                          ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DigestiveSystem
+:DigestiveSystem rdf:type owl:Class ;
+                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ears
+:Ears rdf:type owl:Class ;
+      rdfs:subClassOf :SensorySystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ElectrolyteShift
 :ElectrolyteShift rdf:type owl:Class ;
                   rdfs:subClassOf :MetabolismManifestation ,
@@ -364,6 +427,11 @@
                                 owl:onProperty :hasTerrainPhase ;
                                 owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
                               ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#EndocrineSystem
+:EndocrineSystem rdf:type owl:Class ;
+                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#EndogenousDepression
@@ -393,6 +461,11 @@
                                ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Epidermis
+:Epidermis rdf:type owl:Class ;
+           rdfs:subClassOf :IntegumentarySystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Exostosis
 :Exostosis rdf:type owl:Class ;
            rdfs:subClassOf :LocomotorSystemManifestation ,
@@ -409,6 +482,11 @@
                                  owl:onProperty :hasTerrainPhase ;
                                  owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
                                ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Eyes
+:Eyes rdf:type owl:Class ;
+      rdfs:subClassOf :SensorySystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fibrosis
@@ -506,6 +584,11 @@
                       ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Heart
+:Heart rdf:type owl:Class ;
+       rdfs:subClassOf :CardiovascularSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HeartFailure
 :HeartFailure rdf:type owl:Class ;
               rdfs:subClassOf :CardiovascularSystemManifestation ,
@@ -565,6 +648,11 @@
                                  ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystem
+:ImmuneSystem rdf:type owl:Class ;
+              rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystemManifestation
 :ImmuneSystemManifestation rdf:type owl:Class ;
                            rdfs:subClassOf :Manifestation .
@@ -588,6 +676,11 @@
                                                ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#IntegumentarySystem
+:IntegumentarySystem rdf:type owl:Class ;
+                     rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Iridocyclitis
 :Iridocyclitis rdf:type owl:Class ;
                rdfs:subClassOf :SensorySystemManifestation ,
@@ -606,6 +699,11 @@
                             ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Joints
+:Joints rdf:type owl:Class ;
+        rdfs:subClassOf :LocomotorSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#KidneyStones
 :KidneyStones rdf:type owl:Class ;
               rdfs:subClassOf :UrogenitalSystemManifestation ,
@@ -613,6 +711,11 @@
                                 owl:onProperty :hasTerrainPhase ;
                                 owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
                               ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Kidneys
+:Kidneys rdf:type owl:Class ;
+         rdfs:subClassOf :UrogenitalSystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Leucocytosis
@@ -642,6 +745,11 @@
                                             ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Liver
+:Liver rdf:type owl:Class ;
+       rdfs:subClassOf :DigestiveSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LiverCirrhosis
 :LiverCirrhosis rdf:type owl:Class ;
                 rdfs:subClassOf :GastrointestinalSystemManifestation ,
@@ -651,9 +759,19 @@
                                 ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystem
+:LocomotorSystem rdf:type owl:Class ;
+                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystemManifestation
 :LocomotorSystemManifestation rdf:type owl:Class ;
                               rdfs:subClassOf :Manifestation .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lungs
+:Lungs rdf:type owl:Class ;
+       rdfs:subClassOf :RespiratorySystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymph-nodeSwelling
@@ -663,6 +781,16 @@
                                       owl:onProperty :hasTerrainPhase ;
                                       owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
                                     ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphFluid
+:LymphFluid rdf:type owl:Class ;
+            rdfs:subClassOf :LymphaticSystem .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphNodes
+:LymphNodes rdf:type owl:Class ;
+            rdfs:subClassOf :LymphaticSystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphSystemManifestation
@@ -686,6 +814,11 @@
                                 owl:onProperty :hasTerrainPhase ;
                                 owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
                               ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphaticSystem
+:LymphaticSystem rdf:type owl:Class ;
+                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphedema
@@ -805,6 +938,11 @@
                           ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Muscles
+:Muscles rdf:type owl:Class ;
+         rdfs:subClassOf :LocomotorSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MyocardialInfarction
 :MyocardialInfarction rdf:type owl:Class ;
                       rdfs:subClassOf :CardiovascularSystemManifestation ,
@@ -830,6 +968,16 @@
                          owl:onProperty :hasTerrainPhase ;
                          owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
                        ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nerves
+:Nerves rdf:type owl:Class ;
+        rdfs:subClassOf :NervousSystem .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NervousSystem
+:NervousSystem rdf:type owl:Class ;
+               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NervousSystemManifestation
@@ -909,6 +1057,11 @@
                           ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pancreas
+:Pancreas rdf:type owl:Class ;
+          rdfs:subClassOf :DigestiveSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pericarditis
 :Pericarditis rdf:type owl:Class ;
               rdfs:subClassOf :CardiovascularSystemManifestation ,
@@ -986,6 +1139,16 @@
                               ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ReproductiveOrgans
+:ReproductiveOrgans rdf:type owl:Class ;
+                    rdfs:subClassOf :UrogenitalSystem .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratorySystem
+:RespiratorySystem rdf:type owl:Class ;
+                   rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratoryTractManifestation
 :RespiratoryTractManifestation rdf:type owl:Class ;
                                rdfs:subClassOf :Manifestation .
@@ -1027,6 +1190,11 @@
                              ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystem
+:SensorySystem rdf:type owl:Class ;
+               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystemManifestation
 :SensorySystemManifestation rdf:type owl:Class ;
                             rdfs:subClassOf :Manifestation .
@@ -1039,6 +1207,11 @@
                              owl:onProperty :hasTerrainPhase ;
                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
                            ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sinuses
+:Sinuses rdf:type owl:Class ;
+         rdfs:subClassOf :RespiratorySystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SkinManifestation
@@ -1064,6 +1237,11 @@
                                ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SmallIntestine
+:SmallIntestine rdf:type owl:Class ;
+                rdfs:subClassOf :DigestiveSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SmokerLung
 :SmokerLung rdf:type owl:Class ;
             rdfs:subClassOf :RespiratoryTractManifestation ,
@@ -1073,6 +1251,16 @@
                             ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SpinalCord
+:SpinalCord rdf:type owl:Class ;
+            rdfs:subClassOf :NervousSystem .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spleen
+:Spleen rdf:type owl:Class ;
+        rdfs:subClassOf :LymphaticSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spondylosis
 :Spondylosis rdf:type owl:Class ;
              rdfs:subClassOf :LocomotorSystemManifestation ,
@@ -1080,6 +1268,11 @@
                                owl:onProperty :hasTerrainPhase ;
                                owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
                              ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Stomach
+:Stomach rdf:type owl:Class ;
+         rdfs:subClassOf :DigestiveSystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#StomachCancer
@@ -1107,6 +1300,11 @@
                                              owl:onProperty :hasTerrainPhase ;
                                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
                                            ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SweatGlands
+:SweatGlands rdf:type owl:Class ;
+             rdfs:subClassOf :IntegumentarySystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sweating
@@ -1145,6 +1343,11 @@
                                 ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Thymus
+:Thymus rdf:type owl:Class ;
+        rdfs:subClassOf :ImmuneSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ThyroidCancer
 :ThyroidCancer rdf:type owl:Class ;
                rdfs:subClassOf :HormoneSystemManifestation ,
@@ -1152,6 +1355,11 @@
                                  owl:onProperty :hasTerrainPhase ;
                                  owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
                                ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ThyroidGland
+:ThyroidGland rdf:type owl:Class ;
+              rdfs:subClassOf :EndocrineSystem .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Thyroiditis
@@ -1190,6 +1398,11 @@
                                       ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystem
+:UrogenitalSystem rdf:type owl:Class ;
+                  rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystemManifestation
 :UrogenitalSystemManifestation rdf:type owl:Class ;
                                rdfs:subClassOf :Manifestation .
@@ -1213,8 +1426,18 @@
                                ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WhiteBloodCells
+:WhiteBloodCells rdf:type owl:Class ;
+                 rdfs:subClassOf :ImmuneSystem .
+
+
 ###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus
 <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> rdf:type owl:Class .
+
+
+###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> rdf:type owl:Class ;
+                                                                                 rdfs:comment "Classification logic based on Systemic Anatomy framework (Terminologia Anatomica, FIPAT 2019) and The 11 Body Systems model (Tortora & Derrickson, 2017). Grouping of 'Locomotor' and 'Urogenital' follows Gray's Anatomy and ICD-11 conventions for functional grouping." .
 
 
 ###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle
@@ -1225,10 +1448,6 @@
 ###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> rdf:type owl:Class ;
                                                                                rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> .
-
-
-###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#BodySystem
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#BodySystem> rdf:type owl:Class .
 
 
 ###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase
@@ -1253,11 +1472,6 @@
 ###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> rdf:type owl:Class ;
                                                                            rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> .
-
-
-###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationChannel
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationChannel> rdf:type owl:Class ;
-                                                                                rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#BodySystem> .
 
 
 ###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle
