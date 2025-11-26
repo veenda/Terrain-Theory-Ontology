@@ -25,7 +25,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AIDS
 :AIDS rdf:type owl:Class ;
-      rdfs:subClassOf :ImmuneSystemManifestation .
+      rdfs:subClassOf :ImmuneSystemManifestation ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasTerrainPhase ;
+                        owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
+                      ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Acne
@@ -39,7 +43,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AcuteInfection
 :AcuteInfection rdf:type owl:Class ;
-                rdfs:subClassOf :ImmuneSystemManifestation .
+                rdfs:subClassOf :ImmuneSystemManifestation ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTerrainPhase ;
+                                  owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
+                                ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Adenoma
@@ -121,7 +129,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AutoimmuneDisease
 :AutoimmuneDisease rdf:type owl:Class ;
-                   rdfs:subClassOf :ImmuneSystemManifestation .
+                   rdfs:subClassOf :ImmuneSystemManifestation ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTerrainPhase ;
+                                     owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                                   ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BladderStones
@@ -240,7 +252,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicInfections
 :ChronicInfections rdf:type owl:Class ;
-                   rdfs:subClassOf :ImmuneSystemManifestation .
+                   rdfs:subClassOf :ImmuneSystemManifestation ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTerrainPhase ;
+                                     owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                                   ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicRheumatoidArthritis
@@ -536,7 +552,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Immunodeficiency
 :Immunodeficiency rdf:type owl:Class ;
-                  rdfs:subClassOf :ImmuneSystemManifestation .
+                  rdfs:subClassOf :ImmuneSystemManifestation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTerrainPhase ;
+                                    owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
+                                  ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#InsufficiencyOfTheLymphSystem
@@ -973,7 +993,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SlowReactions
 :SlowReactions rdf:type owl:Class ;
-               rdfs:subClassOf :ImmuneSystemManifestation .
+               rdfs:subClassOf :ImmuneSystemManifestation ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTerrainPhase ;
+                                 owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
+                               ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SmokerLung
@@ -1014,7 +1038,11 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SusceptibilityToInfection
 :SusceptibilityToInfection rdf:type owl:Class ;
-                           rdfs:subClassOf :ImmuneSystemManifestation .
+                           rdfs:subClassOf :ImmuneSystemManifestation ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTerrainPhase ;
+                                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
+                                           ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sweating
@@ -1105,12 +1133,20 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WeakImmuneSystem
 :WeakImmuneSystem rdf:type owl:Class ;
-                  rdfs:subClassOf :ImmuneSystemManifestation .
+                  rdfs:subClassOf :ImmuneSystemManifestation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTerrainPhase ;
+                                    owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
+                                  ] .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WeakReactions
 :WeakReactions rdf:type owl:Class ;
-               rdfs:subClassOf :ImmuneSystemManifestation .
+               rdfs:subClassOf :ImmuneSystemManifestation ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTerrainPhase ;
+                                 owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
+                               ] .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus
