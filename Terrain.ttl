@@ -17,6 +17,14 @@
 <http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -69,7 +77,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AdrenalGland
 :AdrenalGland rdf:type owl:Class ;
-              rdfs:subClassOf :EndocrineSystem .
+              rdfs:subClassOf :EndocrineSystem ;
+              rdfs:label "Adrenal Gland"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AggregationDisturbance
@@ -179,7 +188,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BloodVessels
 :BloodVessels rdf:type owl:Class ;
-              rdfs:subClassOf :CardiovascularSystem .
+              rdfs:subClassOf :CardiovascularSystem ;
+              rdfs:label "Blood Vessels"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bones
@@ -235,7 +245,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystem
 :CardiovascularSystem rdf:type owl:Class ;
-                      rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+                      rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+                      rdfs:label "Cardiovascular System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystemManifestation
@@ -394,7 +405,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DigestiveSystem
 :DigestiveSystem rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+                 rdfs:label "Digestive System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ears
@@ -431,7 +443,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#EndocrineSystem
 :EndocrineSystem rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+                 rdfs:label "Endocrine System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#EndogenousDepression
@@ -650,7 +663,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystem
 :ImmuneSystem rdf:type owl:Class ;
-              rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+              rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+              rdfs:label "Immune System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystemManifestation
@@ -678,7 +692,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#IntegumentarySystem
 :IntegumentarySystem rdf:type owl:Class ;
-                     rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+                     rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+                     rdfs:label "Integumentary System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Iridocyclitis
@@ -761,7 +776,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystem
 :LocomotorSystem rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+                 rdfs:label "Locomotor System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystemManifestation
@@ -785,12 +801,14 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphFluid
 :LymphFluid rdf:type owl:Class ;
-            rdfs:subClassOf :LymphaticSystem .
+            rdfs:subClassOf :LymphaticSystem ;
+            rdfs:label "Lymph Fluid"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphNodes
 :LymphNodes rdf:type owl:Class ;
-            rdfs:subClassOf :LymphaticSystem .
+            rdfs:subClassOf :LymphaticSystem ;
+            rdfs:label "Lymph Nodes"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphSystemManifestation
@@ -818,7 +836,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphaticSystem
 :LymphaticSystem rdf:type owl:Class ;
-                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+                 rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+                 rdfs:label "Lymphatic System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphedema
@@ -876,7 +895,11 @@
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Manifestation
-:Manifestation rdf:type owl:Class .
+:Manifestation rdf:type owl:Class ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "display"@en ,
+                                                              "indicate"@en ,
+                                                              "present"@en ,
+                                                              "show"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Melanoma
@@ -977,7 +1000,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NervousSystem
 :NervousSystem rdf:type owl:Class ;
-               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+               rdfs:label "Nervous System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NervousSystemManifestation
@@ -1141,12 +1165,14 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ReproductiveOrgans
 :ReproductiveOrgans rdf:type owl:Class ;
-                    rdfs:subClassOf :UrogenitalSystem .
+                    rdfs:subClassOf :UrogenitalSystem ;
+                    rdfs:label "Reproductive Organs"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratorySystem
 :RespiratorySystem rdf:type owl:Class ;
-                   rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+                   rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+                   rdfs:label "Respiratory System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratoryTractManifestation
@@ -1192,7 +1218,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystem
 :SensorySystem rdf:type owl:Class ;
-               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+               rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+               rdfs:label "Sensory System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystemManifestation
@@ -1239,7 +1266,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SmallIntestine
 :SmallIntestine rdf:type owl:Class ;
-                rdfs:subClassOf :DigestiveSystem .
+                rdfs:subClassOf :DigestiveSystem ;
+                rdfs:label "Small Intenstine"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SmokerLung
@@ -1253,7 +1281,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SpinalCord
 :SpinalCord rdf:type owl:Class ;
-            rdfs:subClassOf :NervousSystem .
+            rdfs:subClassOf :NervousSystem ;
+            rdfs:label "Spinal Cord"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spleen
@@ -1304,7 +1333,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SweatGlands
 :SweatGlands rdf:type owl:Class ;
-             rdfs:subClassOf :IntegumentarySystem .
+             rdfs:subClassOf :IntegumentarySystem ;
+             rdfs:label "Sweat Glands"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sweating
@@ -1359,7 +1389,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ThyroidGland
 :ThyroidGland rdf:type owl:Class ;
-              rdfs:subClassOf :EndocrineSystem .
+              rdfs:subClassOf :EndocrineSystem ;
+              rdfs:label "Thyroid Gland"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Thyroiditis
@@ -1400,7 +1431,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystem
 :UrogenitalSystem rdf:type owl:Class ;
-                  rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> .
+                  rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+                  rdfs:label "Urogenital System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystemManifestation
@@ -1428,7 +1460,8 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WhiteBloodCells
 :WhiteBloodCells rdf:type owl:Class ;
-                 rdfs:subClassOf :ImmuneSystem .
+                 rdfs:subClassOf :ImmuneSystem ;
+                 rdfs:label "White Blood Cells"@en .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus
@@ -1437,7 +1470,8 @@
 
 ###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> rdf:type owl:Class ;
-                                                                                 rdfs:comment "Classification logic based on Systemic Anatomy framework (Terminologia Anatomica, FIPAT 2019) and The 11 Body Systems model (Tortora & Derrickson, 2017). Grouping of 'Locomotor' and 'Urogenital' follows Gray's Anatomy and ICD-11 conventions for functional grouping." .
+                                                                                 <http://purl.org/dc/elements/1.1/source> "Classification logic based on Systemic Anatomy framework (Terminologia Anatomica, FIPAT 2019) and The 11 Body Systems model (Tortora & Derrickson, 2017). Grouping of 'Locomotor' and 'Urogenital' follows Gray's Anatomy and ICD-11 conventions for functional grouping."@en ;
+                                                                                 rdfs:label "Anatomical Structure"@en .
 
 
 ###  https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle
