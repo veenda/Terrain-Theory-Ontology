@@ -12,12 +12,97 @@
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#AppropriationCycle
+:AppropriationCycle rdf:type owl:Class ;
+                    rdfs:subClassOf :TimeCycle .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#AssimilationCycle
+:AssimilationCycle rdf:type owl:Class ;
+                   rdfs:subClassOf :TimeCycle .
+
+
 ###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#BodySystem
 :BodySystem rdf:type owl:Class .
 
 
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#CellularPhase
+:CellularPhase rdf:type owl:Class ;
+               rdfs:subClassOf :TerrainStatus .
+
+
 ###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#DietaryInput
 :DietaryInput rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#ElectricFoods
+:ElectricFoods rdf:type owl:Class ;
+               rdfs:subClassOf :DietaryInput .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#EliminationChannel
+:EliminationChannel rdf:type owl:Class ;
+                    rdfs:subClassOf :BodySystem .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#EliminationCycle
+:EliminationCycle rdf:type owl:Class ;
+                  rdfs:subClassOf :TimeCycle .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#Ginjal
+:Ginjal rdf:type owl:Class ;
+        rdfs:subClassOf :EliminationChannel .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#HumoralPhase
+:HumoralPhase rdf:type owl:Class ;
+              rdfs:subClassOf :TerrainStatus .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#Kulit
+:Kulit rdf:type owl:Class ;
+       rdfs:subClassOf :EliminationChannel .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#MucusFormingFoods
+:MucusFormingFoods rdf:type owl:Class ;
+                   rdfs:subClassOf :DietaryInput .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#MucuslessFoods
+:MucuslessFoods rdf:type owl:Class ;
+                rdfs:subClassOf :DietaryInput .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#ParuParu
+:ParuParu rdf:type owl:Class ;
+          rdfs:subClassOf :EliminationChannel .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#PusForming
+:PusForming rdf:type owl:Class ;
+            rdfs:subClassOf :MucusFormingFoods .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#SeededFruit
+:SeededFruit rdf:type owl:Class ;
+             rdfs:subClassOf :ElectricFoods .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#SistemLimfatik
+:SistemLimfatik rdf:type owl:Class ;
+                rdfs:subClassOf :EliminationChannel .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#SlimeForming
+:SlimeForming rdf:type owl:Class ;
+              rdfs:subClassOf :MucusFormingFoods .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#SoftLeafyGreens
+:SoftLeafyGreens rdf:type owl:Class ;
+                 rdfs:subClassOf :ElectricFoods .
 
 
 ###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#Subject
@@ -30,6 +115,41 @@
 
 ###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TimeCycle
 :TimeCycle rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#UsusBesar
+:UsusBesar rdf:type owl:Class ;
+           rdfs:subClassOf :EliminationChannel .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#1_ExcretionPhase
+<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#1_ExcretionPhase> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf :HumoralPhase .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#2_InflammationPhase
+<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#2_InflammationPhase> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf :HumoralPhase .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#3_DepositionPhase
+<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#3_DepositionPhase> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf :HumoralPhase .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#4_ImpregnationPhase
+<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#4_ImpregnationPhase> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf :CellularPhase .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#5_DegenerationPhase
+<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#5_DegenerationPhase> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf :CellularPhase .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#6_NeoplasmPhase
+<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#6_NeoplasmPhase> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf :CellularPhase .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
