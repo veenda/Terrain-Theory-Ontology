@@ -132,6 +132,17 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Amaurosis
 :Amaurosis rdf:type owl:Class ;
            rdfs:subClassOf :SensorySystemManifestation ,
+                           [ rdf:type owl:Class ;
+                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                             owl:onProperty :affectsSystem ;
+                                             owl:someValuesFrom :Eyes
+                                           ]
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :affectsSystem ;
+                                             owl:someValuesFrom :Nerves
+                                           ]
+                                         )
+                           ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :hasTerrainPhase ;
                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
@@ -150,6 +161,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Anosmia
 :Anosmia rdf:type owl:Class ;
          rdfs:subClassOf :SensorySystemManifestation ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :affectsSystem ;
+                           owl:someValuesFrom :Nose
+                         ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :hasTerrainPhase ;
                            owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
@@ -272,7 +287,8 @@
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasTerrainPhase ;
                               owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
-                            ] .
+                            ] ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "TBC"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cancer
@@ -326,6 +342,10 @@
 :Chalazion rdf:type owl:Class ;
            rdfs:subClassOf :SensorySystemManifestation ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty :affectsSystem ;
+                             owl:someValuesFrom :Eyelid
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :hasTerrainPhase ;
                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
                            ] .
@@ -334,6 +354,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cholesteatoma
 :Cholesteatoma rdf:type owl:Class ;
                rdfs:subClassOf :SensorySystemManifestation ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :affectsSystem ;
+                                 owl:someValuesFrom :MiddleEar
+                               ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasTerrainPhase ;
                                  owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
@@ -360,7 +384,8 @@
                                      owl:onProperty :hasTerrainPhase ;
                                      owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
                                    ] ;
-                   rdfs:label "Chronic Bronchitis"@en .
+                   rdfs:label "Chronic Bronchitis"@en ;
+                   <http://www.w3.org/2004/02/skos/core#altLabel> "TBC"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicGastritis
@@ -427,6 +452,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Conjunctivitis
 :Conjunctivitis rdf:type owl:Class ;
                 rdfs:subClassOf :SensorySystemManifestation ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :affectsSystem ;
+                                  owl:someValuesFrom :Conjunctiva
+                                ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasTerrainPhase ;
                                   owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
@@ -814,9 +843,18 @@
 :Iridocyclitis rdf:type owl:Class ;
                rdfs:subClassOf :SensorySystemManifestation ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty :affectsSystem ;
+                                 owl:someValuesFrom :Iris
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasTerrainPhase ;
                                  owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
                                ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Iris
+:Iris rdf:type owl:Class ;
+      rdfs:subClassOf :Eyes .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#JointPains
@@ -985,9 +1023,14 @@
 :MacularDegeneration rdf:type owl:Class ;
                      rdfs:subClassOf :SensorySystemManifestation ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty :affectsSystem ;
+                                       owl:someValuesFrom :Retina
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty :hasTerrainPhase ;
                                        owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
-                                     ] .
+                                     ] ;
+                     rdfs:label "Macular Degeneration"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Malabsorbtion
@@ -1003,9 +1046,14 @@
 :MalignantTumor rdf:type owl:Class ;
                 rdfs:subClassOf :SensorySystemManifestation ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty :affectsSystem ;
+                                  owl:someValuesFrom :SensorySystem
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasTerrainPhase ;
                                   owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
-                                ] .
+                                ] ;
+                rdfs:label "Malignant Tumor"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mania
@@ -1206,6 +1254,11 @@
                                     ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nose
+:Nose rdf:type owl:Class ;
+      rdfs:subClassOf :SensorySystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Obesity
 :Obesity rdf:type owl:Class ;
          rdfs:subClassOf :MetabolismManifestation ,
@@ -1228,14 +1281,23 @@
 :OtitisMedia rdf:type owl:Class ;
              rdfs:subClassOf :SensorySystemManifestation ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty :affectsSystem ;
+                               owl:someValuesFrom :MiddleEar
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasTerrainPhase ;
                                owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
-                             ] .
+                             ] ;
+             rdfs:label "Otitis Media"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Otorrhea
 :Otorrhea rdf:type owl:Class ;
           rdfs:subClassOf :SensorySystemManifestation ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :affectsSystem ;
+                            owl:someValuesFrom :Ears
+                          ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasTerrainPhase ;
                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
@@ -1553,9 +1615,22 @@
                           ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#TearDucts
+:TearDucts rdf:type owl:Class ;
+           rdfs:subClassOf :Eyes .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tears
 :Tears rdf:type owl:Class ;
        rdfs:subClassOf :SensorySystemManifestation ,
+                       [ rdf:type owl:Class ;
+                         owl:unionOf ( :TearDucts
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :affectsSystem ;
+                                         owl:someValuesFrom :Eyes
+                                       ]
+                                     )
+                       ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasTerrainPhase ;
                          owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
@@ -1612,6 +1687,14 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tinnitus
 :Tinnitus rdf:type owl:Class ;
           rdfs:subClassOf :SensorySystemManifestation ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :affectsSystem ;
+                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :InnerEar
+                                                               :Nerves
+                                                             )
+                                               ]
+                          ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasTerrainPhase ;
                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
