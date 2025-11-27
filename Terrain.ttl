@@ -115,6 +115,10 @@
 :Alzheimer rdf:type owl:Class ;
            rdfs:subClassOf :NervousSystemManifestation ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty :affectsSystem ;
+                             owl:someValuesFrom :Brain
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :hasTerrainPhase ;
                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
                            ] .
@@ -281,6 +285,10 @@
 :Cerebrosclerosis rdf:type owl:Class ;
                   rdfs:subClassOf :NervousSystemManifestation ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty :affectsSystem ;
+                                    owl:someValuesFrom :Brain
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasTerrainPhase ;
                                     owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
                                   ] .
@@ -416,6 +424,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DifficultyConcentrating
 :DifficultyConcentrating rdf:type owl:Class ;
                          rdfs:subClassOf :NervousSystemManifestation ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :affectsSystem ;
+                                           owl:someValuesFrom :Brain
+                                         ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasTerrainPhase ;
                                            owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
@@ -575,6 +587,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gliosarcoma
 :Gliosarcoma rdf:type owl:Class ;
              rdfs:subClassOf :NervousSystemManifestation ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :affectsSystem ;
+                               owl:someValuesFrom :Brain
+                             ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasTerrainPhase ;
                                owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
@@ -941,9 +957,18 @@
                           ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Meninges
+:Meninges rdf:type owl:Class ;
+          rdfs:subClassOf :NervousSystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Meningitis
 :Meningitis rdf:type owl:Class ;
             rdfs:subClassOf :NervousSystemManifestation ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :affectsSystem ;
+                              owl:someValuesFrom :Meninges
+                            ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasTerrainPhase ;
                               owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
@@ -986,6 +1011,22 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Migraine
 :Migraine rdf:type owl:Class ;
           rdfs:subClassOf :NervousSystemManifestation ,
+                          [ rdf:type owl:Class ;
+                            owl:unionOf ( [ rdf:type owl:Class ;
+                                            owl:unionOf ( :Brain
+                                                          :Nerves
+                                                        )
+                                          ]
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :affectsSystem ;
+                                            owl:someValuesFrom [ owl:intersectionOf ( :Brain
+                                                                                      :Nerves
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
+                                                               ]
+                                          ]
+                                        )
+                          ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasTerrainPhase ;
                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
