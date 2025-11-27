@@ -111,6 +111,11 @@
                          ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alveoli
+:Alveoli rdf:type owl:Class ;
+         rdfs:subClassOf :Lungs .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alzheimer
 :Alzheimer rdf:type owl:Class ;
            rdfs:subClassOf :NervousSystemManifestation ,
@@ -226,30 +231,44 @@
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bronchi
 :Bronchi rdf:type owl:Class ;
-         rdfs:subClassOf :RespiratorySystem .
+         rdfs:subClassOf :Lungs .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BronchialCarcinoma
 :BronchialCarcinoma rdf:type owl:Class ;
                     rdfs:subClassOf :RespiratoryTractManifestation ,
                                     [ rdf:type owl:Restriction ;
+                                      owl:onProperty :affectsSystem ;
+                                      owl:someValuesFrom :Bronchi
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTerrainPhase ;
                                       owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
-                                    ] .
+                                    ] ;
+                    rdfs:label "Bronchial Carcinoma"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bronchiectasia
 :Bronchiectasia rdf:type owl:Class ;
                 rdfs:subClassOf :RespiratoryTractManifestation ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty :affectsSystem ;
+                                  owl:someValuesFrom :Bronchi
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasTerrainPhase ;
                                   owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
-                                ] .
+                                ] ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "Bronchiectasis"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bronchitis
 :Bronchitis rdf:type owl:Class ;
             rdfs:subClassOf :RespiratoryTractManifestation ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :affectsSystem ;
+                              owl:someValuesFrom :Bronchi
+                            ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasTerrainPhase ;
                               owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
@@ -334,9 +353,14 @@
 :ChronicBronchitis rdf:type owl:Class ;
                    rdfs:subClassOf :RespiratoryTractManifestation ,
                                    [ rdf:type owl:Restriction ;
+                                     owl:onProperty :affectsSystem ;
+                                     owl:someValuesFrom :Bronchi
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasTerrainPhase ;
                                      owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
-                                   ] .
+                                   ] ;
+                   rdfs:label "Chronic Bronchitis"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicGastritis
@@ -395,6 +419,11 @@
                              ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Conjunctiva
+:Conjunctiva rdf:type owl:Class ;
+             rdfs:subClassOf :Eyes .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Conjunctivitis
 :Conjunctivitis rdf:type owl:Class ;
                 rdfs:subClassOf :SensorySystemManifestation ,
@@ -416,6 +445,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cough
 :Cough rdf:type owl:Class ;
        rdfs:subClassOf :RespiratoryTractManifestation ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :affectsSystem ;
+                         owl:someValuesFrom :RespiratorySystem
+                       ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasTerrainPhase ;
                          owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
@@ -472,6 +505,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Emphysema
 :Emphysema rdf:type owl:Class ;
            rdfs:subClassOf :RespiratoryTractManifestation ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :affectsSystem ;
+                             owl:someValuesFrom :Alveoli
+                           ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :hasTerrainPhase ;
                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
@@ -537,10 +574,28 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Expectoration
 :Expectoration rdf:type owl:Class ;
                rdfs:subClassOf :RespiratoryTractManifestation ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Bronchi
+                                               :Lungs
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :affectsSystem ;
+                                                 owl:someValuesFrom [ owl:intersectionOf ( :Bronchi
+                                                                                           :Lungs
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ]
+                                               ]
+                                             )
+                               ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasTerrainPhase ;
                                  owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
                                ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Eyelid
+:Eyelid rdf:type owl:Class ;
+        rdfs:subClassOf :Eyes .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Eyes
@@ -732,6 +787,12 @@
                                     owl:onProperty :hasTerrainPhase ;
                                     owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
                                   ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#InnerEar
+:InnerEar rdf:type owl:Class ;
+          rdfs:subClassOf :Ears ;
+          rdfs:label "Inner Ear"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#InsufficiencyOfTheLymphSystem
@@ -1028,15 +1089,18 @@
                          rdfs:label "Metabolism Manifestation"@en .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MiddleEar
+:MiddleEar rdf:type owl:Class ;
+           rdfs:subClassOf :Ears ;
+           rdfs:label "Middle Ear"@en .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Migraine
 :Migraine rdf:type owl:Class ;
           rdfs:subClassOf :NervousSystemManifestation ,
                           [ rdf:type owl:Class ;
-                            owl:unionOf ( [ rdf:type owl:Class ;
-                                            owl:unionOf ( :Brain
-                                                          :Nerves
-                                                        )
-                                          ]
+                            owl:unionOf ( :Brain
+                                          :Nerves
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty :affectsSystem ;
                                             owl:someValuesFrom [ owl:intersectionOf ( :Brain
@@ -1201,6 +1265,11 @@
                          ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pleura
+:Pleura rdf:type owl:Class ;
+        rdfs:subClassOf :Lungs .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Polycythaemia
 :Polycythaemia rdf:type owl:Class ;
                rdfs:subClassOf :BloodManifestation ,
@@ -1297,6 +1366,11 @@
                                  ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Retina
+:Retina rdf:type owl:Class ;
+        rdfs:subClassOf :Eyes .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sarcoma
 :Sarcoma rdf:type owl:Class ;
          rdfs:subClassOf :LocomotorSystemManifestation ,
@@ -1350,6 +1424,10 @@
 :Silicosis rdf:type owl:Class ;
            rdfs:subClassOf :RespiratoryTractManifestation ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty :affectsSystem ;
+                             owl:someValuesFrom :Lungs
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :hasTerrainPhase ;
                              owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
                            ] .
@@ -1394,9 +1472,14 @@
 :SmokerLung rdf:type owl:Class ;
             rdfs:subClassOf :RespiratoryTractManifestation ,
                             [ rdf:type owl:Restriction ;
+                              owl:onProperty :affectsSystem ;
+                              owl:someValuesFrom :Lungs
+                            ] ,
+                            [ rdf:type owl:Restriction ;
                               owl:onProperty :hasTerrainPhase ;
                               owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
-                            ] .
+                            ] ;
+            rdfs:label "Smoker's Lung"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SpinalCord
@@ -1552,9 +1635,13 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrinalTractInfection
 :UrinalTractInfection rdf:type owl:Class ;
                       rdfs:subClassOf :UrogenitalSystemManifestation ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty :affectsSystem ;
-                                        owl:someValuesFrom :UrogenitalSystem
+                                      [ rdf:type owl:Class ;
+                                        owl:unionOf ( :Urethra
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :affectsSystem ;
+                                                        owl:someValuesFrom :UrogenitalSystem
+                                                      ]
+                                                    )
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasTerrainPhase ;
