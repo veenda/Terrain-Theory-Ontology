@@ -387,6 +387,11 @@
                        ] .
 
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Dermis
+:Dermis rdf:type owl:Class ;
+        rdfs:subClassOf :IntegumentarySystem .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DiabetesMellitus
 :DiabetesMellitus rdf:type owl:Class ;
                   rdfs:subClassOf :MetabolismManifestation ,
@@ -782,7 +787,8 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystem
 :LocomotorSystem rdf:type owl:Class ;
                  rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
-                 rdfs:label "Locomotor System"@en .
+                 rdfs:label "Locomotor System"@en ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Musculoskeletal System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystemManifestation
@@ -844,7 +850,8 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphaticSystem
 :LymphaticSystem rdf:type owl:Class ;
                  rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
-                 rdfs:label "Lymphatic System"@en .
+                 rdfs:label "Lymphatic System"@en ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Lymphoid System"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphedema
@@ -1225,6 +1232,12 @@
                                owl:onProperty :hasTerrainPhase ;
                                owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
                              ] .
+
+
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebaceuousGlands
+:SebaceuousGlands rdf:type owl:Class ;
+                  rdfs:subClassOf :IntegumentarySystem ;
+                  rdfs:label "Sebaceous Glands"@en .
 
 
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystem
