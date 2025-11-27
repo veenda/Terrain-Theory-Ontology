@@ -29,6 +29,10 @@
 #    Object Properties
 #################################################################
 
+###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#affectsSystem
+:affectsSystem rdf:type owl:ObjectProperty .
+
+
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasTerrainPhase
 :hasTerrainPhase rdf:type owl:ObjectProperty ;
                  rdfs:domain :Manifestation ;
@@ -51,6 +55,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Acne
 :Acne rdf:type owl:Class ;
       rdfs:subClassOf :SkinManifestation ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :affectsSystem ;
+                        owl:someValuesFrom :SebaceuousGlands
+                      ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasTerrainPhase ;
                         owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase>
@@ -93,6 +101,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Allergy
 :Allergy rdf:type owl:Class ;
          rdfs:subClassOf :SkinManifestation ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :affectsSystem ;
+                           owl:someValuesFrom :IntegumentarySystem
+                         ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :hasTerrainPhase ;
                            owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase>
@@ -920,6 +932,10 @@
 :Melanoma rdf:type owl:Class ;
           rdfs:subClassOf :SkinManifestation ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :affectsSystem ;
+                            owl:someValuesFrom :Epidermis
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :hasTerrainPhase ;
                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase>
                           ] .
@@ -1002,6 +1018,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Naevi
 :Naevi rdf:type owl:Class ;
        rdfs:subClassOf :SkinManifestation ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :affectsSystem ;
+                         owl:someValuesFrom :Dermis
+                       ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasTerrainPhase ;
                          owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase>
@@ -1229,6 +1249,10 @@
 :Scleroderma rdf:type owl:Class ;
              rdfs:subClassOf :SkinManifestation ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty :affectsSystem ;
+                               owl:someValuesFrom :Dermis
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasTerrainPhase ;
                                owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase>
                              ] .
@@ -1366,6 +1390,10 @@
 ###  http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sweating
 :Sweating rdf:type owl:Class ;
           rdfs:subClassOf :SkinManifestation ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :affectsSystem ;
+                            owl:someValuesFrom :SweatGlands
+                          ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasTerrainPhase ;
                             owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase>
