@@ -136,6 +136,11 @@ _:genid3 rdf:rest rdf:nil .
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AutonomicNervousSystem> rdfs:label "Autonomic Nervous System"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cartilage
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cartilage> a owl:Class ;
+	rdfs:subClassOf :LocomotorSystem .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FrontalLobe
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FrontalLobe> a owl:Class ;
@@ -158,6 +163,16 @@ _:genid3 rdf:rest rdf:nil .
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Neurotransmitter> a owl:Class ;
 	rdfs:subClassOf :Brain .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spine
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spine> a owl:Class ;
+	rdfs:subClassOf :Bones .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tendons
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tendons> a owl:Class ;
+	rdfs:subClassOf :LocomotorSystem .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus
 
@@ -544,21 +559,27 @@ _:genid51 a owl:Restriction ;
 	rdfs:subClassOf :LocomotorSystemManifestation , _:genid52 .
 
 _:genid52 a owl:Restriction ;
+	owl:onProperty :affectsSystem ;
+	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cartilage> .
+
+:Chondroma rdfs:subClassOf _:genid53 .
+
+_:genid53 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ChronicBronchitis
 
 :ChronicBronchitis a owl:Class ;
-	rdfs:subClassOf :RespiratoryTractManifestation , _:genid53 .
+	rdfs:subClassOf :RespiratoryTractManifestation , _:genid54 .
 
-_:genid53 a owl:Restriction ;
+_:genid54 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Bronchi .
 
-:ChronicBronchitis rdfs:subClassOf _:genid54 .
+:ChronicBronchitis rdfs:subClassOf _:genid55 .
 
-_:genid54 a owl:Restriction ;
+_:genid55 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
@@ -568,42 +589,74 @@ _:genid54 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ChronicGastritis
 
 :ChronicGastritis a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid55 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid56 .
 
-_:genid55 a owl:Restriction ;
+_:genid56 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ChronicInfections
 
 :ChronicInfections a owl:Class ;
-	rdfs:subClassOf :ImmuneSystemManifestation , _:genid56 .
+	rdfs:subClassOf :ImmuneSystemManifestation , _:genid57 .
 
-_:genid56 a owl:Restriction ;
+_:genid57 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ChronicRheumatoidArthritis
 
 :ChronicRheumatoidArthritis a owl:Class ;
-	rdfs:subClassOf :LocomotorSystemManifestation , _:genid57 .
+	rdfs:subClassOf :LocomotorSystemManifestation , _:genid58 .
 
-_:genid57 a owl:Restriction ;
+_:genid58 a owl:Restriction ;
+	owl:onProperty :affectsSystem ;
+	owl:someValuesFrom _:genid59 .
+
+_:genid59 a owl:Class ;
+	owl:unionOf _:genid64 .
+
+_:genid64 a rdf:List ;
+	rdf:first :Joints ;
+	rdf:rest _:genid60 .
+
+_:genid60 a rdf:List ;
+	rdf:first _:genid61 .
+
+_:genid61 owl:intersectionOf _:genid63 .
+
+_:genid63 a rdf:List ;
+	rdf:first :ImmuneSystem ;
+	rdf:rest _:genid62 .
+
+_:genid62 a rdf:List ;
+	rdf:first :Joints ;
+	rdf:rest rdf:nil .
+
+_:genid61 a owl:Class .
+
+_:genid60 rdf:rest rdf:nil .
+
+:ChronicRheumatoidArthritis rdfs:subClassOf _:genid65 .
+
+_:genid65 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+
+:ChronicRheumatoidArthritis rdfs:label "Chronic Rheumatoid Arthritis"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ChronicUrinaryTractInfection
 
 :ChronicUrinaryTractInfection a owl:Class ;
-	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid58 .
+	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid66 .
 
-_:genid58 a owl:Restriction ;
+_:genid66 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :UrogenitalSystem .
 
-:ChronicUrinaryTractInfection rdfs:subClassOf _:genid59 .
+:ChronicUrinaryTractInfection rdfs:subClassOf _:genid67 .
 
-_:genid59 a owl:Restriction ;
+_:genid67 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
@@ -618,9 +671,9 @@ _:genid59 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ColonCancer
 
 :ColonCancer a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid60 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid68 .
 
-_:genid60 a owl:Restriction ;
+_:genid68 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
@@ -632,39 +685,39 @@ _:genid60 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Conjunctivitis
 
 :Conjunctivitis a owl:Class ;
-	rdfs:subClassOf :SensorySystemManifestation , _:genid61 .
+	rdfs:subClassOf :SensorySystemManifestation , _:genid69 .
 
-_:genid61 a owl:Restriction ;
+_:genid69 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Conjunctiva .
 
-:Conjunctivitis rdfs:subClassOf _:genid62 .
+:Conjunctivitis rdfs:subClassOf _:genid70 .
 
-_:genid62 a owl:Restriction ;
+_:genid70 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/CoronaryHeartDisease
 
 :CoronaryHeartDisease a owl:Class ;
-	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid63 .
+	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid71 .
 
-_:genid63 a owl:Restriction ;
+_:genid71 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Cough
 
 :Cough a owl:Class ;
-	rdfs:subClassOf :RespiratoryTractManifestation , _:genid64 .
+	rdfs:subClassOf :RespiratoryTractManifestation , _:genid72 .
 
-_:genid64 a owl:Restriction ;
+_:genid72 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :RespiratorySystem .
 
-:Cough rdfs:subClassOf _:genid65 .
+:Cough rdfs:subClassOf _:genid73 .
 
-_:genid65 a owl:Restriction ;
+_:genid73 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
@@ -676,24 +729,24 @@ _:genid65 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/DiabetesMellitus
 
 :DiabetesMellitus a owl:Class ;
-	rdfs:subClassOf :MetabolismManifestation , _:genid66 .
+	rdfs:subClassOf :MetabolismManifestation , _:genid74 .
 
-_:genid66 a owl:Restriction ;
+_:genid74 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/DifficultyConcentrating
 
 :DifficultyConcentrating a owl:Class ;
-	rdfs:subClassOf :NervousSystemManifestation , _:genid67 .
+	rdfs:subClassOf :NervousSystemManifestation , _:genid75 .
 
-_:genid67 a owl:Restriction ;
+_:genid75 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Brain .
 
-:DifficultyConcentrating rdfs:subClassOf _:genid68 .
+:DifficultyConcentrating rdfs:subClassOf _:genid76 .
 
-_:genid68 a owl:Restriction ;
+_:genid76 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
@@ -711,33 +764,33 @@ _:genid68 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ElectrolyteShift
 
 :ElectrolyteShift a owl:Class ;
-	rdfs:subClassOf :MetabolismManifestation , _:genid69 .
+	rdfs:subClassOf :MetabolismManifestation , _:genid77 .
 
-_:genid69 a owl:Restriction ;
+_:genid77 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Emphysema
 
 :Emphysema a owl:Class ;
-	rdfs:subClassOf :RespiratoryTractManifestation , _:genid70 .
+	rdfs:subClassOf :RespiratoryTractManifestation , _:genid78 .
 
-_:genid70 a owl:Restriction ;
+_:genid78 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Alveoli .
 
-:Emphysema rdfs:subClassOf _:genid71 .
+:Emphysema rdfs:subClassOf _:genid79 .
 
-_:genid71 a owl:Restriction ;
+_:genid79 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Endocarditis
 
 :Endocarditis a owl:Class ;
-	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid72 .
+	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid80 .
 
-_:genid72 a owl:Restriction ;
+_:genid80 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
@@ -750,26 +803,26 @@ _:genid72 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/EndogenousDepression
 
 :EndogenousDepression a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid73 .
+	rdfs:subClassOf :PsycheManifestation , _:genid81 .
 
-_:genid73 a owl:Restriction ;
+_:genid81 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
-	owl:someValuesFrom _:genid74 .
+	owl:someValuesFrom _:genid82 .
 
-_:genid74 a owl:Class ;
-	owl:unionOf _:genid76 .
+_:genid82 a owl:Class ;
+	owl:unionOf _:genid84 .
 
-_:genid76 a rdf:List ;
+_:genid84 a rdf:List ;
 	rdf:first <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LimbicSystem> ;
-	rdf:rest _:genid75 .
+	rdf:rest _:genid83 .
 
-_:genid75 a rdf:List ;
+_:genid83 a rdf:List ;
 	rdf:first <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Neurotransmitter> ;
 	rdf:rest rdf:nil .
 
-:EndogenousDepression rdfs:subClassOf _:genid77 .
+:EndogenousDepression rdfs:subClassOf _:genid85 .
 
-_:genid77 a owl:Restriction ;
+_:genid85 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
@@ -778,18 +831,24 @@ _:genid77 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Endothelioma
 
 :Endothelioma a owl:Class ;
-	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid78 .
+	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid86 .
 
-_:genid78 a owl:Restriction ;
+_:genid86 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Epicondylitis
 
 :Epicondylitis a owl:Class ;
-	rdfs:subClassOf :LocomotorSystemManifestation , _:genid79 .
+	rdfs:subClassOf :LocomotorSystemManifestation , _:genid87 .
 
-_:genid79 a owl:Restriction ;
+_:genid87 a owl:Restriction ;
+	owl:onProperty :affectsSystem ;
+	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tendons> .
+
+:Epicondylitis rdfs:subClassOf _:genid88 .
+
+_:genid88 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
@@ -801,52 +860,58 @@ _:genid79 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Exostosis
 
 :Exostosis a owl:Class ;
-	rdfs:subClassOf :LocomotorSystemManifestation , _:genid80 .
+	rdfs:subClassOf :LocomotorSystemManifestation , _:genid89 .
 
-_:genid80 a owl:Restriction ;
+_:genid89 a owl:Restriction ;
+	owl:onProperty :affectsSystem ;
+	owl:someValuesFrom :Bones .
+
+:Exostosis rdfs:subClassOf _:genid90 .
+
+_:genid90 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Expectoration
 
 :Expectoration a owl:Class ;
-	rdfs:subClassOf :RespiratoryTractManifestation , _:genid81 .
+	rdfs:subClassOf :RespiratoryTractManifestation , _:genid91 .
 
-_:genid81 a owl:Class ;
-	owl:unionOf _:genid88 .
+_:genid91 a owl:Class ;
+	owl:unionOf _:genid98 .
 
-_:genid88 a rdf:List ;
+_:genid98 a rdf:List ;
 	rdf:first :Bronchi ;
-	rdf:rest _:genid87 .
+	rdf:rest _:genid97 .
 
-_:genid87 a rdf:List ;
+_:genid97 a rdf:List ;
 	rdf:first :Lungs ;
-	rdf:rest _:genid82 .
+	rdf:rest _:genid92 .
 
-_:genid82 a rdf:List ;
-	rdf:first _:genid83 .
+_:genid92 a rdf:List ;
+	rdf:first _:genid93 .
 
-_:genid83 a owl:Restriction ;
+_:genid93 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
-	owl:someValuesFrom _:genid84 .
+	owl:someValuesFrom _:genid94 .
 
-_:genid84 owl:intersectionOf _:genid86 .
+_:genid94 owl:intersectionOf _:genid96 .
 
-_:genid86 a rdf:List ;
+_:genid96 a rdf:List ;
 	rdf:first :Bronchi ;
-	rdf:rest _:genid85 .
+	rdf:rest _:genid95 .
 
-_:genid85 a rdf:List ;
+_:genid95 a rdf:List ;
 	rdf:first :Lungs ;
 	rdf:rest rdf:nil .
 
-_:genid84 a owl:Class .
+_:genid94 a owl:Class .
 
-_:genid82 rdf:rest rdf:nil .
+_:genid92 rdf:rest rdf:nil .
 
-:Expectoration rdfs:subClassOf _:genid89 .
+:Expectoration rdfs:subClassOf _:genid99 .
 
-_:genid89 a owl:Restriction ;
+_:genid99 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
@@ -863,33 +928,33 @@ _:genid89 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Fibrosis
 
 :Fibrosis a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid90 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid100 .
 
-_:genid90 a owl:Restriction ;
+_:genid100 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/FunctionalHeartComplaint
 
 :FunctionalHeartComplaint a owl:Class ;
-	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid91 .
+	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid101 .
 
-_:genid91 a owl:Restriction ;
+_:genid101 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/FunctionalPsychologicalDistrubance
 
 :FunctionalPsychologicalDistrubance a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid92 .
+	rdfs:subClassOf :PsycheManifestation , _:genid102 .
 
-_:genid92 a owl:Restriction ;
+_:genid102 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AutonomicNervousSystem> .
 
-:FunctionalPsychologicalDistrubance rdfs:subClassOf _:genid93 .
+:FunctionalPsychologicalDistrubance rdfs:subClassOf _:genid103 .
 
-_:genid93 a owl:Restriction ;
+_:genid103 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 
@@ -898,18 +963,18 @@ _:genid93 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Gastritis
 
 :Gastritis a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid94 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid104 .
 
-_:genid94 a owl:Restriction ;
+_:genid104 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Gastroenteritis
 
 :Gastroenteritis a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid95 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid105 .
 
-_:genid95 a owl:Restriction ;
+_:genid105 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
@@ -922,51 +987,51 @@ _:genid95 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Gliosarcoma
 
 :Gliosarcoma a owl:Class ;
-	rdfs:subClassOf :NervousSystemManifestation , _:genid96 .
+	rdfs:subClassOf :NervousSystemManifestation , _:genid106 .
 
-_:genid96 a owl:Restriction ;
+_:genid106 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Brain .
 
-:Gliosarcoma rdfs:subClassOf _:genid97 .
+:Gliosarcoma rdfs:subClassOf _:genid107 .
 
-_:genid97 a owl:Restriction ;
+_:genid107 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/GlobusSensation
 
 :GlobusSensation a owl:Class ;
-	rdfs:subClassOf :HormoneSystemManifestation , _:genid98 .
+	rdfs:subClassOf :HormoneSystemManifestation , _:genid108 .
 
-_:genid98 a owl:Restriction ;
+_:genid108 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/GlucoseIntolerance
 
 :GlucoseIntolerance a owl:Class ;
-	rdfs:subClassOf :HormoneSystemManifestation , _:genid99 .
+	rdfs:subClassOf :HormoneSystemManifestation , _:genid109 .
 
-_:genid99 a owl:Restriction ;
+_:genid109 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Goitre
 
 :Goitre a owl:Class ;
-	rdfs:subClassOf :HormoneSystemManifestation , _:genid100 .
+	rdfs:subClassOf :HormoneSystemManifestation , _:genid110 .
 
-_:genid100 a owl:Restriction ;
+_:genid110 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Gout
 
 :Gout a owl:Class ;
-	rdfs:subClassOf :MetabolismManifestation , _:genid101 .
+	rdfs:subClassOf :MetabolismManifestation , _:genid111 .
 
-_:genid101 a owl:Restriction ;
+_:genid111 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
@@ -978,27 +1043,27 @@ _:genid101 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/HeartFailure
 
 :HeartFailure a owl:Class ;
-	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid102 .
+	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid112 .
 
-_:genid102 a owl:Restriction ;
+_:genid112 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Heartburn
 
 :Heartburn a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid103 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid113 .
 
-_:genid103 a owl:Restriction ;
+_:genid113 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/HodgkinLymphoma
 
 :HodgkinLymphoma a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid104 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid114 .
 
-_:genid104 a owl:Restriction ;
+_:genid114 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
@@ -1011,15 +1076,15 @@ _:genid104 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/HyperkineticSyndrome
 
 :HyperkineticSyndrome a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid105 .
+	rdfs:subClassOf :PsycheManifestation , _:genid115 .
 
-_:genid105 a owl:Restriction ;
+_:genid115 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FrontalLobe> .
 
-:HyperkineticSyndrome rdfs:subClassOf _:genid106 .
+:HyperkineticSyndrome rdfs:subClassOf _:genid116 .
 
-_:genid106 a owl:Restriction ;
+_:genid116 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
@@ -1029,18 +1094,18 @@ _:genid106 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/HyperplasticGastritis
 
 :HyperplasticGastritis a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid107 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid117 .
 
-_:genid107 a owl:Restriction ;
+_:genid117 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Hyperthyroidism
 
 :Hyperthyroidism a owl:Class ;
-	rdfs:subClassOf :HormoneSystemManifestation , _:genid108 .
+	rdfs:subClassOf :HormoneSystemManifestation , _:genid118 .
 
-_:genid108 a owl:Restriction ;
+_:genid118 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
@@ -1059,9 +1124,9 @@ _:genid108 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Immunodeficiency
 
 :Immunodeficiency a owl:Class ;
-	rdfs:subClassOf :ImmuneSystemManifestation , _:genid109 .
+	rdfs:subClassOf :ImmuneSystemManifestation , _:genid119 .
 
-_:genid109 a owl:Restriction ;
+_:genid119 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
@@ -1074,9 +1139,9 @@ _:genid109 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/InsufficiencyOfTheLymphSystem
 
 :InsufficiencyOfTheLymphSystem a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid110 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid120 .
 
-_:genid110 a owl:Restriction ;
+_:genid120 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
@@ -1089,15 +1154,15 @@ _:genid110 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Iridocyclitis
 
 :Iridocyclitis a owl:Class ;
-	rdfs:subClassOf :SensorySystemManifestation , _:genid111 .
+	rdfs:subClassOf :SensorySystemManifestation , _:genid121 .
 
-_:genid111 a owl:Restriction ;
+_:genid121 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Iris .
 
-:Iridocyclitis rdfs:subClassOf _:genid112 .
+:Iridocyclitis rdfs:subClassOf _:genid122 .
 
-_:genid112 a owl:Restriction ;
+_:genid122 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
@@ -1109,11 +1174,19 @@ _:genid112 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/JointPains
 
 :JointPains a owl:Class ;
-	rdfs:subClassOf :LocomotorSystemManifestation , _:genid113 .
+	rdfs:subClassOf :LocomotorSystemManifestation , _:genid123 .
 
-_:genid113 a owl:Restriction ;
+_:genid123 a owl:Restriction ;
+	owl:onProperty :affectsSystem ;
+	owl:someValuesFrom :Joints .
+
+:JointPains rdfs:subClassOf _:genid124 .
+
+_:genid124 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+
+:JointPains rdfs:label "Joint Pains"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Joints
 
@@ -1123,15 +1196,15 @@ _:genid113 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/KidneyStones
 
 :KidneyStones a owl:Class ;
-	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid114 .
+	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid125 .
 
-_:genid114 a owl:Restriction ;
+_:genid125 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Kidneys .
 
-:KidneyStones rdfs:subClassOf _:genid115 .
+:KidneyStones rdfs:subClassOf _:genid126 .
 
-_:genid115 a owl:Restriction ;
+_:genid126 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
@@ -1145,27 +1218,27 @@ _:genid115 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Leucocytosis
 
 :Leucocytosis a owl:Class ;
-	rdfs:subClassOf :BloodManifestation , _:genid116 .
+	rdfs:subClassOf :BloodManifestation , _:genid127 .
 
-_:genid116 a owl:Restriction ;
+_:genid127 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Leukemia
 
 :Leukemia a owl:Class ;
-	rdfs:subClassOf :BloodManifestation , _:genid117 .
+	rdfs:subClassOf :BloodManifestation , _:genid128 .
 
-_:genid117 a owl:Restriction ;
+_:genid128 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/LipidMetabolismDisturbance
 
 :LipidMetabolismDisturbance a owl:Class ;
-	rdfs:subClassOf :MetabolismManifestation , _:genid118 .
+	rdfs:subClassOf :MetabolismManifestation , _:genid129 .
 
-_:genid118 a owl:Restriction ;
+_:genid129 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
@@ -1177,9 +1250,9 @@ _:genid118 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/LiverCirrhosis
 
 :LiverCirrhosis a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid119 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid130 .
 
-_:genid119 a owl:Restriction ;
+_:genid130 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
@@ -1204,9 +1277,9 @@ _:genid119 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Lymph-nodeSwelling
 
 :Lymph-nodeSwelling a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid120 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid131 .
 
-_:genid120 a owl:Restriction ;
+_:genid131 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
@@ -1231,18 +1304,18 @@ _:genid120 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Lymphadenitis
 
 :Lymphadenitis a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid121 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid132 .
 
-_:genid121 a owl:Restriction ;
+_:genid132 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Lymphangitis
 
 :Lymphangitis a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid122 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid133 .
 
-_:genid122 a owl:Restriction ;
+_:genid133 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
@@ -1256,33 +1329,33 @@ _:genid122 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Lymphedema
 
 :Lymphedema a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid123 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid134 .
 
-_:genid123 a owl:Restriction ;
+_:genid134 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Lymphoma
 
 :Lymphoma a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid124 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid135 .
 
-_:genid124 a owl:Restriction ;
+_:genid135 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/MacularDegeneration
 
 :MacularDegeneration a owl:Class ;
-	rdfs:subClassOf :SensorySystemManifestation , _:genid125 .
+	rdfs:subClassOf :SensorySystemManifestation , _:genid136 .
 
-_:genid125 a owl:Restriction ;
+_:genid136 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Retina .
 
-:MacularDegeneration rdfs:subClassOf _:genid126 .
+:MacularDegeneration rdfs:subClassOf _:genid137 .
 
-_:genid126 a owl:Restriction ;
+_:genid137 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
@@ -1291,24 +1364,24 @@ _:genid126 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Malabsorbtion
 
 :Malabsorbtion a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid127 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid138 .
 
-_:genid127 a owl:Restriction ;
+_:genid138 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/MalignantTumor
 
 :MalignantTumor a owl:Class ;
-	rdfs:subClassOf :SensorySystemManifestation , _:genid128 .
+	rdfs:subClassOf :SensorySystemManifestation , _:genid139 .
 
-_:genid128 a owl:Restriction ;
+_:genid139 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :SensorySystem .
 
-:MalignantTumor rdfs:subClassOf _:genid129 .
+:MalignantTumor rdfs:subClassOf _:genid140 .
 
-_:genid129 a owl:Restriction ;
+_:genid140 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
@@ -1317,15 +1390,15 @@ _:genid129 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Mania
 
 :Mania a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid130 .
+	rdfs:subClassOf :PsycheManifestation , _:genid141 .
 
-_:genid130 a owl:Restriction ;
+_:genid141 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Brain .
 
-:Mania rdfs:subClassOf _:genid131 .
+:Mania rdfs:subClassOf _:genid142 .
 
-_:genid131 a owl:Restriction ;
+_:genid142 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
@@ -1339,15 +1412,15 @@ _:genid131 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Melanoma
 
 :Melanoma a owl:Class ;
-	rdfs:subClassOf :SkinManifestation , _:genid132 .
+	rdfs:subClassOf :SkinManifestation , _:genid143 .
 
-_:genid132 a owl:Restriction ;
+_:genid143 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Epidermis .
 
-:Melanoma rdfs:subClassOf _:genid133 .
+:Melanoma rdfs:subClassOf _:genid144 .
 
-_:genid133 a owl:Restriction ;
+_:genid144 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
@@ -1359,39 +1432,39 @@ _:genid133 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Meningitis
 
 :Meningitis a owl:Class ;
-	rdfs:subClassOf :NervousSystemManifestation , _:genid134 .
+	rdfs:subClassOf :NervousSystemManifestation , _:genid145 .
 
-_:genid134 a owl:Restriction ;
+_:genid145 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Meninges .
 
-:Meningitis rdfs:subClassOf _:genid135 .
+:Meningitis rdfs:subClassOf _:genid146 .
 
-_:genid135 a owl:Restriction ;
+_:genid146 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/MenopausalSymptoms
 
 :MenopausalSymptoms a owl:Class ;
-	rdfs:subClassOf :HormoneSystemManifestation , _:genid136 .
+	rdfs:subClassOf :HormoneSystemManifestation , _:genid147 .
 
-_:genid136 a owl:Restriction ;
+_:genid147 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/MentalDeficiency
 
 :MentalDeficiency a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid137 .
+	rdfs:subClassOf :PsycheManifestation , _:genid148 .
 
-_:genid137 a owl:Restriction ;
+_:genid148 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Brain .
 
-:MentalDeficiency rdfs:subClassOf _:genid138 .
+:MentalDeficiency rdfs:subClassOf _:genid149 .
 
-_:genid138 a owl:Restriction ;
+_:genid149 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
@@ -1400,9 +1473,9 @@ _:genid138 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/MetabolicSyndrome
 
 :MetabolicSyndrome a owl:Class ;
-	rdfs:subClassOf :MetabolismManifestation , _:genid139 .
+	rdfs:subClassOf :MetabolismManifestation , _:genid150 .
 
-_:genid139 a owl:Restriction ;
+_:genid150 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
@@ -1421,43 +1494,43 @@ _:genid139 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Migraine
 
 :Migraine a owl:Class ;
-	rdfs:subClassOf :NervousSystemManifestation , _:genid140 .
+	rdfs:subClassOf :NervousSystemManifestation , _:genid151 .
 
-_:genid140 a owl:Class ;
-	owl:unionOf _:genid147 .
+_:genid151 a owl:Class ;
+	owl:unionOf _:genid158 .
 
-_:genid147 a rdf:List ;
+_:genid158 a rdf:List ;
 	rdf:first :Brain ;
-	rdf:rest _:genid146 .
+	rdf:rest _:genid157 .
 
-_:genid146 a rdf:List ;
+_:genid157 a rdf:List ;
 	rdf:first :Nerves ;
-	rdf:rest _:genid141 .
+	rdf:rest _:genid152 .
 
-_:genid141 a rdf:List ;
-	rdf:first _:genid142 .
+_:genid152 a rdf:List ;
+	rdf:first _:genid153 .
 
-_:genid142 a owl:Restriction ;
+_:genid153 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
-	owl:someValuesFrom _:genid143 .
+	owl:someValuesFrom _:genid154 .
 
-_:genid143 owl:intersectionOf _:genid145 .
+_:genid154 owl:intersectionOf _:genid156 .
 
-_:genid145 a rdf:List ;
+_:genid156 a rdf:List ;
 	rdf:first :Brain ;
-	rdf:rest _:genid144 .
+	rdf:rest _:genid155 .
 
-_:genid144 a rdf:List ;
+_:genid155 a rdf:List ;
 	rdf:first :Nerves ;
 	rdf:rest rdf:nil .
 
-_:genid143 a owl:Class .
+_:genid154 a owl:Class .
 
-_:genid141 rdf:rest rdf:nil .
+_:genid152 rdf:rest rdf:nil .
 
-:Migraine rdfs:subClassOf _:genid148 .
+:Migraine rdfs:subClassOf _:genid159 .
 
-_:genid148 a owl:Restriction ;
+_:genid159 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
@@ -1469,33 +1542,33 @@ _:genid148 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/MyocardialInfarction
 
 :MyocardialInfarction a owl:Class ;
-	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid149 .
+	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid160 .
 
-_:genid149 a owl:Restriction ;
+_:genid160 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Myocarditis
 
 :Myocarditis a owl:Class ;
-	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid150 .
+	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid161 .
 
-_:genid150 a owl:Restriction ;
+_:genid161 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Naevi
 
 :Naevi a owl:Class ;
-	rdfs:subClassOf :SkinManifestation , _:genid151 .
+	rdfs:subClassOf :SkinManifestation , _:genid162 .
 
-_:genid151 a owl:Restriction ;
+_:genid162 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Dermis .
 
-:Naevi rdfs:subClassOf _:genid152 .
+:Naevi rdfs:subClassOf _:genid163 .
 
-_:genid152 a owl:Restriction ;
+_:genid163 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
@@ -1519,45 +1592,45 @@ _:genid152 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Nervousness
 
 :Nervousness a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid153 .
+	rdfs:subClassOf :PsycheManifestation , _:genid164 .
 
-_:genid153 a owl:Restriction ;
+_:genid164 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AutonomicNervousSystem> .
 
-:Nervousness rdfs:subClassOf _:genid154 .
+:Nervousness rdfs:subClassOf _:genid165 .
 
-_:genid154 a owl:Restriction ;
+_:genid165 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Neuroses
 
 :Neuroses a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid155 .
+	rdfs:subClassOf :PsycheManifestation , _:genid166 .
 
-_:genid155 a owl:Restriction ;
+_:genid166 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :NervousSystem .
 
-:Neuroses rdfs:subClassOf _:genid156 .
+:Neuroses rdfs:subClassOf _:genid167 .
 
-_:genid156 a owl:Restriction ;
+_:genid167 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/NeuroticDepression
 
 :NeuroticDepression a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid157 .
+	rdfs:subClassOf :PsycheManifestation , _:genid168 .
 
-_:genid157 a owl:Restriction ;
+_:genid168 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LimbicSystem> .
 
-:NeuroticDepression rdfs:subClassOf _:genid158 .
+:NeuroticDepression rdfs:subClassOf _:genid169 .
 
-_:genid158 a owl:Restriction ;
+_:genid169 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
@@ -1566,9 +1639,9 @@ _:genid158 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/NonHodgkinLymphoma
 
 :NonHodgkinLymphoma a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid159 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid170 .
 
-_:genid159 a owl:Restriction ;
+_:genid170 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
@@ -1580,24 +1653,24 @@ _:genid159 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Obesity
 
 :Obesity a owl:Class ;
-	rdfs:subClassOf :MetabolismManifestation , _:genid160 .
+	rdfs:subClassOf :MetabolismManifestation , _:genid171 .
 
-_:genid160 a owl:Restriction ;
+_:genid171 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/OrganicPsychosyndrome
 
 :OrganicPsychosyndrome a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid161 .
+	rdfs:subClassOf :PsycheManifestation , _:genid172 .
 
-_:genid161 a owl:Restriction ;
+_:genid172 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Brain .
 
-:OrganicPsychosyndrome rdfs:subClassOf _:genid162 .
+:OrganicPsychosyndrome rdfs:subClassOf _:genid173 .
 
-_:genid162 a owl:Restriction ;
+_:genid173 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
@@ -1606,15 +1679,15 @@ _:genid162 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/OtitisMedia
 
 :OtitisMedia a owl:Class ;
-	rdfs:subClassOf :SensorySystemManifestation , _:genid163 .
+	rdfs:subClassOf :SensorySystemManifestation , _:genid174 .
 
-_:genid163 a owl:Restriction ;
+_:genid174 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :MiddleEar .
 
-:OtitisMedia rdfs:subClassOf _:genid164 .
+:OtitisMedia rdfs:subClassOf _:genid175 .
 
-_:genid164 a owl:Restriction ;
+_:genid175 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
@@ -1623,15 +1696,15 @@ _:genid164 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Otorrhea
 
 :Otorrhea a owl:Class ;
-	rdfs:subClassOf :SensorySystemManifestation , _:genid165 .
+	rdfs:subClassOf :SensorySystemManifestation , _:genid176 .
 
-_:genid165 a owl:Restriction ;
+_:genid176 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Ears .
 
-:Otorrhea rdfs:subClassOf _:genid166 .
+:Otorrhea rdfs:subClassOf _:genid177 .
 
-_:genid166 a owl:Restriction ;
+_:genid177 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
@@ -1643,24 +1716,24 @@ _:genid166 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Pericarditis
 
 :Pericarditis a owl:Class ;
-	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid167 .
+	rdfs:subClassOf :CardiovascularSystemManifestation , _:genid178 .
 
-_:genid167 a owl:Restriction ;
+_:genid178 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Phobias
 
 :Phobias a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid168 .
+	rdfs:subClassOf :PsycheManifestation , _:genid179 .
 
-_:genid168 a owl:Restriction ;
+_:genid179 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LimbicSystem> .
 
-:Phobias rdfs:subClassOf _:genid169 .
+:Phobias rdfs:subClassOf _:genid180 .
 
-_:genid169 a owl:Restriction ;
+_:genid180 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
@@ -1672,24 +1745,24 @@ _:genid169 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Polycythaemia
 
 :Polycythaemia a owl:Class ;
-	rdfs:subClassOf :BloodManifestation , _:genid170 .
+	rdfs:subClassOf :BloodManifestation , _:genid181 .
 
-_:genid170 a owl:Restriction ;
+_:genid181 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Polyuria
 
 :Polyuria a owl:Class ;
-	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid171 .
+	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid182 .
 
-_:genid171 a owl:Restriction ;
+_:genid182 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Kidneys .
 
-:Polyuria rdfs:subClassOf _:genid172 .
+:Polyuria rdfs:subClassOf _:genid183 .
 
-_:genid172 a owl:Restriction ;
+_:genid183 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
@@ -1702,30 +1775,30 @@ _:genid172 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Psychosis
 
 :Psychosis a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid173 .
+	rdfs:subClassOf :PsycheManifestation , _:genid184 .
 
-_:genid173 a owl:Restriction ;
+_:genid184 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Brain .
 
-:Psychosis rdfs:subClassOf _:genid174 .
+:Psychosis rdfs:subClassOf _:genid185 .
 
-_:genid174 a owl:Restriction ;
+_:genid185 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/PsychosomaticManifestation
 
 :PsychosomaticManifestation a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid175 .
+	rdfs:subClassOf :PsycheManifestation , _:genid186 .
 
-_:genid175 a owl:Restriction ;
+_:genid186 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AutonomicNervousSystem> .
 
-:PsychosomaticManifestation rdfs:subClassOf _:genid176 .
+:PsychosomaticManifestation rdfs:subClassOf _:genid187 .
 
-_:genid176 a owl:Restriction ;
+_:genid187 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
@@ -1734,15 +1807,15 @@ _:genid176 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ReactiveDepressiveSyndromes
 
 :ReactiveDepressiveSyndromes a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid177 .
+	rdfs:subClassOf :PsycheManifestation , _:genid188 .
 
-_:genid177 a owl:Restriction ;
+_:genid188 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LimbicSystem> .
 
-:ReactiveDepressiveSyndromes rdfs:subClassOf _:genid178 .
+:ReactiveDepressiveSyndromes rdfs:subClassOf _:genid189 .
 
-_:genid178 a owl:Restriction ;
+_:genid189 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
@@ -1751,15 +1824,15 @@ _:genid178 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/RenalAtrophy
 
 :RenalAtrophy a owl:Class ;
-	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid179 .
+	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid190 .
 
-_:genid179 a owl:Restriction ;
+_:genid190 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Kidneys .
 
-:RenalAtrophy rdfs:subClassOf _:genid180 .
+:RenalAtrophy rdfs:subClassOf _:genid191 .
 
-_:genid180 a owl:Restriction ;
+_:genid191 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
@@ -1786,9 +1859,9 @@ _:genid180 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Reticulocytosis
 
 :Reticulocytosis a owl:Class ;
-	rdfs:subClassOf :BloodManifestation , _:genid181 .
+	rdfs:subClassOf :BloodManifestation , _:genid192 .
 
-_:genid181 a owl:Restriction ;
+_:genid192 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
@@ -1800,24 +1873,30 @@ _:genid181 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Sarcoma
 
 :Sarcoma a owl:Class ;
-	rdfs:subClassOf :LocomotorSystemManifestation , _:genid182 .
+	rdfs:subClassOf :LocomotorSystemManifestation , _:genid193 .
 
-_:genid182 a owl:Restriction ;
+_:genid193 a owl:Restriction ;
+	owl:onProperty :affectsSystem ;
+	owl:someValuesFrom :LocomotorSystem .
+
+:Sarcoma rdfs:subClassOf _:genid194 .
+
+_:genid194 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/SchizophrenicDefectiveStates
 
 :SchizophrenicDefectiveStates a owl:Class ;
-	rdfs:subClassOf :PsycheManifestation , _:genid183 .
+	rdfs:subClassOf :PsycheManifestation , _:genid195 .
 
-_:genid183 a owl:Restriction ;
+_:genid195 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Brain .
 
-:SchizophrenicDefectiveStates rdfs:subClassOf _:genid184 .
+:SchizophrenicDefectiveStates rdfs:subClassOf _:genid196 .
 
-_:genid184 a owl:Restriction ;
+_:genid196 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
@@ -1826,15 +1905,15 @@ _:genid184 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Scleroderma
 
 :Scleroderma a owl:Class ;
-	rdfs:subClassOf :SkinManifestation , _:genid185 .
+	rdfs:subClassOf :SkinManifestation , _:genid197 .
 
-_:genid185 a owl:Restriction ;
+_:genid197 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Dermis .
 
-:Scleroderma rdfs:subClassOf _:genid186 .
+:Scleroderma rdfs:subClassOf _:genid198 .
 
-_:genid186 a owl:Restriction ;
+_:genid198 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
@@ -1859,15 +1938,15 @@ _:genid186 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Silicosis
 
 :Silicosis a owl:Class ;
-	rdfs:subClassOf :RespiratoryTractManifestation , _:genid187 .
+	rdfs:subClassOf :RespiratoryTractManifestation , _:genid199 .
 
-_:genid187 a owl:Restriction ;
+_:genid199 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Lungs .
 
-:Silicosis rdfs:subClassOf _:genid188 .
+:Silicosis rdfs:subClassOf _:genid200 .
 
-_:genid188 a owl:Restriction ;
+_:genid200 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
@@ -1885,18 +1964,18 @@ _:genid188 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/SlowReaction
 
 :SlowReaction a owl:Class ;
-	rdfs:subClassOf :MetabolismManifestation , _:genid189 .
+	rdfs:subClassOf :MetabolismManifestation , _:genid201 .
 
-_:genid189 a owl:Restriction ;
+_:genid201 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/SlowReactions
 
 :SlowReactions a owl:Class ;
-	rdfs:subClassOf :ImmuneSystemManifestation , _:genid190 .
+	rdfs:subClassOf :ImmuneSystemManifestation , _:genid202 .
 
-_:genid190 a owl:Restriction ;
+_:genid202 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
@@ -1909,15 +1988,15 @@ _:genid190 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/SmokerLung
 
 :SmokerLung a owl:Class ;
-	rdfs:subClassOf :RespiratoryTractManifestation , _:genid191 .
+	rdfs:subClassOf :RespiratoryTractManifestation , _:genid203 .
 
-_:genid191 a owl:Restriction ;
+_:genid203 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Lungs .
 
-:SmokerLung rdfs:subClassOf _:genid192 .
+:SmokerLung rdfs:subClassOf _:genid204 .
 
-_:genid192 a owl:Restriction ;
+_:genid204 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
@@ -1937,9 +2016,26 @@ _:genid192 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Spondylosis
 
 :Spondylosis a owl:Class ;
-	rdfs:subClassOf :LocomotorSystemManifestation , _:genid193 .
+	rdfs:subClassOf :LocomotorSystemManifestation , _:genid205 .
 
-_:genid193 a owl:Restriction ;
+_:genid205 a owl:Restriction ;
+	owl:onProperty :affectsSystem ;
+	owl:someValuesFrom _:genid206 .
+
+_:genid206 a owl:Class ;
+	owl:unionOf _:genid208 .
+
+_:genid208 a rdf:List ;
+	rdf:first <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spine> ;
+	rdf:rest _:genid207 .
+
+_:genid207 a rdf:List ;
+	rdf:first :Joints ;
+	rdf:rest rdf:nil .
+
+:Spondylosis rdfs:subClassOf _:genid209 .
+
+_:genid209 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
@@ -1951,27 +2047,27 @@ _:genid193 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/StomachCancer
 
 :StomachCancer a owl:Class ;
-	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid194 .
+	rdfs:subClassOf :GastrointestinalSystemManifestation , _:genid210 .
 
-_:genid194 a owl:Restriction ;
+_:genid210 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Suppuration
 
 :Suppuration a owl:Class ;
-	rdfs:subClassOf :BloodManifestation , _:genid195 .
+	rdfs:subClassOf :BloodManifestation , _:genid211 .
 
-_:genid195 a owl:Restriction ;
+_:genid211 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/SusceptibilityToInfection
 
 :SusceptibilityToInfection a owl:Class ;
-	rdfs:subClassOf :ImmuneSystemManifestation , _:genid196 .
+	rdfs:subClassOf :ImmuneSystemManifestation , _:genid212 .
 
-_:genid196 a owl:Restriction ;
+_:genid212 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
@@ -1984,15 +2080,15 @@ _:genid196 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Sweating
 
 :Sweating a owl:Class ;
-	rdfs:subClassOf :SkinManifestation , _:genid197 .
+	rdfs:subClassOf :SkinManifestation , _:genid213 .
 
-_:genid197 a owl:Restriction ;
+_:genid213 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :SweatGlands .
 
-:Sweating rdfs:subClassOf _:genid198 .
+:Sweating rdfs:subClassOf _:genid214 .
 
-_:genid198 a owl:Restriction ;
+_:genid214 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
@@ -2004,45 +2100,45 @@ _:genid198 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Tears
 
 :Tears a owl:Class ;
-	rdfs:subClassOf :SensorySystemManifestation , _:genid199 .
+	rdfs:subClassOf :SensorySystemManifestation , _:genid215 .
 
-_:genid199 a owl:Class ;
-	owl:unionOf _:genid202 .
+_:genid215 a owl:Class ;
+	owl:unionOf _:genid218 .
 
-_:genid202 a rdf:List ;
+_:genid218 a rdf:List ;
 	rdf:first :TearDucts ;
-	rdf:rest _:genid200 .
+	rdf:rest _:genid216 .
 
-_:genid200 a rdf:List ;
-	rdf:first _:genid201 .
+_:genid216 a rdf:List ;
+	rdf:first _:genid217 .
 
-_:genid201 a owl:Restriction ;
+_:genid217 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :Eyes .
 
-_:genid200 rdf:rest rdf:nil .
+_:genid216 rdf:rest rdf:nil .
 
-:Tears rdfs:subClassOf _:genid203 .
+:Tears rdfs:subClassOf _:genid219 .
 
-_:genid203 a owl:Restriction ;
+_:genid219 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Thrombocytopenia
 
 :Thrombocytopenia a owl:Class ;
-	rdfs:subClassOf :BloodManifestation , _:genid204 .
+	rdfs:subClassOf :BloodManifestation , _:genid220 .
 
-_:genid204 a owl:Restriction ;
+_:genid220 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Thrombocytosis
 
 :Thrombocytosis a owl:Class ;
-	rdfs:subClassOf :BloodManifestation , _:genid205 .
+	rdfs:subClassOf :BloodManifestation , _:genid221 .
 
-_:genid205 a owl:Restriction ;
+_:genid221 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
@@ -2054,9 +2150,9 @@ _:genid205 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ThyroidCancer
 
 :ThyroidCancer a owl:Class ;
-	rdfs:subClassOf :HormoneSystemManifestation , _:genid206 .
+	rdfs:subClassOf :HormoneSystemManifestation , _:genid222 .
 
-_:genid206 a owl:Restriction ;
+_:genid222 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
@@ -2069,44 +2165,44 @@ _:genid206 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Thyroiditis
 
 :Thyroiditis a owl:Class ;
-	rdfs:subClassOf :HormoneSystemManifestation , _:genid207 .
+	rdfs:subClassOf :HormoneSystemManifestation , _:genid223 .
 
-_:genid207 a owl:Restriction ;
+_:genid223 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Tinnitus
 
 :Tinnitus a owl:Class ;
-	rdfs:subClassOf :SensorySystemManifestation , _:genid208 .
+	rdfs:subClassOf :SensorySystemManifestation , _:genid224 .
 
-_:genid208 a owl:Restriction ;
+_:genid224 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
-	owl:someValuesFrom _:genid209 .
+	owl:someValuesFrom _:genid225 .
 
-_:genid209 a owl:Class ;
-	owl:unionOf _:genid211 .
+_:genid225 a owl:Class ;
+	owl:unionOf _:genid227 .
 
-_:genid211 a rdf:List ;
+_:genid227 a rdf:List ;
 	rdf:first :InnerEar ;
-	rdf:rest _:genid210 .
+	rdf:rest _:genid226 .
 
-_:genid210 a rdf:List ;
+_:genid226 a rdf:List ;
 	rdf:first :Nerves ;
 	rdf:rest rdf:nil .
 
-:Tinnitus rdfs:subClassOf _:genid212 .
+:Tinnitus rdfs:subClassOf _:genid228 .
 
-_:genid212 a owl:Restriction ;
+_:genid228 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Tonsillitis
 
 :Tonsillitis a owl:Class ;
-	rdfs:subClassOf :LymphSystemManifestation , _:genid213 .
+	rdfs:subClassOf :LymphSystemManifestation , _:genid229 .
 
-_:genid213 a owl:Restriction ;
+_:genid229 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
@@ -2118,27 +2214,27 @@ _:genid213 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/UrinalTractInfection
 
 :UrinalTractInfection a owl:Class ;
-	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid214 .
+	rdfs:subClassOf :UrogenitalSystemManifestation , _:genid230 .
 
-_:genid214 a owl:Class ;
-	owl:unionOf _:genid217 .
+_:genid230 a owl:Class ;
+	owl:unionOf _:genid233 .
 
-_:genid217 a rdf:List ;
+_:genid233 a rdf:List ;
 	rdf:first :Urethra ;
-	rdf:rest _:genid215 .
+	rdf:rest _:genid231 .
 
-_:genid215 a rdf:List ;
-	rdf:first _:genid216 .
+_:genid231 a rdf:List ;
+	rdf:first _:genid232 .
 
-_:genid216 a owl:Restriction ;
+_:genid232 a owl:Restriction ;
 	owl:onProperty :affectsSystem ;
 	owl:someValuesFrom :UrogenitalSystem .
 
-_:genid215 rdf:rest rdf:nil .
+_:genid231 rdf:rest rdf:nil .
 
-:UrinalTractInfection rdfs:subClassOf _:genid218 .
+:UrinalTractInfection rdfs:subClassOf _:genid234 .
 
-_:genid218 a owl:Restriction ;
+_:genid234 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
@@ -2160,18 +2256,18 @@ _:genid218 a owl:Restriction ;
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/WeakImmuneSystem
 
 :WeakImmuneSystem a owl:Class ;
-	rdfs:subClassOf :ImmuneSystemManifestation , _:genid219 .
+	rdfs:subClassOf :ImmuneSystemManifestation , _:genid235 .
 
-_:genid219 a owl:Restriction ;
+_:genid235 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/WeakReactions
 
 :WeakReactions a owl:Class ;
-	rdfs:subClassOf :ImmuneSystemManifestation , _:genid220 .
+	rdfs:subClassOf :ImmuneSystemManifestation , _:genid236 .
 
-_:genid220 a owl:Restriction ;
+_:genid236 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
