@@ -40,13 +40,18 @@
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> a owl:ObjectProperty ;
-	owl:inverseOf <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isCleansedBy> .
+	owl:inverseOf <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isCleansedBy> ;
+	rdfs:label "cleanses organ"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#damagesOrgan
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#damagesOrgan> a owl:ObjectProperty ;
 	rdfs:subPropertyOf :affectsSystem ;
 	rdfs:seeAlso "damages organ"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasProperty
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasProperty> a owl:ObjectProperty .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isCleansedBy
 
@@ -176,6 +181,31 @@ _:genid3 rdf:rest rdf:nil .
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Neurotransmitter> a owl:Class ;
 	rdfs:subClassOf :Brain .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> a owl:Class ;
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> a owl:Class ;
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiNutsandSeeds
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiNutsandSeeds> a owl:Class ;
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> a owl:Class ;
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiSpicesAndSeasonings
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiSpicesAndSeasonings> a owl:Class ;
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spine
 
@@ -2619,20 +2649,20 @@ _:genid282 a owl:Restriction ;
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#PusForming> a owl:Class ;
 	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#SeededFruit
+# https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SeededFruit> a owl:Class ;
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> a owl:Class ;
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
+# 
+# https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables
+
+<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> a owl:Class ;
 	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#SlimeForming
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SlimeForming> a owl:Class ;
 	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> .
-# 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#SoftLeafyGreens
-
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SoftLeafyGreens> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#Subject
 
@@ -2641,5 +2671,255 @@ _:genid282 a owl:Restriction ;
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> a owl:Class .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Amaranth
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Amaranth> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AmaranthGreens
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AmaranthGreens> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Apples
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Apples> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Avocado
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Avocado> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bananas
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bananas> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
+	rdfs:comment "smallest or Burro"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BellPeppers
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BellPeppers> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Berries
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Berries> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
+	rdfs:comment "Except Cranberries"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cantaloupe
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cantaloupe> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chayote
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chayote> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cherries
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cherries> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CherryTomato
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CherryTomato> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cucumber
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cucumber> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Currants
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Currants> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DandelionGreens
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DandelionGreens> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Dates
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Dates> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Figs
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Figs> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fonio
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fonio> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GarbanzoBeans
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GarbanzoBeans> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> ;
+	<http://www.w3.org/2004/02/skos/core#altLabel> "Chickpeas"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Grapes
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Grapes> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Hiriji
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Hiriji> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Izote
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Izote> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Kale
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Kale> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Kamut
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Kamut> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lettuce
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lettuce> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> ;
+	rdfs:comment "Except Iceberg"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Limes
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Limes> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
+	rdfs:comment "key limes preferred"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mango
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mango> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Melons
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Melons> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
+	rdfs:comment "seeded"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mushrooms
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mushrooms> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> ;
+	rdfs:comment "Except Shitake"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nopales
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nopales> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nori
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nori> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Okra
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Okra> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Olives
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Olives> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Onions
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Onions> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Orange
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Orange> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
+	rdfs:comment "seville or sour"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Papayas
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Papayas> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Peaches
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Peaches> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pears
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pears> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PlumTomato
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PlumTomato> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Plums
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Plums> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PricklyPear
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PricklyPear> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
+	<http://www.w3.org/2004/02/skos/core#altLabel> "Cactus Fruit"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Prunes
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Prunes> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Purslane
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Purslane> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> ;
+	rdfs:comment "Verdolaga"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Quinoa
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Quinoa> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Raisins
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Raisins> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
+	rdfs:comment "seeded"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Rye
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Rye> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SoftJellyCoconuts
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SoftJellyCoconuts> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
+	<http://www.w3.org/2004/02/skos/core#altLabel> "Coconut Jelly"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Soursoups
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Soursoups> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spelt
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Spelt> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Squash
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Squash> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> ;
+	rdfs:comment "Butternut"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tamarind
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tamarind> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tef
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tef> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#TurnipGreens
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#TurnipGreens> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Wakame
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Wakame> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Watercress
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Watercress> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WildArugula
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WildArugula> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WildRice
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WildRice> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Zucchini
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Zucchini> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
 # 
 # Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
