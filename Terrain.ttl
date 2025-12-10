@@ -2726,6 +2726,10 @@ _:genid282 a owl:Restriction ;
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Avocado> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AvocadoOil
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AvocadoOil> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bananas
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bananas> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
@@ -2748,6 +2752,11 @@ _:genid282 a owl:Restriction ;
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Berries> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
 	rdfs:comment "Except Cranberries"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
+	rdfs:label "Burdock Root"@en .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cantaloupe
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cantaloupe> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
@@ -2756,6 +2765,10 @@ _:genid282 a owl:Restriction ;
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cayenne> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PungentAndSpicyFlavor> ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "African Bird Pepper"@en , "Cayenne Pepper"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chamomile
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chamomile> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chayote
 
@@ -2772,6 +2785,16 @@ _:genid282 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cloves
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cloves> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MildFlavor> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CoconutOil
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CoconutOil> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> ;
+	rdfs:comment "do not cook"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cuachalalate
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cuachalalate> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "specific herb from Mexico"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cucumber
 
@@ -2797,9 +2820,22 @@ _:genid282 a owl:Restriction ;
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Dill> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MildFlavor> .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Elderberry
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Elderberry> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fennel
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fennel> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Figs
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Figs> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FlorDeManita
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FlorDeManita> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
+	rdfs:label "Flor de Manita"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fonio
 
@@ -2809,6 +2845,16 @@ _:genid282 a owl:Restriction ;
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GarbanzoBeans> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Chickpeas"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ginger
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ginger> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GordoLobo
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GordoLobo> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
+	rdfs:label "Gordo Lobo"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "specific herb from Mexico"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GranulatedSeaweed
 
@@ -2820,9 +2866,17 @@ _:genid282 a owl:Restriction ;
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Grapes> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GrapeseedOil
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GrapeseedOil> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Habanero
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Habanero> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PungentAndSpicyFlavor> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HempseedOil
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HempseedOil> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Hiriji
 
@@ -2859,6 +2913,11 @@ _:genid282 a owl:Restriction ;
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Melons> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
 	rdfs:comment "seeded"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Muicle
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Muicle> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "specific herb from Mexico"@en .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mushrooms
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mushrooms> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> ;
@@ -2875,6 +2934,11 @@ _:genid282 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Okra
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Okra> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OliveOil
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OliveOil> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> ;
+	rdfs:comment "do not cook"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Olives
 
@@ -2940,6 +3004,11 @@ _:genid282 a owl:Restriction ;
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Raisins> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
 	rdfs:comment "seeded"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RedRaspberry
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RedRaspberry> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
+	rdfs:label "Red Raspberry"@en .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Rye
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Rye> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains> .
@@ -2956,6 +3025,10 @@ _:genid282 a owl:Restriction ;
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SeaSalt> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SaltyFlavor> ;
 	rdfs:label "Pure Sea Salt"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SesameOil
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SesameOil> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SoftJellyCoconuts
 
