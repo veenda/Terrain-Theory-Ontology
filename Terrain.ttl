@@ -2752,6 +2752,10 @@ _:genid282 a owl:Restriction ;
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Berries> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
 	rdfs:comment "Except Cranberries"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BrazilNuts
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BrazilNuts> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiNutsandSeeds> .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
@@ -2873,6 +2877,10 @@ _:genid282 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Habanero
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Habanero> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PungentAndSpicyFlavor> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HempSeeds
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HempSeeds> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiNutsandSeeds> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HempseedOil
 
@@ -3004,6 +3012,14 @@ _:genid282 a owl:Restriction ;
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Raisins> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
 	rdfs:comment "seeded"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RawSesameSeeds
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RawSesameSeeds> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiNutsandSeeds> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RawSesameTahiniButter
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RawSesameTahiniButter> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiNutsandSeeds> .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RedRaspberry
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RedRaspberry> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
@@ -3075,6 +3091,10 @@ _:genid282 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Wakame
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Wakame> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Walnuts
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Walnuts> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiNutsandSeeds> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Watercress
 
