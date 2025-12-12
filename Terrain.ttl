@@ -41,7 +41,16 @@
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> a owl:ObjectProperty ;
 	owl:inverseOf <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isCleansedBy> ;
+	rdfs:domain <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	rdfs:range <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "cleanses organ"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#congestsOrgan
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#congestsOrgan> a owl:ObjectProperty ;
+	rdfs:domain <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> ;
+	rdfs:range <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:label "congests organ"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#damagesOrgan
 
@@ -55,7 +64,15 @@
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isCleansedBy
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isCleansedBy> a owl:ObjectProperty .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isCleansedBy> a owl:ObjectProperty ;
+	rdfs:label "is cleansed by"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> a owl:ObjectProperty ;
+	rdfs:domain <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	rdfs:range <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:label "nourishes system"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/affectsSystem
 
@@ -2733,7 +2750,7 @@ _:genid282 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bananas
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bananas> a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> ;
-	rdfs:comment "smallest or Burro"@en .
+	rdfs:comment "smallest or burro"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Basil
 
@@ -2758,8 +2775,26 @@ _:genid282 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
-	rdfs:label "Burdock Root"@en .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid283 .
+
+_:genid283 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :Blood .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock> a _:genid284 .
+
+_:genid284 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :Kidneys .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock> a _:genid285 .
+
+_:genid285 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :Liver .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Burdock> rdfs:label "Burdock Root"@en ;
+	<http://www.w3.org/2004/02/skos/core#altLabel> "Burdock"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cantaloupe
 
@@ -2772,7 +2807,17 @@ _:genid282 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chamomile
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chamomile> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chamomile> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid286 .
+
+_:genid286 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :DigestiveSystem .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chamomile> a _:genid287 .
+
+_:genid287 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
+	owl:someValuesFrom :NervousSystem .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chayote
 
@@ -2793,12 +2838,23 @@ _:genid282 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CoconutOil
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CoconutOil> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> ;
-	rdfs:comment "do not cook"@en .
+	rdfs:comment "do not cook"@en , "use raw only"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cuachalalate
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cuachalalate> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
-	<http://www.w3.org/2004/02/skos/core#definition> "specific herb from Mexico"@en .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cuachalalate> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid288 .
+
+_:genid288 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :DigestiveSystem .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cuachalalate> a _:genid289 .
+
+_:genid289 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :IntegumentarySystem .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cuachalalate> <http://www.w3.org/2004/02/skos/core#definition> "specific herb from Mexico"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cucumber
 
@@ -2826,11 +2882,25 @@ _:genid282 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Elderberry
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Elderberry> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Elderberry> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid290 .
+
+_:genid290 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :RespiratorySystem .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Elderberry> a _:genid291 .
+
+_:genid291 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
+	owl:someValuesFrom :ImmuneSystem .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fennel
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fennel> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fennel> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid292 .
+
+_:genid292 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :DigestiveSystem .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Figs
 
@@ -2838,8 +2908,19 @@ _:genid282 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FlorDeManita
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FlorDeManita> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
-	rdfs:label "Flor de Manita"@en .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FlorDeManita> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid293 .
+
+_:genid293 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
+	owl:someValuesFrom :CardiovascularSystem .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FlorDeManita> a _:genid294 .
+
+_:genid294 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
+	owl:someValuesFrom :NervousSystem .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FlorDeManita> rdfs:label "Flor de Manita"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Fonio
 
@@ -2852,12 +2933,27 @@ _:genid282 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ginger
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ginger> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ginger> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid295 .
+
+_:genid295 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :DigestiveSystem .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ginger> a _:genid296 .
+
+_:genid296 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
+	owl:someValuesFrom :CardiovascularSystem .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GordoLobo
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GordoLobo> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
-	rdfs:label "Gordo Lobo"@en ;
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GordoLobo> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid297 .
+
+_:genid297 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :RespiratorySystem .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GordoLobo> rdfs:label "Gordo Lobo"@en ;
 	<http://www.w3.org/2004/02/skos/core#definition> "specific herb from Mexico"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GranulatedSeaweed
@@ -2923,8 +3019,19 @@ _:genid282 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Muicle
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Muicle> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
-	<http://www.w3.org/2004/02/skos/core#definition> "specific herb from Mexico"@en .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Muicle> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid298 .
+
+_:genid298 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	owl:someValuesFrom :Blood .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Muicle> a _:genid299 .
+
+_:genid299 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
+	owl:someValuesFrom :ReproductiveOrgans .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Muicle> <http://www.w3.org/2004/02/skos/core#definition> "specific herb from Mexico"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mushrooms
 
@@ -2946,7 +3053,7 @@ _:genid282 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OliveOil
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OliveOil> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils> ;
-	rdfs:comment "do not cook"@en .
+	rdfs:comment "do not cook"@en , "use raw only"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Olives
 
@@ -3022,8 +3129,13 @@ _:genid282 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RedRaspberry
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RedRaspberry> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> ;
-	rdfs:label "Red Raspberry"@en .
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RedRaspberry> a owl:NamedIndividual , <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas> , _:genid300 .
+
+_:genid300 a owl:Restriction ;
+	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
+	owl:someValuesFrom :ReproductiveOrgans .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RedRaspberry> rdfs:label "Red Raspberry"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Rye
 
