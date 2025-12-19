@@ -32,6 +32,19 @@
 # 
 # #################################################################
 # #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#time
+
+xsd:time a rdfs:Datatype .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Object Properties
 # #
 # #################################################################
@@ -123,11 +136,23 @@ _:genid1 a rdf:List ;
 # #################################################################
 # 
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasEndTime
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasEndTime> a owl:DatatypeProperty ;
+	rdfs:range xsd:time ;
+	rdfs:label "has end time"@en .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasPHLevel
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasPHLevel> a owl:DatatypeProperty ;
 	rdfs:range xsd:float ;
 	rdfs:label "has pH level"@en .
+# 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasStartTime
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasStartTime> a owl:DatatypeProperty ;
+	rdfs:range xsd:time ;
+	rdfs:label "has start time"@en .
 # 
 # 
 # 
@@ -2683,27 +2708,32 @@ _:genid290 a owl:Restriction ;
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> ;
+	rdfs:label "Appropriation Cycle"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> ;
+	rdfs:label "Assimilation Cycle"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> ;
+	rdfs:label "Cellular Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> ;
+	rdfs:label "Degeneration Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> ;
+	rdfs:label "Deposition Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput
 
@@ -2720,32 +2750,38 @@ _:genid290 a owl:Restriction ;
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> ;
+	rdfs:label "Elimination Cycle"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> ;
+	rdfs:label "Excretion Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> ;
+	rdfs:label "Humoral Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> ;
+	rdfs:label "Impregnation Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> ;
+	rdfs:label "Inflammation Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> ;
+	rdfs:label "Matrix Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods
 
@@ -2762,7 +2798,8 @@ _:genid290 a owl:Restriction ;
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase
 
 <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> .
+	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> ;
+	rdfs:label "Neoplasem Phase"@en .
 # 
 # https://github.com/veenda/Terrain-Theory-Ontology/ontology#PusForming
 
