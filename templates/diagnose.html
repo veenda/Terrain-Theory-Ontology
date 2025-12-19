@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-section">
+    <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 class="page-title" style="border-bottom: none;">Konsultasi Terrain</h2>
+        <p style="color: var(--color-text-light); max-width: 600px; margin: 0 auto;">
+            Pilih manifestasi (keluhan) yang Anda rasakan. Sistem akan menganalisis organ yang melemah dan merekomendasikan nutrisi bio-elektrik yang sesuai dengan jam tubuh Anda saat ini.
+        </p>
+    </div>
+
+    <form method="post" action="{{ url_for('diagnose_view') }}" class="diagnose-form" style="max-width: 500px; margin: 0 auto;">
+        
+        <div style="margin-bottom: 2rem;">
+            <label for="disease_id" style="display: block; margin-bottom: 0.8rem; font-weight: bold; color: var(--color-primary);">
+                Apa yang sedang Anda rasakan?
+            </label>
+            
+            <div style="position: relative;">
+                <select name="disease_id" id="disease_id" required>
+                    <option value="" disabled selected>-- Pilih Manifestasi / Penyakit --</option>
+                    {% if diseases %}
+                        {% for d in diseases %}
+                            <option value="{{ d.id }}">{{ d.name }}</option>
+                        {% endfor %}
+                    {% else %}
+                        <option value="" disabled>Sedang memuat data ontologi...</option>
+                    {% endif %}
+                </select>
+                <span style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--color-primary);">▼</span>
+            </div>
+        </div>
+
+        <div class="form-actions" style="text-align: center;">
+            <button type="submit" class="primary-button" style="width: 100%;">
+                Dapatkan Protokol Penyembuhan
+            </button>
+        </div>
+
+    </form>
+
+    <div class="info-section" style="margin-top: 3rem; text-align: center; font-size: 0.9rem;">
+        <p>
+            <strong>💡 Tahukah Anda?</strong> 
+            Dalam Teori Terrain, penyakit hanyalah gejala dari tubuh yang asam. Fokuslah pada pembersihan (Detox) dan regenerasi sel.
+        </p>
+    </div>
+</section>
+{% endblock %}
