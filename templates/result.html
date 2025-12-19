@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    /* Styling tambahan khusus halaman ini untuk menghilangkan logic di HTML */
+    .disease-card.status-allowed {
+        border-left: 5px solid var(--color-success);
+    }
+    .disease-card.status-wait {
+        border-left: 5px solid var(--color-error);
+    }
+</style>
+
+<section class="page-section">
+    <h2 class="page-title">Protocol Recommendation</h2>
+
+    {# PENGAMAN 1: Cek apakah result ada isinya #}
+    {% if result %}
+        
+        <p class="page-subtitle">Based on: <strong>{{ result.disease_name }}</strong></p>
+        
+        <div class="info-section" style="margin-top: 0; background: var(--color-bg-light);">
+            <h3>🕒 Current Phase: {{ result.phase_info }}</h3>
+            <p>Organs to focus on: 
+                {% if result.affected_organs %}
+                    {% for org in result.affected_organs %}
+                        <span style="font-weight: bold; color: var(--color-primary);">{{ org }}</span>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <span>General System</span>
+                {% endif %}
+            </p>
+        </div>
+
+        <div class="disease-results">
+            {% if result.recommendations %}
+                {% for item in result.recommendations %}
+                
+                {# Trik CSS: Kita masukkan status ke nama class (status-allowed atau status-wait) #}
+                <div class="disease-card status-{{ item.status|lower }}">
+                    
+                    <h4 class="disease-name">
+                        {% if item.type == 'Herbal' %}🍵{% else %}🥑{% endif %} 
+                        {{ item.name }}
+                    </h4>
+                    
+                    <div class="disease-meta">
+                        <span class="meta-item">{{ item.type }}</span>
+                        <span class="meta-item">Target: {{ item.organ }}</span>
+                    </div>
+
+                    {% if item.status == 'Allowed' %}
+                        <p class="disease-description" style="color: var(--color-success); font-weight: bold;">
+                            ✅ Recommended to consume now.
+                        </p>
+                    {% else %}
+                        <p class="disease-description" style="color: var(--color-error);">
+                            ⏳ {{ item.warning if item.warning else "Wait for correct phase" }}
+                        </p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>No specific food recommendations found in the ontology for this condition.</p>
+            {% endif %}
+        </div>
+
+    {# JIKA RESULT KOSONG (Misal ID Penyakit Salah) #}
+    {% else %}
+        <div class="info-section" style="background-color: #ffebee; color: #c62828;">
+            <h3>⚠️ Diagnosis Error</h3>
+            <p>Could not retrieve data for the selected condition. Please try again.</p>
+        </div>
+    {% endif %}
+
+    <div class="form-actions">
+        <a href="{{ url_for('diagnose_view') }}" class="primary-button">New Consultation</a>
+    </div>
+</section>
+{% endblock %}
