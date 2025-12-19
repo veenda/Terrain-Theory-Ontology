@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sebi AI - Terrain Theory Protocol</title>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --light-green: #e8f5e9;
+            --accent: #4caf50;
+            --warning: #ff9800;
+            --danger: #f44336;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h1 { color: var(--primary); margin: 0; }
+        p.subtitle { color: #666; margin-top: 5px; }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        label { font-weight: bold; display: block; margin-bottom: 8px; }
+        
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+            transition: border-color 0.3s;
+        }
+        
+        select:focus { outline: none; border-color: var(--primary); }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        button:hover { background-color: #1b5e20; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+
+        /* Hasil Diagnosa */
+        #resultArea { display: none; animation: fadeIn 0.5s; }
+        
+        .phase-badge {
+            display: inline-block;
+            background: var(--light-green);
+            color: var(--primary);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            border: 1px solid var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .organ-list { color: #555; font-style: italic; margin-bottom: 20px; }
+
+        .recommendation-group { margin-top: 20px; }
+        
+        .food-item {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            border: 1px solid #ddd;
+        }
+
+        .status-allowed { background-color: #e8f5e9; border-color: var(--primary); color: #1b5e20; }
+        .status-wait { background-color: #ffebee; border-color: #ef9a9a; color: #b71c1c; opacity: 0.8; }
+        .type-herbal { font-weight: bold; border-style: dashed; }
+
+        .loading { text-align: center; display: none; color: #666; margin-top: 10px; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .card { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Dr. Sebi AI Protocol</h1>
+        <p class="subtitle">Analisis Terrain Theory & Siklus Sirkadian</p>
+    </header>
+
+    <div class="card">
+        <label for="diseaseSelect">Apa keluhan Anda?</label>
+        <select id="diseaseSelect">
+            <option value="">-- Sedang memuat database penyakit... --</option>
+        </select>
+        
+        <button id="btnConsult" onclick="getRecommendation()">Dapatkan Protokol Penyembuhan</button>
+        <div id="loading" class="loading">⏳ Sedang menganalisis ontologi...</div>
+    </div>
+
+    <div id="resultArea">
+        <div class="card">
+            <h2 id="resName" style="margin-top:0; color:var(--primary);"></h2>
+            
+            <div style="text-align: center;">
+                <span id="resPhase" class="phase-badge"></span>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <strong>Organ Terdampak:</strong>
+                <div id="resOrgans" class="organ-list"></div>
+            </div>
+
+            <hr style="border:0; border-top:1px solid #eee; margin: 20px 0;">
+
+            <h3>📋 Rekomendasi Nutrisi Elektrik</h3>
+            
+            <div class="recommendation-group">
+                <h4 style="color:var(--primary);">✅ Sangat Disarankan (Sekarang):</h4>
+                <div id="resAllowed"></div>
+                <p id="msgAllowed" style="color:#777; font-size:0.9em; display:none;">Tidak ada rekomendasi spesifik saat ini.</p>
+            </div>
+
+            <div class="recommendation-group">
+                <h4 style="color:var(--warning);">⏳ Tunggu Fase Berikutnya:</h4>
+                <div id="resWait"></div>
+                <p id="msgWait" style="color:#777; font-size:0.9em; display:none;">Semua makanan aman dimakan sekarang.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Load Penyakit saat Web Dibuka
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/get_diseases')
+                .then(response => response.json())
+                .then(data => {
+                    const select = document.getElementById('diseaseSelect');
+                    select.innerHTML = '<option value="">-- Pilih Penyakit --</option>';
+                    data.forEach(disease => {
+                        const option = document.createElement('option');
+                        option.value = disease.id;
+                        option.textContent = disease.label;
+                        select.appendChild(option);
+                    });
+                })
+                .catch(err => {
+                    document.getElementById('diseaseSelect').innerHTML = '<option>Gagal memuat data (Cek Console)</option>';
+                    console.error("Error loading diseases:", err);
+                });
+        });
+
+        // 2. Fungsi Utama
+        function getRecommendation() {
+            const diseaseId = document.getElementById('diseaseSelect').value;
+            if(!diseaseId) return alert("Mohon pilih penyakit terlebih dahulu!");
+
+            // UI Loading
+            const btn = document.getElementById('btnConsult');
+            const loading = document.getElementById('loading');
+            const resultArea = document.getElementById('resultArea');
+            
+            btn.disabled = true;
+            btn.innerText = "Menganalisis...";
+            loading.style.display = 'block';
+            resultArea.style.display = 'none';
+
+            // Panggil API Python
+            fetch('/diagnose', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ disease_id: diseaseId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // UI Selesai Loading
+                btn.disabled = false;
+                btn.innerText = "Dapatkan Protokol Penyembuhan";
+                loading.style.display = 'none';
+                
+                if(data.error) return alert(data.error);
+
+                // Render Data
+                resultArea.style.display = 'block';
+                document.getElementById('resName').innerText = "Protokol: " + data.disease_name;
+                document.getElementById('resPhase').innerText = "🕒 Jam Tubuh: " + data.current_time_phase;
+
+                // Render Organ
+                const organsHtml = data.affected_organs.length > 0 
+                    ? data.affected_organs.join(", ") 
+                    : "Sistem Umum";
+                document.getElementById('resOrgans').innerText = organsHtml;
+
+                // Pisahkan Makanan (Allowed vs Wait)
+                let allowedHtml = "";
+                let waitHtml = "";
+                let hasAllowed = false;
+                let hasWait = false;
+
+                data.recommendations.forEach(item => {
+                    // Cek tipe (Herbal/Makanan) untuk styling
+                    const typeClass = item.type === 'Herbal' ? 'type-herbal' : '';
+                    const label = item.type === 'Herbal' ? '🍵 ' + item.food_name : '🥑 ' + item.food_name;
+                    
+                    if(item.status === "Allowed") {
+                        hasAllowed = true;
+                        allowedHtml += `<span class="food-item status-allowed ${typeClass}" title="${item.target_organ}">
+                            ${label}
+                        </span>`;
+                    } else {
+                        hasWait = true;
+                        waitHtml += `<span class="food-item status-wait ${typeClass}" title="${item.warning}">
+                            ${label} <small>(${item.warning})</small>
+                        </span>`;
+                    }
+                });
+
+                document.getElementById('resAllowed').innerHTML = allowedHtml;
+                document.getElementById('resWait').innerHTML = waitHtml;
+
+                // Tampilkan pesan kosong jika tidak ada data
+                document.getElementById('msgAllowed').style.display = hasAllowed ? 'none' : 'block';
+                document.getElementById('msgWait').style.display = hasWait ? 'none' : 'block';
+
+            })
+            .catch(err => {
+                btn.disabled = false;
+                btn.innerText = "Coba Lagi";
+                alert("Terjadi kesalahan koneksi server.");
+                console.error(err);
+            });
+        }
+    </script>
+</body>
+</html>

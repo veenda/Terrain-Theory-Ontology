@@ -5,8 +5,10 @@ from datetime import datetime
 import pytz
 import os
 
-# Konfigurasi Template Folder (Keluar satu level dari folder 'api')
-app = Flask(__name__, template_folder='../templates')
+import os
+# Mendapatkan jalur absolut ke folder templates
+template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates'))
+app = Flask(__name__, template_folder=template_dir)
 
 # --- KONFIGURASI PENTING ---
 # Ganti 'USERNAME' dengan username GitHub Anda yang asli.
