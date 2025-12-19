@@ -55,6 +55,13 @@ xsd:time a rdfs:Datatype .
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#approvedBy> a owl:ObjectProperty ;
 	rdfs:label "approved by"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#bestConsumedDuring
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#bestConsumedDuring> a owl:ObjectProperty ;
+	rdfs:domain <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	rdfs:range <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> ;
+	rdfs:label "best consumed during"@en .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> a owl:ObjectProperty ;
@@ -73,7 +80,7 @@ xsd:time a rdfs:Datatype .
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#damagesOrgan
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#damagesOrgan> a owl:ObjectProperty ;
-	rdfs:subPropertyOf :affectsSystem ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
 	rdfs:label "damages organ"@en ;
 	rdfs:seeAlso "damages organ"@en .
 # 
