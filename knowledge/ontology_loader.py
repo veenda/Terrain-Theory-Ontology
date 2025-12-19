@@ -3,80 +3,79 @@ import os
 
 def load_knowledge(filename="Terrain.ttl"):
     """
-    Memuat ontologi Terrain Theory dengan teknik 'Sanitasi In-Memory'
-    dan iterasi manual agar SEMUA penyakit terdeteksi.
+    Memuat ontologi dengan mode Debugging.
+    Jika error, pesan error akan dikirim ke Dropdown di website.
     """
-    # 1. Tentukan path file asli
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file_path = os.path.join(base_path, filename)
     
     print(f"📥 Loading Ontology from: {file_path}")
     
     try:
-        # --- TEKNIK 1: SANITASI FILE (BYPASS ERROR @base) ---
-        # Baca konten file asli sebagai teks (gunakan utf-8-sig untuk handle BOM)
+        # 1. SANITASI FILE (Hapus baris @base yang bikin error di Vercel)
+        if not os.path.exists(file_path):
+            return {"onto": None, "diseases_list": [{"id": "err", "name": f"❌ Error: File {filename} tidak ditemukan!"}]}
+
         with open(file_path, "r", encoding="utf-8-sig") as f:
-            raw_content = f.readlines()
-            
-        # Hapus baris yang mengandung '@base' agar parser Vercel tidak error
-        clean_lines = [line for line in raw_content if not line.strip().startswith("@base")]
-        clean_content = "".join(clean_lines)
+            lines = f.readlines()
         
-        # Simpan file bersih ke folder sementara
-        tmp_path = "/tmp/clean_terrain.ttl"
+        # Hapus baris yang mengandung '@base'
+        clean_content = "".join([l for l in lines if not l.strip().startswith("@base")])
+        
+        # Simpan ke folder sementara
+        tmp_path = "/tmp/terrain_fixed.ttl"
         with open(tmp_path, "w", encoding="utf-8") as f:
             f.write(clean_content)
             
-        print("🧹 Sanitasi Selesai: @base dihapus.")
-        # ----------------------------------------------------
+        # 2. LOAD ONTOLOGI
+        try:
+            onto = get_ontology(tmp_path).load()
+        except Exception as e:
+            return {"onto": None, "diseases_list": [{"id": "err", "name": f"❌ Parse Error: {str(e)[:50]}..."}]}
 
-        # Load file sementara
-        onto = get_ontology(tmp_path).load()
-        print("✅ Ontology Loaded Successfully!")
-        
+        # 3. CARI PENYAKIT (Metode Leluhur/Ancestors)
         diseases = []
         
-        # --- TEKNIK 2: PENCARIAN PENYAKIT (LEBIH KUAT) ---
+        # Cari kelas 'Manifestation' (Root dari semua penyakit)
+        root = onto.search_one(iri="*Manifestation")
         
-        # Cari kelas induk "Manifestation" dengan IRI lengkap
-        # Sesuaikan dengan prefix di file Terrain.ttl Anda
-        iri_root = "http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Manifestation"
-        root = onto.search_one(iri=iri_root)
-        
-        # Fallback jika IRI berubah/salah, cari wildcard
         if not root:
-             print(f"⚠️ Warning: Root IRI {iri_root} tidak ditemukan. Mencoba wildcard...")
-             root = onto.search_one(iri="*Manifestation")
-
-        if root:
-            # Iterasi SEMUA kelas yang ada di ontologi (dijamin tidak ada yang terlewat)
+            # Coba cari manual jika search_one gagal
             for cls in onto.classes():
-                try:
-                    # Cek apakah cls adalah turunan dari Root (Manifestation)
-                    if cls != root and issubclass(cls, root):
-                        
-                        # FILTER PENTING:
-                        # Jangan masukkan "Kategori" (yang namanya mengandung 'Manifestation')
-                        # Kita hanya mau Penyakit spesifik (Leaf Nodes) seperti 'Acne', 'Diabetes', dll.
-                        if "Manifestation" in cls.name:
-                            continue 
-                        
-                        # Format Nama agar rapi (hapus underscore)
-                        clean_name = cls.name.replace("_", " ")
-                        
-                        diseases.append({
-                            "id": cls.name,
-                            "name": clean_name
-                        })
-                except:
-                    continue
-        else:
-            print("❌ Error: Kelas 'Manifestation' tidak ditemukan sama sekali di Ontologi.")
-
-        # Sortir A-Z agar mudah dicari di dropdown
-        diseases.sort(key=lambda x: x["name"])
+                if "Manifestation" in cls.name and "Skin" not in cls.name: # Cari yg umum
+                    root = cls
+                    break
         
-        print(f"📊 Total Penyakit Ditemukan: {len(diseases)}")
+        if not root:
+            return {"onto": onto, "diseases_list": [{"id": "err", "name": "❌ Error: Kelas 'Manifestation' tidak ditemukan"}]}
+
+        # Iterasi semua kelas dan cek apakah mereka anak dari Root
+        count = 0
+        for cls in onto.classes():
+            try:
+                # Cek apakah 'root' ada di dalam daftar leluhur (ancestors) kelas ini
+                if cls != root and root in cls.ancestors():
+                    
+                    # FILTER: Jangan masukkan kategori induk (yang namanya mengandung 'Manifestation')
+                    # Kecuali Anda ingin kategori juga muncul, hapus baris if ini.
+                    if "Manifestation" in cls.name:
+                        continue 
+                    
+                    clean_name = cls.name.replace("_", " ")
+                    diseases.append({
+                        "id": cls.name,
+                        "name": clean_name
+                    })
+                    count += 1
+            except:
+                continue
+
+        # 4. HASIL
+        if count == 0:
+            return {"onto": onto, "diseases_list": [{"id": "err", "name": "⚠️ 0 Penyakit ditemukan (Cek Hierarki)"}]}
+
+        diseases.sort(key=lambda x: x["name"])
+        print(f"✅ Berhasil memuat {count} penyakit.")
         
         return {
             "onto": onto,
@@ -84,8 +83,9 @@ def load_knowledge(filename="Terrain.ttl"):
         }
         
     except Exception as e:
-        print(f"❌ CRITICAL ERROR loading ontology: {e}")
+        # Tangkap error tak terduga
+        print(f"❌ CRITICAL ERROR: {e}")
         return {
             "onto": None,
-            "diseases_list": []
+            "diseases_list": [{"id": "err", "name": f"🔥 System Error: {str(e)}"}]
         }
