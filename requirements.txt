@@ -1,0 +1,4 @@
+Flask==3.0.0
+Owlready2==0.45
+pytz==2023.3
+requests
