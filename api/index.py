@@ -22,18 +22,24 @@ ONTOLOGY_URL = f"https://raw.githubusercontent.com/{GITHUB_USERNAME}/{REPO_NAME}
 TIMEZONE = pytz.timezone('Asia/Jakarta')
 
 # --- LOAD ONTOLOGY ---
-# Download file .ttl ke memori sementara server (agar tidak perlu simpan file fisik)
+onto = None  # Inisialisasi awal supaya tidak NameError
+
 try:
     print(f"📥 Downloading ontology from: {ONTOLOGY_URL}")
     urllib.request.urlretrieve(ONTOLOGY_URL, "/tmp/terrain.ttl")
     
-    # Load Ontology dengan Owlready2
-    onto = get_ontology("/tmp/terrain.ttl").load()
-    print("✅ Ontology Loaded Successfully!")
-except Exception as e:
-    print(f"❌ Error loading ontology: {e}")
-    print("Pastikan URL GitHub benar dan Repository PUBLIC.")
+    # Cek apakah file berhasil terdownload dan ukurannya tidak 0
+    if os.path.getsize("/tmp/terrain.ttl") > 0:
+        onto = get_ontology("/tmp/terrain.ttl").load()
+        print("✅ Ontology Loaded Successfully!")
+    else:
+        print("❌ Error: File terdownload tapi kosong.")
 
+except Exception as e:
+    print(f"❌ CRITICAL ERROR loading ontology: {e}")
+    print("TIP: Cek Username, Nama Repo, dan Pastikan Repo PUBLIC.")
+
+    
 # --- HELPER FUNCTIONS ---
 
 def clean_name(entity):
