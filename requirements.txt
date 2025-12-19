@@ -1,4 +1,5 @@
 Flask==3.0.0
 Owlready2==0.45
+rdflib==7.0.0
 pytz==2023.3
 requests
