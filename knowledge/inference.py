@@ -14,62 +14,67 @@ def get_current_phase():
         return "Assimilation Phase", "Malam (Rest & Repair Mode)"
 
 def normalize_phase_name(phase_name):
-    """Membersihkan nama fase agar cocok (misal 'AppropriationCycle' -> 'Appropriation Phase')"""
-    if "Appropriation" in phase_name: return "Appropriation Phase"
-    if "Elimination" in phase_name: return "Elimination Phase"
-    if "Assimilation" in phase_name: return "Assimilation Phase"
+    """Membersihkan nama fase dari Ontologi agar cocok dengan jam"""
+    p = phase_name.lower()
+    if "elimination" in p: return "Elimination Phase"
+    if "appropriation" in p: return "Appropriation Phase"
+    if "assimilation" in p: return "Assimilation Phase"
     return phase_name
 
 def run_diagnosis(disease_id, knowledge_data):
     """
-    Logika Utama (Versi RDFLib Compatible)
+    Logika Utama Diagnosa (Kompatibel dengan RDFLib Loader)
     """
     if not knowledge_data:
         return None
 
+    # Ambil data dari hasil loader
     diseases_dict = knowledge_data.get("diseases_obj", {})
     all_foods = knowledge_data.get("foods_obj", [])
     
-    # Ambil objek penyakit dari dictionary
+    # 1. Cari Penyakit
     disease = diseases_dict.get(disease_id)
     if not disease:
         return None
 
+    # 2. Cek Waktu
     current_phase_key, phase_label = get_current_phase()
     
-    # Organ Target
+    # 3. Cari Organ Terdampak
     target_organs = disease.affected_organs
-    # Bersihkan nama organ (misal "Liver" tetap "Liver")
     
     recommendations = []
 
+    # 4. Filter Makanan
     for food in all_foods:
-        # Cek apakah makanan ini membersihkan atau menutrisi organ yang sakit
         is_relevant = False
         relevant_organ = ""
         
-        # Cek Cleanses
+        # Cek apakah makanan membersihkan organ yg sakit?
         for organ in target_organs:
-            if organ in food.cleanses:
+            # Cek Cleanses (Prioritas)
+            if any(organ in c for c in food.cleanses):
                 is_relevant = True
                 relevant_organ = organ
-                break # Prioritas cleansing
-            if organ in food.nourishes:
+                break
+            # Cek Nourishes
+            if any(organ in n for n in food.nourishes):
                 is_relevant = True
                 relevant_organ = organ
+                break
         
         if is_relevant:
-            # Cek Waktu Konsumsi
             status = "Allowed"
             warning = ""
             
-            # Normalisasi fase makanan
+            # Cek Fase Waktu
             food_phases = [normalize_phase_name(p) for p in food.best_phases]
             
-            if food_phases:
-                if current_phase_key not in food_phases:
-                    status = "Wait"
-                    warning = f"Tunggu: {', '.join(food_phases)}"
+            # Jika makanan punya aturan waktu, dan waktu sekarang tidak cocok
+            if food_phases and current_phase_key not in food_phases:
+                status = "Wait"
+                pretty_phases = [p.replace(" Phase", "") for p in food_phases]
+                warning = f"Wait for: {', '.join(pretty_phases)}"
             
             recommendations.append({
                 "name": food.name,
@@ -79,7 +84,7 @@ def run_diagnosis(disease_id, knowledge_data):
                 "type": food.type
             })
 
-    # Deduping & Sorting
+    # 5. Bersihkan Duplikat & Urutkan
     seen = set()
     unique_recs = []
     for r in recommendations:
@@ -88,7 +93,7 @@ def run_diagnosis(disease_id, knowledge_data):
             seen.add(key)
             unique_recs.append(r)
     
-    # Sort: Allowed dulu, lalu Wait. Di dalam itu urut nama.
+    # Urutkan: Allowed paling atas, lalu Wait
     unique_recs.sort(key=lambda x: (x['status'] != 'Allowed', x['name']))
 
     return {

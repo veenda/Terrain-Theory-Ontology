@@ -5,7 +5,6 @@ from knowledge.inference import run_diagnosis
 app = Flask(__name__)
 
 # Load Knowledge saat startup
-# Pastikan file 'Terrain.ttl' ada di folder yang sama dengan app.py
 knowledge = load_knowledge("Terrain.ttl")
 
 @app.route("/", methods=["GET"])
@@ -14,16 +13,15 @@ def index():
 
 @app.route("/diagnose", methods=["GET", "POST"])
 def diagnose_view():
-    # Jika Data Gagal Load
     if not knowledge:
         return render_template("base.html", error="Ontology failed to load.")
 
     if request.method == "GET":
-        # Tampilkan Dropdown Penyakit
-        diseases = knowledge.get("diseases_list", [])
-        return render_template("diagnose.html", diseases=diseases)
+        # Kirim 'categories' yang berisi nested diseases
+        categories = knowledge.get("categories", [])
+        return render_template("diagnose.html", categories=categories)
     
-    # POST: Proses Diagnosa
+    # POST
     disease_id = request.form.get("disease_id")
     if not disease_id:
         return redirect(url_for('diagnose_view'))
