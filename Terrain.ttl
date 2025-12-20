@@ -5,8 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> rdf:type owl:Ontology .
-
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> a owl:Ontology .
 # 
 # 
 # #################################################################
@@ -407,6 +406,8 @@ _:genid21 a owl:Restriction ;
 _:genid22 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+
+:AcuteInfection rdfs:label "Acute Infection"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Adenoma
 
@@ -431,6 +432,8 @@ _:genid23 a owl:Restriction ;
 _:genid24 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+
+:AggregationDisturbance rdfs:label "Aggregation Disturbance"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Allergy
 
@@ -548,6 +551,8 @@ _:genid39 a owl:Restriction ;
 _:genid40 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+
+:AtrophicGastritis rdfs:label "Atrophic Gastritis"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/AutoimmuneDisease
 
@@ -557,6 +562,8 @@ _:genid40 a owl:Restriction ;
 _:genid41 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+
+:AutoimmuneDisease rdfs:label "Autoimmune Disease"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Bladder
 
@@ -791,6 +798,8 @@ _:genid63 a owl:Restriction ;
 _:genid64 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+
+:ChronicGastritis rdfs:label "Chronic Gastritis"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ChronicInfections
 
@@ -800,6 +809,8 @@ _:genid64 a owl:Restriction ;
 _:genid65 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+
+:ChronicInfections rdfs:label "Chronic Infections"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ChronicRheumatoidArthritis
 
@@ -873,6 +884,8 @@ _:genid75 a owl:Restriction ;
 _:genid76 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+
+:ColonCancer rdfs:label "Colon Cancer"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Conjunctiva
 
@@ -902,6 +915,8 @@ _:genid78 a owl:Restriction ;
 _:genid79 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+
+:CoronaryHeartDisease rdfs:label "Coronary Heart Disease"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Cough
 
@@ -954,6 +969,8 @@ _:genid84 a owl:Restriction ;
 _:genid85 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+
+:DifficultyConcentrating rdfs:label "Difficulty Concentrating"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/DigestiveSystem
 
@@ -1161,6 +1178,8 @@ _:genid111 a owl:Restriction ;
 _:genid112 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+
+:FunctionalHeartComplaint rdfs:label "Functional Heart Complaint"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/FunctionalPsychologicalDistrubance
 
@@ -1226,6 +1245,8 @@ _:genid118 a owl:Restriction ;
 _:genid119 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+
+:GlobusSensation rdfs:label "Globul Sensation"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/GlucoseIntolerance
 
@@ -1235,6 +1256,8 @@ _:genid119 a owl:Restriction ;
 _:genid120 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+
+:GlucoseIntolerance rdfs:label "Glucose Intolerance"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Goitre
 
@@ -1285,6 +1308,8 @@ _:genid126 a owl:Restriction ;
 _:genid127 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+
+:HeartFailure rdfs:label "Heart Failure"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Heartburn
 
@@ -1368,6 +1393,8 @@ _:genid138 a owl:Restriction ;
 _:genid139 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+
+:HyperplasticGastritis rdfs:label "Hyperplastic Gastritis"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Hyperthyroidism
 
@@ -1552,6 +1579,8 @@ _:genid156 a owl:Restriction ;
 _:genid157 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+
+:LiverCirrhosis rdfs:label "Liver Cirrhosis"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/LocomotorSystem
 
@@ -1816,6 +1845,8 @@ _:genid187 a owl:Restriction ;
 _:genid188 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+
+:MenopausalSymptoms rdfs:label "Menopausal Symptoms"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/MentalDeficiency
 
@@ -1914,6 +1945,8 @@ _:genid200 a owl:Restriction ;
 _:genid201 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+
+:MyocardialInfarction rdfs:label "Myocardial Infarction"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Myocarditis
 
@@ -2403,6 +2436,8 @@ _:genid254 a owl:Restriction ;
 _:genid255 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+
+:SlowReactions rdfs:label "Slow Reaction"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/SmallIntestine
 
@@ -2477,6 +2512,8 @@ _:genid262 a owl:Restriction ;
 _:genid263 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+
+:StomachCancer rdfs:label "Stomach Cancer"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/Suppuration
 
@@ -2495,6 +2532,8 @@ _:genid264 a owl:Restriction ;
 _:genid265 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+
+:SusceptibilityToInfection rdfs:label "Susceptibility to Infection"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/SweatGlands
 
@@ -2580,6 +2619,8 @@ _:genid274 a owl:Restriction ;
 _:genid275 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+
+:ThyroidCancer rdfs:label "Thyroid Cancer"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/ThyroidGland
 
@@ -2692,6 +2733,8 @@ _:genid288 a owl:Restriction ;
 _:genid289 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+
+:WeakImmuneSystem rdfs:label "Weak Immune System"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/WeakReactions
 
@@ -2701,6 +2744,8 @@ _:genid289 a owl:Restriction ;
 _:genid290 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
 	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+
+:WeakReactions rdfs:label "Weak Reactions"@en .
 # 
 # http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11/WhiteBloodCells
 
