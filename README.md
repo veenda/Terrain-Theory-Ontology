@@ -97,3 +97,10 @@ Terrain-Theory-Ontology/
 ├── requirements.txt        # Daftar pustaka Python
 ├── Terrain.ttl             # File Knowledge Base (Ontologi)
 └── vercel.json             # Konfigurasi deployment Vercel
+
+## 👥 Authors
+Program Studi Sains Data Fakultas Teknologi Informasi dan Sains Data Universitas Sebelas Maret
+
+- Emeralita Wistyaka Rani 📧 emeralita@student.uns.ac.id
+
+- Veenda Putri Divo 📧 veenda@student.uns.ac.id

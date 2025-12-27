@@ -98,6 +98,12 @@ xsd:time a rdfs:Datatype .
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isCleansedBy> a owl:ObjectProperty ;
 	rdfs:label "is cleansed by"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isRecommendedFor
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isRecommendedFor> a owl:ObjectProperty ;
+	rdfs:comment "'food' is recommended for 'organ/system'"@en ;
+	rdfs:label "is recommended for"@en .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> a owl:ObjectProperty ;
@@ -145,7 +151,7 @@ _:genid1 a rdf:List ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasEndTime
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasEndTime> a owl:DatatypeProperty ;
-	rdfs:range xsd:time ;
+	rdfs:range xsd:integer ;
 	rdfs:label "has end time"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "has end hour"@en .
 # 
@@ -158,7 +164,7 @@ _:genid1 a rdf:List ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasStartTime
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#hasStartTime> a owl:DatatypeProperty ;
-	rdfs:range xsd:time ;
+	rdfs:range xsd:integer ;
 	rdfs:label "has start time"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "has start hour"@en .
 # 
