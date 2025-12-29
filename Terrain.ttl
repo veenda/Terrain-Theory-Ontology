@@ -104,6 +104,10 @@ xsd:time a rdfs:Datatype .
 	rdfs:comment "'food' is recommended for 'organ/system'"@en ;
 	rdfs:label "is recommended for"@en .
 # 
+# http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isTimelyFor
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isTimelyFor> a owl:ObjectProperty .
+# 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> a owl:ObjectProperty ;
@@ -5147,4 +5151,180 @@ _:genid648 a owl:Restriction ;
 	owl:onProperty <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
 	owl:someValuesFrom :IntegumentarySystem .
 # 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+
+<urn:swrl#d> a <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl#p> a <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl#f> a <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl#o> a <http://www.w3.org/2003/11/swrl#Variable> .
+
+_:genid649 a <http://www.w3.org/2003/11/swrl#Imp> ;
+	<http://www.w3.org/2003/11/swrl#body> _:genid656 .
+
+_:genid656 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid3 .
+
+_:genid3 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> :Manifestation ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#d> .
+
+_:genid656 rdf:rest _:genid654 .
+
+_:genid654 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid655 .
+
+_:genid655 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerrainPhase ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#d> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#p> .
+
+_:genid654 rdf:rest _:genid652 .
+
+_:genid652 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid11 .
+
+_:genid11 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> .
+
+_:genid652 rdf:rest _:genid650 .
+
+_:genid650 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid651 .
+
+_:genid651 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#bestConsumedDuring> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#p> .
+
+_:genid650 rdf:rest rdf:nil .
+
+_:genid649 <http://www.w3.org/2003/11/swrl#head> _:genid658 .
+
+_:genid658 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid659 .
+
+_:genid659 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isTimelyFor> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#d> .
+
+_:genid658 rdf:rest rdf:nil .
+
+_:genid660 a <http://www.w3.org/2003/11/swrl#Imp> ;
+	<http://www.w3.org/2003/11/swrl#body> _:genid666 .
+
+_:genid666 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid10 .
+
+_:genid10 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> .
+
+_:genid666 rdf:rest _:genid664 .
+
+_:genid664 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid665 .
+
+_:genid665 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#o> .
+
+_:genid664 rdf:rest _:genid663 .
+
+_:genid663 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid4 .
+
+_:genid4 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> :Manifestation ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#d> .
+
+_:genid663 rdf:rest _:genid661 .
+
+_:genid661 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid8 .
+
+_:genid8 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> :affectsSystem ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#d> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#o> .
+
+_:genid661 rdf:rest rdf:nil .
+
+_:genid660 <http://www.w3.org/2003/11/swrl#head> _:genid667 .
+
+_:genid667 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid5 .
+
+_:genid5 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isRecommendedFor> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#d> .
+
+_:genid667 rdf:rest rdf:nil .
+
+_:genid669 a <http://www.w3.org/2003/11/swrl#Imp> ;
+	<http://www.w3.org/2003/11/swrl#body> _:genid674 .
+
+_:genid674 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid9 .
+
+_:genid9 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> .
+
+_:genid674 rdf:rest _:genid672 .
+
+_:genid672 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid673 .
+
+_:genid673 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#o> .
+
+_:genid672 rdf:rest _:genid671 .
+
+_:genid671 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid2 .
+
+_:genid2 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> :Manifestation ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#d> .
+
+_:genid671 rdf:rest _:genid670 .
+
+_:genid670 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid7 .
+
+_:genid7 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> :affectsSystem ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#d> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#o> .
+
+_:genid670 rdf:rest rdf:nil .
+
+_:genid669 <http://www.w3.org/2003/11/swrl#head> _:genid675 .
+
+_:genid675 a <http://www.w3.org/2003/11/swrl#AtomList> ;
+	rdf:first _:genid6 .
+
+_:genid6 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+	<http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#isRecommendedFor> ;
+	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> ;
+	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#d> .
+
+_:genid675 rdf:rest rdf:nil .
 # Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
