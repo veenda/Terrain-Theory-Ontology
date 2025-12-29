@@ -4,6 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> .
 
 <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> a owl:Ontology .
 # 
@@ -73,23 +74,23 @@ _:genid1 a rdf:List ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#bestConsumedDuring
 
 :bestConsumedDuring a owl:ObjectProperty ;
-	rdfs:domain <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
-	rdfs:range <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> ;
+	rdfs:domain <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	rdfs:range <http://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> ;
 	rdfs:label "best consumed during"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#cleansesOrgan
 
 :cleansesOrgan a owl:ObjectProperty ;
 	owl:inverseOf :isCleansedBy ;
-	rdfs:domain <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
-	rdfs:range <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:domain <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	rdfs:range <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "cleanses organ"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#congestsOrgan
 
 :congestsOrgan a owl:ObjectProperty ;
-	rdfs:domain <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> ;
-	rdfs:range <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:domain <http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> ;
+	rdfs:range <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "congests organ"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#damagesOrgan
@@ -135,8 +136,8 @@ _:genid1 a rdf:List ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#nourishesSystem
 
 :nourishesSystem a owl:ObjectProperty ;
-	rdfs:domain <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
-	rdfs:range <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:domain <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	rdfs:range <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "nourishes system"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#partOf
@@ -189,7 +190,7 @@ _:genid1 a rdf:List ;
 
 _:genid3 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Acne
 
@@ -204,7 +205,7 @@ _:genid4 a owl:Restriction ;
 
 _:genid5 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AcuteInfection
 
@@ -213,7 +214,7 @@ _:genid5 a owl:Restriction ;
 
 _:genid6 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
 :AcuteInfection rdfs:label "Acute Infection"@en .
 # 
@@ -224,7 +225,7 @@ _:genid6 a owl:Restriction ;
 
 _:genid7 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AdiposeTissue
 
@@ -246,7 +247,7 @@ _:genid7 a owl:Restriction ;
 
 _:genid8 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :AggregationDisturbance rdfs:label "Aggregation Disturbance"@en .
 # 
@@ -263,7 +264,7 @@ _:genid9 a owl:Restriction ;
 
 _:genid10 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Alveoli
 
@@ -283,7 +284,7 @@ _:genid11 a owl:Restriction ;
 
 _:genid12 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Amaurosis
 
@@ -315,7 +316,7 @@ _:genid14 rdf:rest rdf:nil .
 
 _:genid18 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Anemia
 
@@ -324,7 +325,7 @@ _:genid18 a owl:Restriction ;
 
 _:genid19 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Anosmia
 
@@ -339,7 +340,7 @@ _:genid20 a owl:Restriction ;
 
 _:genid21 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AnxietyNeurosis
 
@@ -354,7 +355,7 @@ _:genid22 a owl:Restriction ;
 
 _:genid23 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :AnxietyNeurosis rdfs:label "Anxiety Neurosis"@en .
 # 
@@ -365,7 +366,7 @@ _:genid23 a owl:Restriction ;
 
 _:genid24 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :AtrophicGastritis rdfs:label "Atrophic Gastritis"@en .
 # 
@@ -380,7 +381,7 @@ _:genid24 a owl:Restriction ;
 
 _:genid25 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :AutoimmuneDisease rdfs:label "Autoimmune Disease"@en .
 # 
@@ -449,7 +450,7 @@ _:genid36 a owl:Restriction ;
 
 _:genid37 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :BladderStones rdfs:label "Bladder Stones"@en .
 # 
@@ -498,7 +499,7 @@ _:genid38 a owl:Restriction ;
 
 _:genid39 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :BronchialCarcinoma rdfs:label "Bronchial Carcinoma"@en .
 # 
@@ -515,7 +516,7 @@ _:genid40 a owl:Restriction ;
 
 _:genid41 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :Bronchiectasia <http://www.w3.org/2004/02/skos/core#altLabel> "Bronchiectasis"@en .
 # 
@@ -532,7 +533,7 @@ _:genid42 a owl:Restriction ;
 
 _:genid43 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
 :Bronchitis <http://www.w3.org/2004/02/skos/core#altLabel> "TBC"@en .
 # 
@@ -549,12 +550,12 @@ _:genid44 a owl:Restriction ;
 
 _:genid45 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystem
 
 :CardiovascularSystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Cardiovascular System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CardiovascularSystemManifestation
@@ -581,7 +582,7 @@ _:genid46 a owl:Restriction ;
 
 _:genid47 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cerebrosclerosis
 
@@ -596,7 +597,7 @@ _:genid48 a owl:Restriction ;
 
 _:genid49 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chalazion
 
@@ -611,7 +612,7 @@ _:genid50 a owl:Restriction ;
 
 _:genid51 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cholesteatoma
 
@@ -626,7 +627,7 @@ _:genid52 a owl:Restriction ;
 
 _:genid53 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chondroma
 
@@ -641,7 +642,7 @@ _:genid54 a owl:Restriction ;
 
 _:genid55 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ChronicBronchitis
 
@@ -656,7 +657,7 @@ _:genid56 a owl:Restriction ;
 
 _:genid57 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :ChronicBronchitis rdfs:label "Chronic Bronchitis"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "TBC"@en .
@@ -668,7 +669,7 @@ _:genid57 a owl:Restriction ;
 
 _:genid58 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :ChronicGastritis rdfs:label "Chronic Gastritis"@en .
 # 
@@ -679,7 +680,7 @@ _:genid58 a owl:Restriction ;
 
 _:genid59 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :ChronicInfections rdfs:label "Chronic Infections"@en .
 # 
@@ -720,7 +721,7 @@ _:genid62 rdf:rest rdf:nil .
 
 _:genid67 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :ChronicRheumatoidArthritis rdfs:label "Chronic Rheumatoid Arthritis"@en .
 # 
@@ -737,7 +738,7 @@ _:genid68 a owl:Restriction ;
 
 _:genid69 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :ChronicUrinaryTractInfection rdfs:label "Chronic Urinary Tract Infection"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Chronic Urinal Tract Infection"@en .
@@ -754,7 +755,7 @@ _:genid69 a owl:Restriction ;
 
 _:genid70 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :ColonCancer rdfs:label "Colon Cancer"@en .
 # 
@@ -776,7 +777,7 @@ _:genid71 a owl:Restriction ;
 
 _:genid72 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ConnectiveTissue
 
@@ -791,7 +792,7 @@ _:genid72 a owl:Restriction ;
 
 _:genid73 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :CoronaryHeartDisease rdfs:label "Coronary Heart Disease"@en .
 # 
@@ -808,7 +809,7 @@ _:genid74 a owl:Restriction ;
 
 _:genid75 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Dermis
 
@@ -828,7 +829,7 @@ _:genid76 a owl:Restriction ;
 
 _:genid77 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :DiabetesMellitus rdfs:label "Diabetes Melitus"@en .
 # 
@@ -845,14 +846,14 @@ _:genid78 a owl:Restriction ;
 
 _:genid79 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 
 :DifficultyConcentrating rdfs:label "Difficulty Concentrating"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DigestiveSystem
 
 :DigestiveSystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Digestive System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Ears
@@ -873,7 +874,7 @@ _:genid80 a owl:Restriction ;
 
 _:genid81 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 
 :ElectrolyteShift rdfs:label "Electrolyte Shift"@en .
 # 
@@ -890,7 +891,7 @@ _:genid82 a owl:Restriction ;
 
 _:genid83 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Endocarditis
 
@@ -899,12 +900,12 @@ _:genid83 a owl:Restriction ;
 
 _:genid84 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#EndocrineSystem
 
 :EndocrineSystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Endocrine System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#EndogenousDepression
@@ -931,7 +932,7 @@ _:genid87 a rdf:List ;
 
 _:genid89 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :EndogenousDepression rdfs:label "Endogenous Depression"@en .
 # 
@@ -942,7 +943,7 @@ _:genid89 a owl:Restriction ;
 
 _:genid90 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Epicondylitis
 
@@ -957,7 +958,7 @@ _:genid91 a owl:Restriction ;
 
 _:genid92 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Epidermis
 
@@ -977,7 +978,7 @@ _:genid93 a owl:Restriction ;
 
 _:genid94 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Expectoration
 
@@ -1020,7 +1021,7 @@ _:genid96 rdf:rest rdf:nil .
 
 _:genid103 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Eyelid
 
@@ -1045,7 +1046,7 @@ _:genid104 a owl:Restriction ;
 
 _:genid105 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#FrontalLobe
 
@@ -1060,7 +1061,7 @@ _:genid105 a owl:Restriction ;
 
 _:genid106 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 
 :FunctionalHeartComplaint rdfs:label "Functional Heart Complaint"@en .
 # 
@@ -1077,7 +1078,7 @@ _:genid107 a owl:Restriction ;
 
 _:genid108 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 
 :FunctionalPsychologicalDistrubance rdfs:label "Functional Psychological Disturbance"@en .
 # 
@@ -1088,7 +1089,7 @@ _:genid108 a owl:Restriction ;
 
 _:genid109 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gastroenteritis
 
@@ -1097,7 +1098,7 @@ _:genid109 a owl:Restriction ;
 
 _:genid110 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GastrointestinalSystemManifestation
 
@@ -1118,7 +1119,7 @@ _:genid111 a owl:Restriction ;
 
 _:genid112 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GlobusSensation
 
@@ -1127,7 +1128,7 @@ _:genid112 a owl:Restriction ;
 
 _:genid113 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 
 :GlobusSensation rdfs:label "Globul Sensation"@en .
 # 
@@ -1138,7 +1139,7 @@ _:genid113 a owl:Restriction ;
 
 _:genid114 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :GlucoseIntolerance rdfs:label "Glucose Intolerance"@en .
 # 
@@ -1149,7 +1150,7 @@ _:genid114 a owl:Restriction ;
 
 _:genid115 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Gout
 
@@ -1176,7 +1177,7 @@ _:genid117 a owl:Class .
 
 _:genid120 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Heart
 
@@ -1190,7 +1191,7 @@ _:genid120 a owl:Restriction ;
 
 _:genid121 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :HeartFailure rdfs:label "Heart Failure"@en .
 # 
@@ -1201,7 +1202,7 @@ _:genid121 a owl:Restriction ;
 
 _:genid122 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#HodgkinLymphoma
 
@@ -1240,7 +1241,7 @@ _:genid125 rdf:rest rdf:nil .
 
 _:genid130 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :HodgkinLymphoma rdfs:label "Hodgkin Lymphoma"@en .
 # 
@@ -1263,7 +1264,7 @@ _:genid131 a owl:Restriction ;
 
 _:genid132 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
 :HyperkineticSyndrome rdfs:label "Hyperkinetic Syndrome"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "ADHD"@en .
@@ -1275,7 +1276,7 @@ _:genid132 a owl:Restriction ;
 
 _:genid133 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :HyperplasticGastritis rdfs:label "Hyperplastic Gastritis"@en .
 # 
@@ -1286,12 +1287,12 @@ _:genid133 a owl:Restriction ;
 
 _:genid134 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystem
 
 :ImmuneSystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Immune System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#ImmuneSystemManifestation
@@ -1307,7 +1308,7 @@ _:genid134 a owl:Restriction ;
 
 _:genid135 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#InnerEar
 
@@ -1328,14 +1329,14 @@ _:genid136 a owl:Restriction ;
 
 _:genid137 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :InsufficiencyOfTheLymphSystem rdfs:label "Insufficiency of the Lymph System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#IntegumentarySystem
 
 :IntegumentarySystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Integumentary System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Iridocyclitis
@@ -1351,7 +1352,7 @@ _:genid138 a owl:Restriction ;
 
 _:genid139 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Iris
 
@@ -1371,7 +1372,7 @@ _:genid140 a owl:Restriction ;
 
 _:genid141 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 
 :JointPains rdfs:label "Joint Pains"@en .
 # 
@@ -1393,7 +1394,7 @@ _:genid142 a owl:Restriction ;
 
 _:genid143 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :KidneyStones rdfs:label "Kidney Stones"@en .
 # 
@@ -1409,7 +1410,7 @@ _:genid143 a owl:Restriction ;
 
 _:genid144 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Leukemia
 
@@ -1418,7 +1419,7 @@ _:genid144 a owl:Restriction ;
 
 _:genid145 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LimbicSystem
 
@@ -1451,7 +1452,7 @@ _:genid147 a owl:Class .
 
 _:genid150 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
 :LipidMetabolismDisturbance rdfs:label "Lipid Metabolism Distrubance"@en .
 # 
@@ -1467,14 +1468,14 @@ _:genid150 a owl:Restriction ;
 
 _:genid151 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :LiverCirrhosis rdfs:label "Liver Cirrhosis"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LocomotorSystem
 
 :LocomotorSystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Locomotor System"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Musculoskeletal System"@en .
 # 
@@ -1502,7 +1503,7 @@ _:genid152 a owl:Restriction ;
 
 _:genid153 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :Lymph-nodeSwelling rdfs:label "Lymph-node Swelling"@en .
 # 
@@ -1537,7 +1538,7 @@ _:genid154 a owl:Restriction ;
 
 _:genid155 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphangitis
 
@@ -1552,12 +1553,12 @@ _:genid156 a owl:Restriction ;
 
 _:genid157 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#LymphaticSystem
 
 :LymphaticSystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Lymphatic System"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Lymphoid System"@en .
 # 
@@ -1585,7 +1586,7 @@ _:genid160 a rdf:List ;
 
 _:genid162 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lymphoma
 
@@ -1624,7 +1625,7 @@ _:genid165 rdf:rest rdf:nil .
 
 _:genid170 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MacularDegeneration
 
@@ -1639,7 +1640,7 @@ _:genid171 a owl:Restriction ;
 
 _:genid172 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :MacularDegeneration rdfs:label "Macular Degeneration"@en .
 # 
@@ -1650,7 +1651,7 @@ _:genid172 a owl:Restriction ;
 
 _:genid173 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MalignantTumor
 
@@ -1665,7 +1666,7 @@ _:genid174 a owl:Restriction ;
 
 _:genid175 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :MalignantTumor rdfs:label "Malignant Tumor"@en .
 # 
@@ -1682,7 +1683,7 @@ _:genid176 a owl:Restriction ;
 
 _:genid177 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :Mania <http://www.w3.org/2004/02/skos/core#altLabel> "Bipolar"@en .
 # 
@@ -1704,7 +1705,7 @@ _:genid178 a owl:Restriction ;
 
 _:genid179 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Meninges
 
@@ -1724,7 +1725,7 @@ _:genid180 a owl:Restriction ;
 
 _:genid181 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MenopausalSymptoms
 
@@ -1733,7 +1734,7 @@ _:genid181 a owl:Restriction ;
 
 _:genid182 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :MenopausalSymptoms rdfs:label "Menopausal Symptoms"@en .
 # 
@@ -1750,7 +1751,7 @@ _:genid183 a owl:Restriction ;
 
 _:genid184 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :MentalDeficiency rdfs:label "Mental Deficiency"@en .
 # 
@@ -1779,7 +1780,7 @@ _:genid186 a owl:Class .
 
 _:genid189 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :MetabolicSyndrome rdfs:label "Metabolic Syndrome"@en .
 # 
@@ -1819,7 +1820,7 @@ _:genid192 a rdf:List ;
 
 _:genid194 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#MildFlavor
 
@@ -1845,7 +1846,7 @@ _:genid194 a owl:Restriction ;
 
 _:genid195 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :MyocardialInfarction rdfs:label "Myocardial Infarction"@en .
 # 
@@ -1856,7 +1857,7 @@ _:genid195 a owl:Restriction ;
 
 _:genid196 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Naevi
 
@@ -1871,7 +1872,7 @@ _:genid197 a owl:Restriction ;
 
 _:genid198 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nerves
 
@@ -1881,7 +1882,7 @@ _:genid198 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NervousSystem
 
 :NervousSystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Nervous System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NervousSystemManifestation
@@ -1903,7 +1904,7 @@ _:genid199 a owl:Restriction ;
 
 _:genid200 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Neuroses
 
@@ -1918,7 +1919,7 @@ _:genid201 a owl:Restriction ;
 
 _:genid202 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#NeuroticDepression
 
@@ -1933,7 +1934,7 @@ _:genid203 a owl:Restriction ;
 
 _:genid204 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :NeuroticDepression rdfs:label "Neurotic Depression"@en .
 # 
@@ -1979,7 +1980,7 @@ _:genid207 rdf:rest rdf:nil .
 
 _:genid212 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :NonHodgkinLymphoma rdfs:label "Non Hodgkin Lymphoma"@en .
 # 
@@ -2001,7 +2002,7 @@ _:genid213 a owl:Restriction ;
 
 _:genid214 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#OrganicPsychosyndrome
 
@@ -2016,7 +2017,7 @@ _:genid215 a owl:Restriction ;
 
 _:genid216 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 
 :OrganicPsychosyndrome rdfs:label "Organic Psychosyndrome"@en .
 # 
@@ -2033,7 +2034,7 @@ _:genid217 a owl:Restriction ;
 
 _:genid218 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
 :OtitisMedia rdfs:label "Otitis Media"@en .
 # 
@@ -2050,7 +2051,7 @@ _:genid219 a owl:Restriction ;
 
 _:genid220 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pancreas
 
@@ -2064,7 +2065,7 @@ _:genid220 a owl:Restriction ;
 
 _:genid221 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Phobias
 
@@ -2079,7 +2080,7 @@ _:genid222 a owl:Restriction ;
 
 _:genid223 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pleura
 
@@ -2093,7 +2094,7 @@ _:genid223 a owl:Restriction ;
 
 _:genid224 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Polyuria
 
@@ -2108,7 +2109,7 @@ _:genid225 a owl:Restriction ;
 
 _:genid226 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PsycheManifestation
 
@@ -2129,7 +2130,7 @@ _:genid227 a owl:Restriction ;
 
 _:genid228 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PsychosomaticManifestation
 
@@ -2144,7 +2145,7 @@ _:genid229 a owl:Restriction ;
 
 _:genid230 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :PsychosomaticManifestation rdfs:label "Psychosomatic Manifestation"@en .
 # 
@@ -2167,7 +2168,7 @@ _:genid231 a owl:Restriction ;
 
 _:genid232 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
 :ReactiveDepressiveSyndromes rdfs:label "Reactive Depressive Syndromes"@en .
 # 
@@ -2184,7 +2185,7 @@ _:genid233 a owl:Restriction ;
 
 _:genid234 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :RenalAtrophy rdfs:label "Renal Atrophy"@en .
 # 
@@ -2197,7 +2198,7 @@ _:genid234 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratorySystem
 
 :RespiratorySystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Respiratory System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#RespiratoryTractManifestation
@@ -2213,7 +2214,7 @@ _:genid234 a owl:Restriction ;
 
 _:genid235 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Retina
 
@@ -2239,7 +2240,7 @@ _:genid236 a owl:Restriction ;
 
 _:genid237 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SchizophrenicDefectiveStates
 
@@ -2254,7 +2255,7 @@ _:genid238 a owl:Restriction ;
 
 _:genid239 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 
 :SchizophrenicDefectiveStates rdfs:label "Schizophrenic Defective States"@en .
 # 
@@ -2271,7 +2272,7 @@ _:genid240 a owl:Restriction ;
 
 _:genid241 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebaceuousGlands
 
@@ -2282,7 +2283,7 @@ _:genid241 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiGrains
 
 :SebiGrains a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid242 .
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid242 .
 
 _:genid242 a owl:Restriction ;
 	owl:onProperty :approvedBy ;
@@ -2293,7 +2294,7 @@ _:genid242 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiHerbalTeas
 
 :SebiHerbalTeas a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid243 .
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid243 .
 
 _:genid243 a owl:Restriction ;
 	owl:onProperty :approvedBy ;
@@ -2304,7 +2305,7 @@ _:genid243 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiNutsandSeeds
 
 :SebiNutsandSeeds a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid244 .
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid244 .
 
 _:genid244 a owl:Restriction ;
 	owl:onProperty :approvedBy ;
@@ -2315,7 +2316,7 @@ _:genid244 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiOils
 
 :SebiOils a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid245 .
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid245 .
 
 _:genid245 a owl:Restriction ;
 	owl:onProperty :approvedBy ;
@@ -2326,7 +2327,7 @@ _:genid245 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SebiSpicesAndSeasonings
 
 :SebiSpicesAndSeasonings a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid246 .
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid246 .
 
 _:genid246 a owl:Restriction ;
 	owl:onProperty :approvedBy ;
@@ -2337,7 +2338,7 @@ _:genid246 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystem
 
 :SensorySystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Sensory System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SensorySystemManifestation
@@ -2359,7 +2360,7 @@ _:genid247 a owl:Restriction ;
 
 _:genid248 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Sinuses
 
@@ -2396,7 +2397,7 @@ _:genid251 a rdf:List ;
 
 _:genid253 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :SlowReaction rdfs:label "Slow Reaction"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Slow Metabolism"@en .
@@ -2408,7 +2409,7 @@ _:genid253 a owl:Restriction ;
 
 _:genid254 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :SlowReactions rdfs:label "Slow Reaction"@en .
 # 
@@ -2431,7 +2432,7 @@ _:genid255 a owl:Restriction ;
 
 _:genid256 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :SmokerLung rdfs:label "Smoker's Lung"@en .
 # 
@@ -2475,7 +2476,7 @@ _:genid259 a rdf:List ;
 
 _:genid261 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Stomach
 
@@ -2489,7 +2490,7 @@ _:genid261 a owl:Restriction ;
 
 _:genid262 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :StomachCancer rdfs:label "Stomach Cancer"@en .
 # 
@@ -2500,7 +2501,7 @@ _:genid262 a owl:Restriction ;
 
 _:genid263 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SusceptibilityToInfection
 
@@ -2509,7 +2510,7 @@ _:genid263 a owl:Restriction ;
 
 _:genid264 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 
 :SusceptibilityToInfection rdfs:label "Susceptibility to Infection"@en .
 # 
@@ -2532,7 +2533,7 @@ _:genid265 a owl:Restriction ;
 
 _:genid266 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SweetFlavor
 
@@ -2570,7 +2571,7 @@ _:genid268 rdf:rest rdf:nil .
 
 _:genid271 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tendons
 
@@ -2585,7 +2586,7 @@ _:genid271 a owl:Restriction ;
 _:genid272 a owl:Restriction ;
 	owl:onProperty :hasDietaryInput ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> .
+	owl:onClass <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> .
 
 :TheurapeuticProtocol rdfs:comment "ini asal aja sih, biar ada DL expressivity Q. minimal konsumsi 2 object dari dieatry input."@id ;
 	rdfs:label "Theurapeutic Protocol"@en .
@@ -2597,7 +2598,7 @@ _:genid272 a owl:Restriction ;
 
 _:genid273 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Thrombocytosis
 
@@ -2606,7 +2607,7 @@ _:genid273 a owl:Restriction ;
 
 _:genid274 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Thymus
 
@@ -2620,7 +2621,7 @@ _:genid274 a owl:Restriction ;
 
 _:genid275 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> .
 
 :ThyroidCancer rdfs:label "Thyroid Cancer"@en .
 # 
@@ -2637,7 +2638,7 @@ _:genid275 a owl:Restriction ;
 
 _:genid276 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tinnitus
 
@@ -2663,7 +2664,7 @@ _:genid279 a rdf:List ;
 
 _:genid281 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tonsillitis
 
@@ -2678,7 +2679,7 @@ _:genid282 a owl:Restriction ;
 
 _:genid283 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tonsils
 
@@ -2715,7 +2716,7 @@ _:genid285 rdf:rest rdf:nil .
 
 _:genid288 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
 :UrinalTractInfection rdfs:label "Urinal Tract Infection"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Urinary Tract Infection"@en .
@@ -2723,7 +2724,7 @@ _:genid288 a owl:Restriction ;
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystem
 
 :UrogenitalSystem a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> ;
 	rdfs:label "Urogenital System"@en .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#UrogenitalSystemManifestation
@@ -2739,7 +2740,7 @@ _:genid288 a owl:Restriction ;
 
 _:genid289 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> .
 
 :WeakImmuneSystem rdfs:label "Weak Immune System"@en .
 # 
@@ -2750,7 +2751,7 @@ _:genid289 a owl:Restriction ;
 
 _:genid290 a owl:Restriction ;
 	owl:onProperty :hasTerrainPhase ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> .
 
 :WeakReactions rdfs:label "Weak Reactions"@en .
 # 
@@ -2765,186 +2766,186 @@ _:genid290 a owl:Restriction ;
 <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> a owl:Class ;
 	rdfs:label "Terrain Status"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> a owl:Class ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#AnatomicalStructure> a owl:Class ;
 	<http://purl.org/dc/elements/1.1/source> "Classification logic based on Systemic Anatomy framework (Terminologia Anatomica, FIPAT 2019) and The 11 Body Systems model (Tortora & Derrickson, 2017). Grouping of 'Locomotor' and 'Urogenital' follows Gray's Anatomy and ICD-11 conventions for functional grouping."@en ;
 	rdfs:label "Anatomical Structure"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> , _:genid291 .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> , _:genid291 .
 
 _:genid291 a owl:Restriction ;
 	owl:onProperty :hasEndTime ;
 	owl:hasValue "20"^^xsd:integer .
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> rdfs:subClassOf _:genid292 .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> rdfs:subClassOf _:genid292 .
 
 _:genid292 a owl:Restriction ;
 	owl:onProperty :hasStartTime ;
 	owl:hasValue "12"^^xsd:integer .
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> rdfs:comment "eating time"@en ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> rdfs:comment "eating time"@en ;
 	rdfs:label "Appropriation Cycle"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Appropriation Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> , _:genid293 .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> , _:genid293 .
 
 _:genid293 a owl:Restriction ;
 	owl:onProperty :hasEndTime ;
 	owl:hasValue "4"^^xsd:integer .
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> rdfs:subClassOf _:genid294 .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> rdfs:subClassOf _:genid294 .
 
 _:genid294 a owl:Restriction ;
 	owl:onProperty :hasStartTime ;
 	owl:hasValue "20"^^xsd:integer .
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> rdfs:comment "absorbing time"@en ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> rdfs:comment "absorbing time"@en ;
 	rdfs:label "Assimilation Cycle"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Assimilation Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> a owl:Class ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> ;
 	rdfs:label "Cellular Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#DegenerationPhase> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> ;
 	rdfs:label "Degeneration Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#DepositionPhase> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> ;
 	rdfs:label "Deposition Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> a owl:Class ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> a owl:Class ;
 	rdfs:label "Dietary Input"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
-	owl:disjointWith <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucuslessFoods> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	owl:disjointWith <http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucuslessFoods> ;
 	rdfs:label "Electric Foods"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> , _:genid295 .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> , _:genid295 .
 
 _:genid295 a owl:Restriction ;
 	owl:onProperty :hasEndTime ;
 	owl:hasValue "12"^^xsd:integer .
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> rdfs:subClassOf _:genid296 .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> rdfs:subClassOf _:genid296 .
 
 _:genid296 a owl:Restriction ;
 	owl:onProperty :hasStartTime ;
 	owl:hasValue "4"^^xsd:integer .
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> rdfs:comment "detox time"@en ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> rdfs:comment "detox time"@en ;
 	rdfs:label "Elimination Cycle"@en ;
 	<http://www.w3.org/2004/02/skos/core#altLabel> "Elimination Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#ExcretionPhase> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> ;
 	rdfs:label "Excretion Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> a owl:Class ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> ;
 	rdfs:label "Humoral Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#ImpregnationPhase> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> ;
 	rdfs:label "Impregnation Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#InflammationPhase> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#HumoralPhase> ;
 	rdfs:label "Inflammation Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> a owl:Class ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#MatrixPhase> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> ;
 	rdfs:label "Matrix Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
 	rdfs:label "Mucus Forming Foods"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucuslessFoods
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucuslessFoods
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucuslessFoods> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucuslessFoods> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
 	rdfs:label "Mucusless Foods"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#NeoplasmPhase> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#CellularPhase> ;
 	rdfs:label "Neoplasem Phase"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#PusForming
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#PusForming
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#PusForming> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#PusForming> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid297 .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid297 .
 
 _:genid297 a owl:Restriction ;
 	owl:onProperty :approvedBy ;
 	owl:hasValue :DrSebi .
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> rdfs:label "Sebi Fruits"@en .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> rdfs:label "Sebi Fruits"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid298 .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid298 .
 
 _:genid298 a owl:Restriction ;
 	owl:onProperty :approvedBy ;
 	owl:hasValue :DrSebi .
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> rdfs:label "Sebi Vegetables"@en .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> rdfs:label "Sebi Vegetables"@en .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#SlimeForming
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#SlimeForming
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#SlimeForming> a owl:Class ;
-	rdfs:subClassOf <https://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#SlimeForming> a owl:Class ;
+	rdfs:subClassOf <http://github.com/veenda/Terrain-Theory-Ontology/ontology#MucusFormingFoods> .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#Subject
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#Subject
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#Subject> a owl:Class .
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#Subject> a owl:Class .
 # 
-# https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle
+# http://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle
 
-<https://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> a owl:Class ;
+<http://github.com/veenda/Terrain-Theory-Ontology/ontology#TimeCycle> a owl:Class ;
 	rdfs:label "Time Cycle"@en .
 # 
 # 
@@ -2981,7 +2982,7 @@ _:genid300 a owl:Restriction ;
 
 _:genid301 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Amaranth a _:genid302 .
 
@@ -2997,11 +2998,11 @@ _:genid303 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#AmaranthGreens
 
-:AmaranthGreens a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid304 .
+:AmaranthGreens a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid304 .
 
 _:genid304 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :AmaranthGreens a _:genid305 .
 
@@ -3019,7 +3020,7 @@ _:genid306 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Apples
 
-:Apples a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid307 .
+:Apples a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid307 .
 
 _:genid307 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3028,11 +3029,11 @@ _:genid307 a owl:Restriction ;
 _:genid308 owl:intersectionOf _:genid310 .
 
 _:genid310 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid309 .
 
 _:genid309 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid308 a owl:Class .
@@ -3051,11 +3052,11 @@ _:genid312 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Arame
 
-:Arame a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid313 .
+:Arame a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid313 .
 
 _:genid313 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Arame a _:genid314 .
 
@@ -3071,11 +3072,11 @@ _:genid315 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Avocado
 
-:Avocado a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid316 .
+:Avocado a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid316 .
 
 _:genid316 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Avocado a _:genid317 .
 
@@ -3095,7 +3096,7 @@ _:genid318 a owl:Restriction ;
 
 _:genid319 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :AvocadoOil a _:genid320 .
 
@@ -3107,7 +3108,7 @@ _:genid320 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Bananas
 
-:Bananas a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid321 .
+:Bananas a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid321 .
 
 _:genid321 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3116,11 +3117,11 @@ _:genid321 a owl:Restriction ;
 _:genid322 owl:intersectionOf _:genid324 .
 
 _:genid324 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid323 .
 
 _:genid323 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid322 a owl:Class .
@@ -3159,11 +3160,11 @@ _:genid328 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#BellPeppers
 
-:BellPeppers a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid329 .
+:BellPeppers a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid329 .
 
 _:genid329 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :BellPeppers a _:genid330 .
 
@@ -3181,7 +3182,7 @@ _:genid331 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Berries
 
-:Berries a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid332 .
+:Berries a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid332 .
 
 _:genid332 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3190,11 +3191,11 @@ _:genid332 a owl:Restriction ;
 _:genid333 owl:intersectionOf _:genid335 .
 
 _:genid335 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid334 .
 
 _:genid334 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid333 a owl:Class .
@@ -3219,7 +3220,7 @@ _:genid337 a owl:Restriction ;
 
 _:genid338 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :BrazilNuts a _:genid339 .
 
@@ -3240,15 +3241,15 @@ _:genid340 a owl:Restriction ;
 _:genid341 owl:intersectionOf _:genid344 .
 
 _:genid344 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid343 .
 
 _:genid343 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid342 .
 
 _:genid342 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid341 a owl:Class .
@@ -3277,7 +3278,7 @@ _:genid347 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cantaloupe
 
-:Cantaloupe a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid348 .
+:Cantaloupe a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid348 .
 
 _:genid348 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3286,11 +3287,11 @@ _:genid348 a owl:Restriction ;
 _:genid349 owl:intersectionOf _:genid351 .
 
 _:genid351 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid350 .
 
 _:genid350 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid349 a owl:Class .
@@ -3328,15 +3329,15 @@ _:genid355 a owl:Restriction ;
 _:genid356 owl:intersectionOf _:genid359 .
 
 _:genid359 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid358 .
 
 _:genid358 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid357 .
 
 _:genid357 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid356 a owl:Class .
@@ -3357,11 +3358,11 @@ _:genid361 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Chayote
 
-:Chayote a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid362 .
+:Chayote a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid362 .
 
 _:genid362 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Chayote a _:genid363 .
 
@@ -3377,7 +3378,7 @@ _:genid364 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cherries
 
-:Cherries a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid365 .
+:Cherries a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid365 .
 
 _:genid365 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3386,11 +3387,11 @@ _:genid365 a owl:Restriction ;
 _:genid366 owl:intersectionOf _:genid368 .
 
 _:genid368 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid367 .
 
 _:genid367 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid366 a owl:Class .
@@ -3409,11 +3410,11 @@ _:genid370 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#CherryTomato
 
-:CherryTomato a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid371 .
+:CherryTomato a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid371 .
 
 _:genid371 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :CherryTomato a _:genid372 .
 
@@ -3443,7 +3444,7 @@ _:genid374 a owl:Restriction ;
 
 _:genid375 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :CoconutOil a _:genid376 .
 
@@ -3471,15 +3472,15 @@ _:genid378 a owl:Restriction ;
 _:genid379 owl:intersectionOf _:genid382 .
 
 _:genid382 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid381 .
 
 _:genid381 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid380 .
 
 _:genid380 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid379 a owl:Class .
@@ -3501,11 +3502,11 @@ _:genid384 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Cucumber
 
-:Cucumber a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid385 .
+:Cucumber a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid385 .
 
 _:genid385 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Cucumber a _:genid386 .
 
@@ -3521,7 +3522,7 @@ _:genid387 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Currants
 
-:Currants a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid388 .
+:Currants a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid388 .
 
 _:genid388 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3530,11 +3531,11 @@ _:genid388 a owl:Restriction ;
 _:genid389 owl:intersectionOf _:genid391 .
 
 _:genid391 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid390 .
 
 _:genid390 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid389 a owl:Class .
@@ -3553,11 +3554,11 @@ _:genid393 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#DandelionGreens
 
-:DandelionGreens a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid394 .
+:DandelionGreens a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid394 .
 
 _:genid394 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :DandelionGreens a _:genid395 .
 
@@ -3591,7 +3592,7 @@ _:genid398 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Dates
 
-:Dates a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid399 .
+:Dates a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid399 .
 
 _:genid399 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3600,11 +3601,11 @@ _:genid399 a owl:Restriction ;
 _:genid400 owl:intersectionOf _:genid402 .
 
 _:genid402 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid401 .
 
 _:genid401 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid400 a owl:Class .
@@ -3636,11 +3637,11 @@ _:genid405 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Dulse
 
-:Dulse a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid406 .
+:Dulse a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid406 .
 
 _:genid406 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Dulse a _:genid407 .
 
@@ -3665,15 +3666,15 @@ _:genid409 a owl:Restriction ;
 _:genid410 owl:intersectionOf _:genid413 .
 
 _:genid413 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid412 .
 
 _:genid412 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid411 .
 
 _:genid411 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid410 a owl:Class .
@@ -3701,15 +3702,15 @@ _:genid416 a owl:Restriction ;
 _:genid417 owl:intersectionOf _:genid420 .
 
 _:genid420 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid419 .
 
 _:genid419 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid418 .
 
 _:genid418 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid417 a owl:Class .
@@ -3722,7 +3723,7 @@ _:genid421 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Figs
 
-:Figs a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid422 .
+:Figs a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid422 .
 
 _:genid422 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3731,11 +3732,11 @@ _:genid422 a owl:Restriction ;
 _:genid423 owl:intersectionOf _:genid425 .
 
 _:genid425 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid424 .
 
 _:genid424 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid423 a owl:Class .
@@ -3763,15 +3764,15 @@ _:genid428 a owl:Restriction ;
 _:genid429 owl:intersectionOf _:genid432 .
 
 _:genid432 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid431 .
 
 _:genid431 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid430 .
 
 _:genid430 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid429 a owl:Class .
@@ -3796,7 +3797,7 @@ _:genid434 a owl:Restriction ;
 
 _:genid435 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Fonio a _:genid436 .
 
@@ -3806,11 +3807,11 @@ _:genid436 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#GarbanzoBeans
 
-:GarbanzoBeans a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid437 .
+:GarbanzoBeans a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid437 .
 
 _:genid437 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :GarbanzoBeans a _:genid438 .
 
@@ -3832,15 +3833,15 @@ _:genid439 a owl:Restriction ;
 _:genid440 owl:intersectionOf _:genid443 .
 
 _:genid443 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid442 .
 
 _:genid442 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid441 .
 
 _:genid441 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid440 a owl:Class .
@@ -3870,15 +3871,15 @@ _:genid446 a owl:Restriction ;
 _:genid447 owl:intersectionOf _:genid450 .
 
 _:genid450 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid449 .
 
 _:genid449 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid448 .
 
 _:genid448 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid447 a owl:Class .
@@ -3914,7 +3915,7 @@ _:genid453 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Grapes
 
-:Grapes a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid454 .
+:Grapes a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid454 .
 
 _:genid454 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -3923,11 +3924,11 @@ _:genid454 a owl:Restriction ;
 _:genid455 owl:intersectionOf _:genid457 .
 
 _:genid457 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid456 .
 
 _:genid456 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid455 a owl:Class .
@@ -3950,7 +3951,7 @@ _:genid459 a owl:Restriction ;
 
 _:genid460 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :GrapeseedOil a _:genid461 .
 
@@ -3974,7 +3975,7 @@ _:genid462 a owl:Restriction ;
 
 _:genid463 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :HempSeeds a _:genid464 .
 
@@ -3991,7 +3992,7 @@ _:genid464 a owl:Restriction ;
 
 _:genid465 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :HempseedOil a _:genid466 .
 
@@ -4003,11 +4004,11 @@ _:genid466 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Hijiki
 
-:Hijiki a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid467 .
+:Hijiki a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid467 .
 
 _:genid467 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Hijiki a _:genid468 .
 
@@ -4023,11 +4024,11 @@ _:genid469 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Izote
 
-:Izote a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid470 .
+:Izote a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid470 .
 
 _:genid470 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Izote a _:genid471 .
 
@@ -4037,11 +4038,11 @@ _:genid471 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Kale
 
-:Kale a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid472 .
+:Kale a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid472 .
 
 _:genid472 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Kale a _:genid473 .
 
@@ -4061,7 +4062,7 @@ _:genid474 a owl:Restriction ;
 
 _:genid475 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Kamut a _:genid476 .
 
@@ -4071,11 +4072,11 @@ _:genid476 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Lettuce
 
-:Lettuce a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid477 .
+:Lettuce a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid477 .
 
 _:genid477 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Lettuce a _:genid478 .
 
@@ -4093,7 +4094,7 @@ _:genid479 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Limes
 
-:Limes a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid480 .
+:Limes a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid480 .
 
 _:genid480 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4102,11 +4103,11 @@ _:genid480 a owl:Restriction ;
 _:genid481 owl:intersectionOf _:genid483 .
 
 _:genid483 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid482 .
 
 _:genid482 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid481 a owl:Class .
@@ -4127,7 +4128,7 @@ _:genid485 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mango
 
-:Mango a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid486 .
+:Mango a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid486 .
 
 _:genid486 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4136,11 +4137,11 @@ _:genid486 a owl:Restriction ;
 _:genid487 owl:intersectionOf _:genid489 .
 
 _:genid489 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid488 .
 
 _:genid488 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid487 a owl:Class .
@@ -4153,7 +4154,7 @@ _:genid490 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Melons
 
-:Melons a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid491 .
+:Melons a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid491 .
 
 _:genid491 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4162,11 +4163,11 @@ _:genid491 a owl:Restriction ;
 _:genid492 owl:intersectionOf _:genid494 .
 
 _:genid494 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid493 .
 
 _:genid493 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid492 a owl:Class .
@@ -4190,15 +4191,15 @@ _:genid496 a owl:Restriction ;
 _:genid497 owl:intersectionOf _:genid500 .
 
 _:genid500 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid499 .
 
 _:genid499 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid498 .
 
 _:genid498 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid497 a owl:Class .
@@ -4219,11 +4220,11 @@ _:genid502 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Mushrooms
 
-:Mushrooms a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid503 .
+:Mushrooms a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid503 .
 
 _:genid503 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Mushrooms a _:genid504 .
 
@@ -4235,11 +4236,11 @@ _:genid504 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nopales
 
-:Nopales a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid505 .
+:Nopales a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid505 .
 
 _:genid505 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Nopales a _:genid506 .
 
@@ -4263,11 +4264,11 @@ _:genid508 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Nori
 
-:Nori a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid509 .
+:Nori a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid509 .
 
 _:genid509 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Nori a _:genid510 .
 
@@ -4283,11 +4284,11 @@ _:genid511 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Okra
 
-:Okra a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid512 .
+:Okra a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid512 .
 
 _:genid512 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Okra a _:genid513 .
 
@@ -4307,7 +4308,7 @@ _:genid514 a owl:Restriction ;
 
 _:genid515 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :OliveOil a _:genid516 .
 
@@ -4326,11 +4327,11 @@ _:genid517 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Olives
 
-:Olives a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid518 .
+:Olives a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid518 .
 
 _:genid518 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Olives a _:genid519 .
 
@@ -4362,11 +4363,11 @@ _:genid522 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Onions
 
-:Onions a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid523 .
+:Onions a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid523 .
 
 _:genid523 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Onions a _:genid524 .
 
@@ -4382,7 +4383,7 @@ _:genid525 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Orange
 
-:Orange a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid526 .
+:Orange a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid526 .
 
 _:genid526 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4391,11 +4392,11 @@ _:genid526 a owl:Restriction ;
 _:genid527 owl:intersectionOf _:genid529 .
 
 _:genid529 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid528 .
 
 _:genid528 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid527 a owl:Class .
@@ -4418,7 +4419,7 @@ _:genid531 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Papayas
 
-:Papayas a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid532 .
+:Papayas a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid532 .
 
 _:genid532 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4427,11 +4428,11 @@ _:genid532 a owl:Restriction ;
 _:genid533 owl:intersectionOf _:genid535 .
 
 _:genid535 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid534 .
 
 _:genid534 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid533 a owl:Class .
@@ -4444,7 +4445,7 @@ _:genid536 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Peaches
 
-:Peaches a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid537 .
+:Peaches a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid537 .
 
 _:genid537 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4453,11 +4454,11 @@ _:genid537 a owl:Restriction ;
 _:genid538 owl:intersectionOf _:genid540 .
 
 _:genid540 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid539 .
 
 _:genid539 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid538 a owl:Class .
@@ -4470,7 +4471,7 @@ _:genid541 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Pears
 
-:Pears a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid542 .
+:Pears a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid542 .
 
 _:genid542 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4479,11 +4480,11 @@ _:genid542 a owl:Restriction ;
 _:genid543 owl:intersectionOf _:genid545 .
 
 _:genid545 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid544 .
 
 _:genid544 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid543 a owl:Class .
@@ -4502,11 +4503,11 @@ _:genid547 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PlumTomato
 
-:PlumTomato a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid548 .
+:PlumTomato a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid548 .
 
 _:genid548 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :PlumTomato a _:genid549 .
 
@@ -4524,7 +4525,7 @@ _:genid550 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Plums
 
-:Plums a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid551 .
+:Plums a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid551 .
 
 _:genid551 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4533,18 +4534,18 @@ _:genid551 a owl:Restriction ;
 _:genid552 owl:intersectionOf _:genid554 .
 
 _:genid554 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid553 .
 
 _:genid553 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid552 a owl:Class .
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#PricklyPear
 
-:PricklyPear a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid555 .
+:PricklyPear a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid555 .
 
 _:genid555 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4553,11 +4554,11 @@ _:genid555 a owl:Restriction ;
 _:genid556 owl:intersectionOf _:genid558 .
 
 _:genid558 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid557 .
 
 _:genid557 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid556 a owl:Class .
@@ -4573,7 +4574,7 @@ _:genid559 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Prunes
 
-:Prunes a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid560 .
+:Prunes a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid560 .
 
 _:genid560 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4582,11 +4583,11 @@ _:genid560 a owl:Restriction ;
 _:genid561 owl:intersectionOf _:genid563 .
 
 _:genid563 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid562 .
 
 _:genid562 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid561 a owl:Class .
@@ -4599,11 +4600,11 @@ _:genid564 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Purslane
 
-:Purslane a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid565 .
+:Purslane a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid565 .
 
 _:genid565 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Purslane a _:genid566 .
 
@@ -4625,7 +4626,7 @@ _:genid567 a owl:Restriction ;
 
 _:genid568 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Quinoa a _:genid569 .
 
@@ -4635,7 +4636,7 @@ _:genid569 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Raisins
 
-:Raisins a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid570 .
+:Raisins a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid570 .
 
 _:genid570 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4644,11 +4645,11 @@ _:genid570 a owl:Restriction ;
 _:genid571 owl:intersectionOf _:genid573 .
 
 _:genid573 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid572 .
 
 _:genid572 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid571 a owl:Class .
@@ -4661,7 +4662,7 @@ _:genid571 a owl:Class .
 
 _:genid574 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :RawSesameSeeds a _:genid575 .
 
@@ -4678,7 +4679,7 @@ _:genid575 a owl:Restriction ;
 
 _:genid576 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :RawSesameTahiniButter a _:genid577 .
 
@@ -4699,15 +4700,15 @@ _:genid578 a owl:Restriction ;
 _:genid579 owl:intersectionOf _:genid582 .
 
 _:genid582 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid581 .
 
 _:genid581 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid580 .
 
 _:genid580 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid579 a owl:Class .
@@ -4727,7 +4728,7 @@ _:genid583 a owl:Restriction ;
 
 _:genid584 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Rye a _:genid585 .
 
@@ -4775,7 +4776,7 @@ _:genid589 a owl:Restriction ;
 
 _:genid590 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :SesameOil a _:genid591 .
 
@@ -4787,7 +4788,7 @@ _:genid591 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#SoftJellyCoconuts
 
-:SoftJellyCoconuts a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid592 .
+:SoftJellyCoconuts a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid592 .
 
 _:genid592 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4796,11 +4797,11 @@ _:genid592 a owl:Restriction ;
 _:genid593 owl:intersectionOf _:genid595 .
 
 _:genid595 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid594 .
 
 _:genid594 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid593 a owl:Class .
@@ -4816,7 +4817,7 @@ _:genid596 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Soursops
 
-:Soursops a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid597 .
+:Soursops a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid597 .
 
 _:genid597 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4825,11 +4826,11 @@ _:genid597 a owl:Restriction ;
 _:genid598 owl:intersectionOf _:genid600 .
 
 _:genid600 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid599 .
 
 _:genid599 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid598 a owl:Class .
@@ -4852,7 +4853,7 @@ _:genid602 a owl:Restriction ;
 
 _:genid603 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Spelt a _:genid604 .
 
@@ -4868,11 +4869,11 @@ _:genid605 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Squash
 
-:Squash a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid606 .
+:Squash a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid606 .
 
 _:genid606 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Squash a _:genid607 .
 
@@ -4900,7 +4901,7 @@ _:genid609 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Tamarind
 
-:Tamarind a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid610 .
+:Tamarind a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiFruits> , _:genid610 .
 
 _:genid610 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -4909,11 +4910,11 @@ _:genid610 a owl:Restriction ;
 _:genid611 owl:intersectionOf _:genid613 .
 
 _:genid613 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid612 .
 
 _:genid612 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid611 a owl:Class .
@@ -4938,7 +4939,7 @@ _:genid615 a owl:Restriction ;
 
 _:genid616 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Tef a _:genid617 .
 
@@ -4962,11 +4963,11 @@ _:genid619 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#TurnipGreens
 
-:TurnipGreens a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid620 .
+:TurnipGreens a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid620 .
 
 _:genid620 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :TurnipGreens a _:genid621 .
 
@@ -4984,11 +4985,11 @@ _:genid622 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Wakame
 
-:Wakame a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid623 .
+:Wakame a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid623 .
 
 _:genid623 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Wakame a _:genid624 .
 
@@ -5008,7 +5009,7 @@ _:genid625 a owl:Restriction ;
 
 _:genid626 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Walnuts a _:genid627 .
 
@@ -5026,7 +5027,7 @@ _:genid628 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Water
 
-:Water a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid629 .
+:Water a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#ElectricFoods> , _:genid629 .
 
 _:genid629 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
@@ -5035,15 +5036,15 @@ _:genid629 a owl:Restriction ;
 _:genid630 owl:intersectionOf _:genid633 .
 
 _:genid633 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> ;
 	rdf:rest _:genid632 .
 
 _:genid632 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AssimilationCycle> ;
 	rdf:rest _:genid631 .
 
 _:genid631 a rdf:List ;
-	rdf:first <https://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
+	rdf:first <http://github.com/veenda/Terrain-Theory-Ontology/ontology#EliminationCycle> ;
 	rdf:rest rdf:nil .
 
 _:genid630 a owl:Class .
@@ -5070,11 +5071,11 @@ _:genid636 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Watercress
 
-:Watercress a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid637 .
+:Watercress a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid637 .
 
 _:genid637 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Watercress a _:genid638 .
 
@@ -5090,11 +5091,11 @@ _:genid639 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#WildArugula
 
-:WildArugula a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid640 .
+:WildArugula a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid640 .
 
 _:genid640 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :WildArugula a _:genid641 .
 
@@ -5116,7 +5117,7 @@ _:genid642 a owl:Restriction ;
 
 _:genid643 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :WildRice a _:genid644 .
 
@@ -5134,11 +5135,11 @@ _:genid645 a owl:Restriction ;
 # 
 # http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#Zucchini
 
-:Zucchini a owl:NamedIndividual , <https://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid646 .
+:Zucchini a owl:NamedIndividual , <http://github.com/veenda/Terrain-Theory-Ontology/ontology#SebiVegetables> , _:genid646 .
 
 _:genid646 a owl:Restriction ;
 	owl:onProperty :bestConsumedDuring ;
-	owl:someValuesFrom <https://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
+	owl:someValuesFrom <http://github.com/veenda/Terrain-Theory-Ontology/ontology#AppropriationCycle> .
 
 :Zucchini a _:genid647 .
 
@@ -5177,7 +5178,7 @@ _:genid656 a <http://www.w3.org/2003/11/swrl#AtomList> ;
 	rdf:first _:genid14 .
 
 _:genid14 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-	<http://www.w3.org/2003/11/swrl#classPredicate> <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
 	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> .
 
 _:genid656 rdf:rest _:genid654 .
@@ -5230,7 +5231,7 @@ _:genid665 a <http://www.w3.org/2003/11/swrl#AtomList> ;
 	rdf:first _:genid13 .
 
 _:genid13 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-	<http://www.w3.org/2003/11/swrl#classPredicate> <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
 	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> .
 
 _:genid665 rdf:rest _:genid663 .
@@ -5302,7 +5303,7 @@ _:genid670 a <http://www.w3.org/2003/11/swrl#AtomList> ;
 	rdf:first _:genid15 .
 
 _:genid15 a <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-	<http://www.w3.org/2003/11/swrl#classPredicate> <https://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
+	<http://www.w3.org/2003/11/swrl#classPredicate> <http://github.com/veenda/Terrain-Theory-Ontology/ontology#DietaryInput> ;
 	<http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#f> .
 
 _:genid670 rdf:rest _:genid668 .
@@ -5328,4 +5329,26 @@ _:genid675 a <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
 	<http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#d> .
 
 _:genid674 rdf:rest rdf:nil .
-# Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
+# Generated by the OWL API (version 4.2.6.20160910-2108) http://github.com/owlcs/owlapi
+
+### MAGIC DATA FOR SWRL DEMO ###
+
+# 1. Kita ubah Organ jadi "Benda" biar bisa dibaca SWRL
+:IntegumentarySystem a owl:NamedIndividual .
+:NervousSystem a owl:NamedIndividual .
+:DigestiveSystem a owl:NamedIndividual .
+
+# 2. Kita ubah Penyakit (Jerawat) jadi "Kasus Nyata"
+:AcneCase1 a :Acne , owl:NamedIndividual ;
+    rdfs:label "Kasus Jerawat Demo" ;
+    :affectsSystem :IntegumentarySystem ;
+    :hasTerrainPhase :InflammationPhase .
+
+# 3. Kita pastikan Makanan (Alpukat) punya link langsung ke Organ
+:Avocado :nourishesSystem :IntegumentarySystem .
+:Avocado :cleansesOrgan :DigestiveSystem .
+
+# 4. Contoh Lain: Wild Rice untuk Saraf
+:WildRice :nourishesSystem :NervousSystem .
+:AnxietyCase1 a :AnxietyNeurosis , owl:NamedIndividual ;
+    :affectsSystem :NervousSystem .
