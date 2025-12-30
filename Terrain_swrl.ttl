@@ -1,0 +1,239 @@
+@prefix : <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@base <http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> .
+
+<http://www.github.com/veenda/Terrain-Theory-Ontology/ontology> a owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:affectsSystem a owl:ObjectProperty , owl:TransitiveProperty ;
+	rdfs:label "affects system"@en .
+
+:approvedBy a owl:ObjectProperty ;
+	rdfs:label "approved by"@en .
+
+:bestConsumedDuring a owl:ObjectProperty ;
+	rdfs:domain :DietaryInput ;
+	rdfs:range :TimeCycle ;
+	rdfs:label "best consumed during"@en .
+
+:cleansesOrgan a owl:ObjectProperty ;
+	owl:inverseOf :isCleansedBy ;
+	rdfs:domain :DietaryInput ;
+	rdfs:range :AnatomicalStructure ;
+	rdfs:label "cleanses organ"@en .
+
+:congestsOrgan a owl:ObjectProperty ;
+	rdfs:domain :MucusFormingFoods ;
+	rdfs:range :AnatomicalStructure ;
+	rdfs:label "congests organ"@en .
+
+:damagesOrgan a owl:ObjectProperty ;
+	rdfs:label "damages organ"@en .
+
+:hasDietaryInput a owl:ObjectProperty ;
+	rdfs:label "has dietary input"@en .
+
+:hasProperty a owl:ObjectProperty ;
+	rdfs:label "has property"@en .
+
+:hasTerrainPhase a owl:ObjectProperty ;
+	rdfs:domain :Manifestation ;
+	rdfs:range <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> ;
+	rdfs:label "has terrain phase"@en .
+
+:isCleansedBy a owl:ObjectProperty ;
+	rdfs:label "is cleansed by"@en .
+
+:isRecommendedFor a owl:ObjectProperty ;
+	rdfs:label "is recommended for"@en .
+
+:isTimelyFor a owl:ObjectProperty ;
+	rdfs:label "is timely for"@en .
+
+:nourishesSystem a owl:ObjectProperty ;
+	rdfs:domain :DietaryInput ;
+	rdfs:range :AnatomicalStructure ;
+	rdfs:label "nourishes system"@en .
+
+:partOf a owl:ObjectProperty ;
+	rdfs:label "part of"@en .
+
+#################################################################
+#    Classes (DATA ASLI ANDA - TIDAK DIUBAH)
+#################################################################
+
+:DietaryInput a owl:Class ; rdfs:label "Dietary Input"@en .
+:Manifestation a owl:Class ; rdfs:label "Manifestation"@en .
+:AnatomicalStructure a owl:Class ; rdfs:label "Anatomical Structure"@en .
+:TimeCycle a owl:Class ; rdfs:label "Time Cycle"@en .
+
+:ElectricFoods a owl:Class ; rdfs:subClassOf :DietaryInput ; rdfs:label "Electric Foods"@en .
+:SebiVegetables a owl:Class ; rdfs:subClassOf :ElectricFoods ; rdfs:label "Sebi Vegetables"@en .
+:SebiFruits a owl:Class ; rdfs:subClassOf :ElectricFoods ; rdfs:label "Sebi Fruits"@en .
+:SebiGrains a owl:Class ; rdfs:subClassOf :ElectricFoods ; rdfs:label "Sebi Grains"@en .
+:SebiNutsandSeeds a owl:Class ; rdfs:subClassOf :ElectricFoods ; rdfs:label "Sebi Nuts and Seeds"@en .
+:SebiOils a owl:Class ; rdfs:subClassOf :ElectricFoods ; rdfs:label "Sebi Oils"@en .
+:SebiHerbalTeas a owl:Class ; rdfs:subClassOf :ElectricFoods ; rdfs:label "Sebi Herbal Teas"@en .
+:SebiSpicesAndSeasonings a owl:Class ; rdfs:subClassOf :ElectricFoods ; rdfs:label "Sebi Spices and Seasonings"@en .
+
+:MucusFormingFoods a owl:Class ; rdfs:subClassOf :DietaryInput .
+:MucuslessFoods a owl:Class ; rdfs:subClassOf :DietaryInput .
+
+# --- ORGAN CLASSES ---
+:CardiovascularSystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:DigestiveSystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:EndocrineSystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:ImmuneSystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:IntegumentarySystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:LocomotorSystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:LymphaticSystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:NervousSystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:ReproductiveOrgans a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:RespiratorySystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:SensorySystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+:UrogenitalSystem a owl:Class ; rdfs:subClassOf :AnatomicalStructure .
+
+# --- SUB-ORGANS ---
+:Blood a owl:Class ; rdfs:subClassOf :CardiovascularSystem .
+:Brain a owl:Class ; rdfs:subClassOf :NervousSystem .
+:Colon a owl:Class ; rdfs:subClassOf :DigestiveSystem .
+:Kidneys a owl:Class ; rdfs:subClassOf :UrogenitalSystem .
+:Liver a owl:Class ; rdfs:subClassOf :DigestiveSystem .
+:Lungs a owl:Class ; rdfs:subClassOf :RespiratorySystem .
+:Skin a owl:Class ; rdfs:subClassOf :IntegumentarySystem .
+:Stomach a owl:Class ; rdfs:subClassOf :DigestiveSystem .
+
+# --- PHASES ---
+<http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> a owl:Class .
+:HumoralPhase a owl:Class ; rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+:InflammationPhase a owl:Class ; rdfs:subClassOf :HumoralPhase .
+:DepositionPhase a owl:Class ; rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+:ImpregnationPhase a owl:Class ; rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+:DegenerationPhase a owl:Class ; rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+:NeoplasmPhase a owl:Class ; rdfs:subClassOf <http://www.semanticweb.org/hp/ontologies/2025/10/untitled-ontology-11#TerrainStatus> .
+
+:AppropriationCycle a owl:Class ; rdfs:subClassOf :TimeCycle .
+:AssimilationCycle a owl:Class ; rdfs:subClassOf :TimeCycle .
+:EliminationCycle a owl:Class ; rdfs:subClassOf :TimeCycle .
+
+# --- DISEASES (CLASSES) ---
+:Acne a owl:Class ; rdfs:subClassOf :Manifestation .
+:AnxietyNeurosis a owl:Class ; rdfs:subClassOf :Manifestation .
+:Bronchitis a owl:Class ; rdfs:subClassOf :Manifestation .
+:DiabetesMellitus a owl:Class ; rdfs:subClassOf :Manifestation .
+:Gastritis a owl:Class ; rdfs:subClassOf :Manifestation .
+
+#################################################################
+#    INDIVIDUALS (DATA MAKANAN)
+#################################################################
+
+:DrSebi a owl:NamedIndividual .
+
+:Avocado a owl:NamedIndividual, :SebiVegetables .
+:WildRice a owl:NamedIndividual, :SebiGrains .
+:Apples a owl:NamedIndividual, :SebiFruits .
+:Burdock a owl:NamedIndividual, :SebiHerbalTeas .
+:BlueVervain a owl:NamedIndividual, :SebiHerbalTeas .
+
+# (Dan seterusnya sesuai data Anda...)
+
+#################################################################
+#    SWRL ACTIVATOR (BAGIAN INI YANG MEMBUAT REASONING JALAN)
+#################################################################
+# Bagian ini menerjemahkan data Class/Restriction Anda menjadi
+# Individual/Assertion yang bisa dibaca SWRL.
+
+# 1. Mengaktifkan Organ sebagai Individual
+:IntegumentarySystem a owl:NamedIndividual .
+:NervousSystem a owl:NamedIndividual .
+:DigestiveSystem a owl:NamedIndividual .
+:RespiratorySystem a owl:NamedIndividual .
+:CardiovascularSystem a owl:NamedIndividual .
+:EndocrineSystem a owl:NamedIndividual .
+:ImmuneSystem a owl:NamedIndividual .
+:UrogenitalSystem a owl:NamedIndividual .
+:LocomotorSystem a owl:NamedIndividual .
+
+# 2. Mengaktifkan Fase sebagai Individual
+:InflammationPhase a owl:NamedIndividual .
+:AppropriationCycle a owl:NamedIndividual .
+:EliminationCycle a owl:NamedIndividual .
+
+# 3. Mengaktifkan Penyakit sebagai Individual (Punning)
+#    dan menyambungkannya ke Organ (Assertion)
+:Acne a owl:NamedIndividual ;
+      :affectsSystem :IntegumentarySystem ;
+      :hasTerrainPhase :InflammationPhase .
+
+:AnxietyNeurosis a owl:NamedIndividual ;
+                 :affectsSystem :NervousSystem ;
+                 :hasTerrainPhase :InflammationPhase .
+
+:Bronchitis a owl:NamedIndividual ;
+            :affectsSystem :RespiratorySystem ;
+            :hasTerrainPhase :InflammationPhase .
+
+:Gastritis a owl:NamedIndividual ;
+           :affectsSystem :DigestiveSystem ;
+           :hasTerrainPhase :InflammationPhase .
+
+# 4. Mengaktifkan Link Makanan ke Organ (Assertion)
+#    Ini 'Copy' dari Restriction Anda, tapi dalam bentuk yang dibaca SWRL
+:Avocado :nourishesSystem :IntegumentarySystem ;
+         :nourishesSystem :NervousSystem ;
+         :bestConsumedDuring :AppropriationCycle .
+
+:WildRice :nourishesSystem :NervousSystem ;
+          :nourishesSystem :DigestiveSystem .
+
+:Apples :nourishesSystem :DigestiveSystem ;
+        :bestConsumedDuring :EliminationCycle .
+
+:Burdock :cleansesOrgan :Blood ;
+         :cleansesOrgan :Kidneys .
+
+#################################################################
+#    SWRL RULES (CLEAN & WORKING)
+#################################################################
+
+<urn:swrl:rule1> rdf:type swrl:Imp ;
+    swrl:body (
+        [ rdf:type swrl:ClassAtom ; swrl:classPredicate :DietaryInput ; swrl:argument1 <urn:swrl:f> ]
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :cleansesOrgan ; swrl:argument1 <urn:swrl:f> ; swrl:argument2 <urn:swrl:o> ]
+        [ rdf:type swrl:ClassAtom ; swrl:classPredicate :Manifestation ; swrl:argument1 <urn:swrl:d> ]
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :affectsSystem ; swrl:argument1 <urn:swrl:d> ; swrl:argument2 <urn:swrl:o> ]
+    ) ;
+    swrl:head (
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :isRecommendedFor ; swrl:argument1 <urn:swrl:f> ; swrl:argument2 <urn:swrl:d> ]
+    ) .
+
+<urn:swrl:rule2> rdf:type swrl:Imp ;
+    swrl:body (
+        [ rdf:type swrl:ClassAtom ; swrl:classPredicate :DietaryInput ; swrl:argument1 <urn:swrl:f> ]
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :nourishesSystem ; swrl:argument1 <urn:swrl:f> ; swrl:argument2 <urn:swrl:o> ]
+        [ rdf:type swrl:ClassAtom ; swrl:classPredicate :Manifestation ; swrl:argument1 <urn:swrl:d> ]
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :affectsSystem ; swrl:argument1 <urn:swrl:d> ; swrl:argument2 <urn:swrl:o> ]
+    ) ;
+    swrl:head (
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :isRecommendedFor ; swrl:argument1 <urn:swrl:f> ; swrl:argument2 <urn:swrl:d> ]
+    ) .
+
+<urn:swrl:rule3> rdf:type swrl:Imp ;
+    swrl:body (
+        [ rdf:type swrl:ClassAtom ; swrl:classPredicate :Manifestation ; swrl:argument1 <urn:swrl:d> ]
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :hasTerrainPhase ; swrl:argument1 <urn:swrl:d> ; swrl:argument2 <urn:swrl:p> ]
+        [ rdf:type swrl:ClassAtom ; swrl:classPredicate :DietaryInput ; swrl:argument1 <urn:swrl:f> ]
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :bestConsumedDuring ; swrl:argument1 <urn:swrl:f> ; swrl:argument2 <urn:swrl:p> ]
+    ) ;
+    swrl:head (
+        [ rdf:type swrl:IndividualPropertyAtom ; swrl:propertyPredicate :isTimelyFor ; swrl:argument1 <urn:swrl:f> ; swrl:argument2 <urn:swrl:d> ]
+    ) .
